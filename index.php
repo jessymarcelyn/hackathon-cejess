@@ -38,9 +38,32 @@
       <!-- <div class="row">
         <div class="col-lg-12">
           <div class="row">
+<<<<<<< HEAD
           <h2>Galeri Gumitir</h2>
           <h3>Pusat Informasi Pariwisata & Oleh-Oleh</h3>  
            
+=======
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h2>Galeri Gumitir</h2><span></span>
+                    <p>
+                      Galeri Gumitir terletak di <span> Sidomulyo Silo, Jember. </span> Kami memiliki banyak tempat
+                      wisata menarik yang bisa dinikmati dari anak-anak hingga orang dewasa.
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img src="assets/wisata/akar1.png" alt="" />
+              </div>
+            </div>
+          </div>
+>>>>>>> 207661de58b596a67ddcde4bf9479d654fd7bfea
         </div>
       </div> -->
     <!-- </div> -->
@@ -242,7 +265,7 @@
         <div class="col-lg-8 offset-lg-2">
           <div class="section-heading">
             <h4>Paket <em>Wisata </em></h4>
-            <img src="assets/images/heading-line-dec.png" alt="" />
+            <!-- <img src="assets/images/heading-line-dec.png" alt="" /> -->
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eismod tempor incididunt ut labore et dolore magna.
@@ -253,7 +276,7 @@
           <div class="pricing-item-regular">
             <h4>Paket Wisata Sejarah</h4>
             <div class="icon">
-              <img src="assets/images/pricing-table-01.png" alt="" />
+              <!-- <img src="assets/images/pricing-table-01.png" alt="" /> -->
             </div>
             <p>
               Wisata yang ditujukan untuk wisatawan umum dapat belajar
@@ -268,7 +291,7 @@
           <div class="pricing-item-regular">
             <h4>Paket Wisata Edukasi</h4>
             <div class="icon">
-              <img src="assets/images/pricing-table-01.png" alt="" />
+              <!-- <img src="assets/images/pricing-table-01.png" alt="" /> -->
             </div>
             <ul>
               <p>Wisata edukasi yang ditujukan untuk pelajar sampai umum yang di mana mereka dapat belajar dengan cara
@@ -282,7 +305,7 @@
           <div class="pricing-item-regular">
             <h4>Paket Wisata Spiritual</h4>
             <div class="icon">
-              <img src="assets/images/pricing-table-01.png" alt="" />
+              <!-- <img src="assets/images/pricing-table-01.png" alt="" /> -->
             </div>
             <p>Wisata yang ditujukan untuk wisatawan umum yang memiliki minat melakukan kegiatan spiritual (ziarah)</p>
             <div class="border-button">
@@ -297,7 +320,7 @@
           <div class="pricing-item-regular">
             <h4>Paket Wisata EduKids</h4>
             <div class="icon">
-              <img src="assets/images/pricing-table-01.png" alt="" />
+              <!-- <img src="assets/images/pricing-table-01.png" alt="" /> -->
             </div>
             <p>
               Wisata edukasi yang ditujukan untuk anak-anak (TK/PAUD-SD) yang
@@ -312,7 +335,7 @@
           <div class="pricing-item-regular">
             <h4>Paket Wisata Kreatif</h4>
             <div class="icon">
-              <img src="assets/images/pricing-table-01.png" alt="" />
+              <!-- <img src="assets/images/pricing-table-01.png" alt="" /> -->
             </div>
             <p>Wisata yang dikhusukan bagi pengunjung yang memiliki minat khusus untuk belajar dan berkreasi</p>
             <div class="border-button">
@@ -324,7 +347,7 @@
           <div class="pricing-item-regular">
             <h4>Sport Tourism</h4>
             <div class="icon">
-              <img src="assets/images/pricing-table-01.png" alt="" />
+              <!-- <img src="assets/images/pricing-table-01.png" alt="" /> -->
             </div>
             <p>Wisata yang ditujukan untuk peminat gowes dan trail untuk menjelajahi rute hutan pinus yang ada di desa
               Sidomulyo dengan spot pilihan</p>
