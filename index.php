@@ -12,13 +12,10 @@
               <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
                 <div class="row">
                   <div class="col-lg-12">
-                    <h3>Selamat datang di</h3>
-                    <h2><span>Galeri Gumitir</span></h2><span></span>
+                    <h2>Galeri Gumitir</h2><span></span>
                     <p>
                       Galeri Gumitir terletak di <span> Sidomulyo Silo, Jember. </span> Kami memiliki banyak tempat
-                      wisata
-                      menarik yang
-                      bisa dinikmati dari anak-anak hingga orang dewasa.
+                      wisata menarik yang bisa dinikmati dari anak-anak hingga orang dewasa.
                     </p>
                   </div>
 
@@ -27,7 +24,7 @@
             </div>
             <div class="col-lg-6">
               <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <img src="assets/images/slider-dec.png" alt="" />
+                <img src="assets/wisata/akar1.png" alt="" />
               </div>
             </div>
           </div>
