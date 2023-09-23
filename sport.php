@@ -86,8 +86,9 @@
                       </button>
                     </div>
                     <div class="col-md-2">
-                      <button class="btn beli align-self-center">Beli
-                        sekarang</button>
+                      <a href="https://wa.me/6285707003873?text=Silahkan masukkan bukti pembayaran " target="_blank"
+                        class="navbar__highlight"><button class="btn beli align-self-center">Beli
+                          sekarang</button></a>
                     </div>
                   </div>
                 </h2>
@@ -114,7 +115,9 @@
                       </button>
                     </div>
                     <div class="col-md-2">
-                      <button class="btn  beli align-self-center">Beli sekarang</button>
+                      <a href="https://wa.me/6285707003873?text=Silahkan masukkan bukti pembayaran " target="_blank"
+                        class="navbar__highlight"><button class="btn beli align-self-center">Beli
+                          sekarang</button></a>
                     </div>
                   </div>
                 </h2>
@@ -141,7 +144,9 @@
                       </button>
                     </div>
                     <div class="col-md-2">
-                      <button class="btn  beli align-self-center">Beli sekarang</button>
+                      <a href="https://wa.me/6285707003873?text=Silahkan masukkan bukti pembayaran " target="_blank"
+                        class="navbar__highlight"><button class="btn beli align-self-center">Beli
+                          sekarang</button></a>
                     </div>
                   </div>
                 </h2>
@@ -158,9 +163,6 @@
             </div>
 
 
-
-
-
             <h4 class="mt-5">Sidomulyo Mountain Bike</h4>
             <div class="card">
               <div class="card-header" id="headingOne">
@@ -171,9 +173,10 @@
                         <strong>Moutain Bike</strong>
                       </button>
                     </div>
-                    <div class=" col-md-2">
-                      <button class="btn beli align-self-center">Beli
-                        sekarang</button>
+                    <div class="col-md-2">
+                      <a href="https://wa.me/6285707003873?text=Silahkan masukkan bukti pembayaran " target="_blank"
+                        class="navbar__highlight"><button class="btn beli align-self-center">Beli
+                          sekarang</button></a>
                     </div>
                   </div>
 

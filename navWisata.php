@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet" />
 
+    <link rel="icon" type="image/x-icon" href="assets/images/logores.png" />
+
     <title>Galeri Gumitir</title>
 
     <!-- Font Awesome -->
@@ -103,7 +105,7 @@
             margin: 10px;
         }
 
-        img {
+        .carousel-item img {
             height: 400px;
         }
 
@@ -117,8 +119,9 @@
             background-color: #3c5447;
         }
 
+
         @media (max-width: 767px) {
-            img {
+            .carousel-item img {
                 height: 200px;
             }
 
@@ -139,18 +142,13 @@
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav">
-                        <a href="index.html" class="logo">
-
+                        <a href="index.php" class="logo">
+                            <img src="assets/images/logores.png" alt="" />
                         </a>
 
                         <ul class="nav">
                             <li class="scroll-to-section">
                                 <a href="index.php">Utama</a>
-                            </li>
-
-                            <li class="scroll-to-section"><a href="#about">Tentang Kami</a></li>
-                            <li class="scroll-to-section">
-                                <a href="#pricing">Kontak Kami</a>
                             </li>
 
                             <li>
@@ -171,14 +169,28 @@
                                     </div>
                                 </div>
                             </li>
-
-                            <li class="scroll-to-section">
-                                <a href="#newsletter">Newsletter</a>
-                            </li>
+                            <!-- <li class="scroll-to-section">
+                                <div class="dropdown">
+                                    <a class="dropdown-toggle active" type="button" data-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Wisata
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="edukids.php">Paket Wisata Edukids</a>
+                                        <a class="dropdown-item" href="edukasi.php">Paket Wisata Edukasi</a>
+                                        <a class="dropdown-item" href="kreatif.php">Paket Wisata Kreatif</a>
+                                        <a class="dropdown-item" href="sejarah.php">Paket Wisata Sejarah</a>
+                                        <a class="dropdown-item" href="spiritual.php">Paket Wisata Spiritual</a>
+                                        <a class="dropdown-item" href="sport.php">Sport Tourism gowes & Trail
+                                            Adventure</a>
+                                        <a class="dropdown-item text-warning" href="custom.php">Custom Paket</a>
+                                    </div>
+                                </div>
+                            </li> -->
                             <li>
                                 <div class="gradient-button">
-                                    <a id="modal_trigger" href="#modal"><i class="fa fa-sign-in-alt"></i> Sign In
-                                        Now</a>
+                                    <a id="modal_trigger" href="#modal"><i
+                                            class="fa-regular fa-lightbulb me-2"></i>QUIZ</a>
                                 </div>
                             </li>
                         </ul>

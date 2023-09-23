@@ -1,7 +1,7 @@
 <?php
 session_start();
 require "connect.php";
-include('navbar.html')
+include('navbar.php')
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -91,6 +91,7 @@ include('navbar.html')
             background: linear-gradient(#1e4e34, #E9EEF2);
             background-size: contain;
             height: 100%;
+            overflow: hidden;
         }
 
         .wrapper {
@@ -101,7 +102,7 @@ include('navbar.html')
             border-style: solid;
             border-radius: 20px;
             padding: -2px;
-            margin-top: 5%;
+            /* margin-top: 5%; */
             margin-bottom: 8px;
         }
     </style>
@@ -150,64 +151,67 @@ include('navbar.html')
 
 
 <body>
-    <?php
-    $tgl = $_GET['tgl'];
-    $q1 = $_GET['q1'];
-    $q2 = $_GET['q2'];
-    $q3 = $_GET['q3'];
-    $q4 = $_GET['q4'];
-    $q5 = $_GET['q5'];
-    $q6 = $_GET['q6'];
-    $q7 = $_GET['q7'];
-    $q8 = $_GET['q8'];
-    $q9 = $_GET['q9'];
-    $q10 = $_GET['q10'];
-    ?>
-    <div class="wrapper">
-        <a href="custom.php" class="text-primary"><i><u> &#171; kembali </u> </i> </a>
-        <h2 style='text-align: center;'>Sign Up</h2>
-        <!-- <p>Please fill this form to create an account</p> -->
-        <form action="regist.php" method="post">
-            <input class="form-control" type="hidden" name="tgl" value="<?php echo ($tgl); ?>">
-            <input class="form-control" type="hidden" name="q1" value="<?php echo ($q1); ?>">
-            <input class="form-control" type="hidden" name="q2" value="<?php echo ($q2); ?>">
-            <input class="form-control" type="hidden" name="q3" value="<?php echo ($q3); ?>">
-            <input class="form-control" type="hidden" name="q4" value="<?php echo ($q4); ?>">
-            <input class="form-control" type="hidden" name="q5" value="<?php echo ($q5); ?>">
-            <input class="form-control" type="hidden" name="q6" value="<?php echo ($q6); ?>">
-            <input class="form-control" type="hidden" name="q7" value="<?php echo ($q7); ?>">
-            <input class="form-control" type="hidden" name="q8" value="<?php echo ($q8); ?>">
-            <input class="form-control" type="hidden" name="q9" value="<?php echo ($q9); ?>">
-            <input class="form-control" type="hidden" name="q10" value="<?php echo ($q10); ?>">
+    <div class="main-banner">
+        <?php
+        $tgl = $_GET['tgl'];
+        $q1 = $_GET['q1'];
+        $q2 = $_GET['q2'];
+        $q3 = $_GET['q3'];
+        $q4 = $_GET['q4'];
+        $q5 = $_GET['q5'];
+        $q6 = $_GET['q6'];
+        $q7 = $_GET['q7'];
+        $q8 = $_GET['q8'];
+        $q9 = $_GET['q9'];
+        $q10 = $_GET['q10'];
+        ?>
+        <div class="wrapper">
+            <a href="custom.php" class="text-primary"><i><u> &#171; kembali </u> </i> </a>
+            <h2 style='text-align: center;'>Sign Up</h2>
+            <!-- <p>Please fill this form to create an account</p> -->
+            <form action="regist.php" method="post">
+                <input class="form-control" type="hidden" name="tgl" value="<?php echo ($tgl); ?>">
+                <input class="form-control" type="hidden" name="q1" value="<?php echo ($q1); ?>">
+                <input class="form-control" type="hidden" name="q2" value="<?php echo ($q2); ?>">
+                <input class="form-control" type="hidden" name="q3" value="<?php echo ($q3); ?>">
+                <input class="form-control" type="hidden" name="q4" value="<?php echo ($q4); ?>">
+                <input class="form-control" type="hidden" name="q5" value="<?php echo ($q5); ?>">
+                <input class="form-control" type="hidden" name="q6" value="<?php echo ($q6); ?>">
+                <input class="form-control" type="hidden" name="q7" value="<?php echo ($q7); ?>">
+                <input class="form-control" type="hidden" name="q8" value="<?php echo ($q8); ?>">
+                <input class="form-control" type="hidden" name="q9" value="<?php echo ($q9); ?>">
+                <input class="form-control" type="hidden" name="q10" value="<?php echo ($q10); ?>">
 
-            <div class="container text-center">
-                <div class="mb-3">
-                    <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Lengkap" required>
-                </div>
-            </div>
-            <div class="container text-center">
-                <div class="row align-items-start">
-                    <div class="col">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" name="nomor" id="nomor" placeholder="Nomor Telepon"
-                                required>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="mb-3">
-                            <input type="email" class="form-control" name="email" id="email" required
-                                aria-describedby="emailHelp" placeholder="Email">
-                        </div>
+                <div class="container text-center">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Lengkap"
+                            required>
                     </div>
                 </div>
-            </div>
-            <div class="container" style="display:flex; justify-content:center">
-                <button type="submit" name="save" class="btn btn-secondary text-white px-4  mt-1">Lanjutkan ke
-                    Pembayaran</button>
-            </div>
-        </form>
+                <div class="container text-center">
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="nomor" id="nomor"
+                                    placeholder="Nomor Telepon" required>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mb-3">
+                                <input type="email" class="form-control" name="email" id="email" required
+                                    aria-describedby="emailHelp" placeholder="Email">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="display:flex; justify-content:center">
+                    <button type="submit" name="save" class="btn text-white px-4  mt-1"
+                        style="background: #1e4e34">Lanjutkan ke
+                        Pembayaran</button>
+                </div>
+            </form>
+        </div>
     </div>
-
 </body>
 
 </html>
