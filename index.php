@@ -80,38 +80,53 @@ require "connect.php";
               </div>
 
               <script>
-                plus<?= $i ?> = document.getElementById("plus<?= $i ?>"),
-                minus<?= $i ?> = document.getElementById("minus<?= $i ?>"),
-                num<?= $i ?> = document.getElementById("num<?= $i ?>");
-                let a<?= $i ?> = 1;
-                document.getElementById("quantity<?= $i ?>").value = a<?= $i ?>;
-                //Untuk menambah dan mengurangkan jumlah kamar yang akan dipesan
-                plus<?= $i ?>.addEventListener("click", () => {
-                  a<?= $i ?>++;
-                  if (a<?= $i ?> < 10) {
-                    document.getElementById("quantity<?= $i ?>").value = a<?= $i ?>;
-                    a<?= $i ?> = "0" + a<?= $i ?>;
-                    num<?= $i ?>.innerText = a<?= $i ?>;
-                  } else {
-                    document.getElementById("quantity<?= $i ?>").value = a<?= $i ?>;
-                    num<?= $i ?>.innerText = a<?= $i ?>;
-                  }
-                });
+    let quantity<?= $i ?> = 0;
 
-                minus<?= $i ?>.addEventListener("click", () => {
-                  if (a<?= $i ?> > 1) {
-                    a<?= $i ?>--;
-                    if (a<?= $i ?> < 10) {
-                      document.getElementById("quantity<?= $i ?>").value = a<?= $i ?>;
-                      a<?= $i ?> = "0" + a<?= $i ?>;
-                      num<?= $i ?>.innerText = a<?= $i ?>;
-                    } else {
-                      document.getElementById("quantity<?= $i ?>").value = a<?= $i ?>;
-                      num<?= $i ?>.innerText = a<?= $i ?>;
-                    }
-                  }
-                });
-              </script>
+    // Function to update quantity and display
+    function updateQuantity<?= $i ?>(value) {
+        // Ensure the quantity doesn't go below 0
+        if (quantity<?= $i ?> === 0 && value === -1) {
+            return;
+        }
+
+        quantity<?= $i ?> += value;
+
+        // Update the input and display
+        let quantityInput<?= $i ?> = document.getElementById("quantity<?= $i ?>");
+        quantityInput<?= $i ?>.value = quantity<?= $i ?>;
+
+        let num<?= $i ?> = document.getElementById("num<?= $i ?>");
+        num<?= $i ?>.innerText = quantity<?= $i ?>;
+
+        // Disable/Enable minus button based on quantity
+        let minus<?= $i ?> = document.getElementById("minus<?= $i ?>");
+        if (quantity<?= $i ?> === 0) {
+            minus<?= $i ?>.classList.add('disabled');
+        } else {
+            minus<?= $i ?>.classList.remove('disabled');
+        }
+    }
+
+    document.getElementById("plus<?= $i ?>").addEventListener("click", () => {
+        updateQuantity<?= $i ?>(1);
+    });
+
+    document.getElementById("minus<?= $i ?>").addEventListener("click", () => {
+        updateQuantity<?= $i ?>(-1);
+    });
+
+    // Call the function to set initial state to '0'
+    updateQuantity<?= $i ?>(0);
+</script>
+
+
+
+
+
+
+
+
+
 
               <?php
             }

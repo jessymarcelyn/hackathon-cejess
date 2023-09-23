@@ -1,14 +1,8 @@
 <?php
 
 require "connect.php";
-echo("<script LANGUAGE = 'JavaScript'>
-window.alert('1');
-</script>");
 if (isset($_POST['save'])) {
-    echo("<script LANGUAGE = 'JavaScript'>
-window.alert('2');
-</script>");
-$tgl=  $_POST['tgl'];
+    $tgl=  $_POST['tgl'];
    $q1=  $_POST['q1'];
    $q2=$_POST['q2'];
    $q3=$_POST['q3'];
@@ -30,7 +24,8 @@ $tgl=  $_POST['tgl'];
     } else {
         $sql2 = "INSERT INTO user VALUES (null, '$nama', '$email', '$nomor')";
         $query = mysqli_query($con, $sql2);
-        header("Location: payment.php?tgl=${tgl}&q1=${q1}&q2=${q2}&q3=${q3}&q4=${q4}&q5=${q5}&q6=${q6}&q7=${q7}&q8=${q8}&q9=${q9}&q10=${q10}");
+        $idUser= mysqli_insert_id($con);
+        header("Location: payment.php?id_user=${idUser}&tgl=${tgl}&q1=${q1}&q2=${q2}&q3=${q3}&q4=${q4}&q5=${q5}&q6=${q6}&q7=${q7}&q8=${q8}&q9=${q9}&q10=${q10}");
         }
     }
 

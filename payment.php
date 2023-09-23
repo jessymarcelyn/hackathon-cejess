@@ -40,6 +40,7 @@ require "connect.php";
 
 <body>
 	<?php
+		$idUser=$_GET['id_user'];
 		$tglDapet=$_GET['tgl'];
 		$q1=$_GET['q1'];
         $q2=$_GET['q2'];
@@ -56,6 +57,18 @@ require "connect.php";
 	 <p class= "judul"  style = "background-color :rgb(143, 124, 112); height : 3rem; text-align: center; margin-left : 5rem; margin-right: 5rem; margin-button: 3rem;  margin-top: 3rem;" >Transaction Detail</p>
 		<div style="margin-left: 10vw; margin-right: 10vw;">
 			<form action="pay.php" method="post">
+        <input type="hidden" name="tgl" value="<?php echo ($tgl); ?>">
+		<input type="hidden" name="idUser" value="<?php echo ($idUser); ?>">
+        <input type="hidden" name="q1" value="<?php echo ($q1); ?>">
+        <input type="hidden" name="q2" value="<?php echo ($q2); ?>">
+        <input type="hidden" name="q3" value="<?php echo ($q3); ?>">
+        <input type="hidden" name="q4" value="<?php echo ($q4); ?>">
+        <input type="hidden" name="q5" value="<?php echo ($q5); ?>">
+        <input type="hidden" name="q6" value="<?php echo ($q6); ?>">
+        <input type="hidden" name="q7" value="<?php echo ($q7); ?>">
+        <input type="hidden" name="q8" value="<?php echo ($q8); ?>">
+        <input type="hidden" name="q9" value="<?php echo ($q9); ?>">
+        <input type="hidden" name="q10" value="<?php echo ($q10); ?>">
 			<div class="mb-3 row">
 					<label class="col-sm-3">Tanggal</label>
 					<div class="col-sm-3">
@@ -114,32 +127,23 @@ require "connect.php";
 					</div>
 				</div>				
 				<p class= "judul"  style = "background-color :rgb(143, 124, 112); height : 3rem; text-align: center; margin-left : -3rem; margin-right:8rem; margin-button: 3rem;  margin-top: 3rem; width : 125%;" >Payment Details</p>
+				<p style = " width : 125%;" ><b>BCA 5210932567 A/N Galeri Sidomulyo</b></p>
 				<div class="mb-3 row">
-					<label class="col-sm-2">Name</label>
+					<label class="col-sm-2">Nama Rekening</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" name="name">
+						<input type="text" class="form-control" name="name" required>
 					</div>
 				</div>
 				<div class="mb-3 row">
-					<label class="col-sm-2">Card ID</label>
+					<label class="col-sm-2">Bukti Transfer</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" name="card-id">
+					<input class="form-control" type="file" id="photo" name="photo" required>
 					</div>
 				</div>
-				<div class="mb-3 row">
-					<label class="col-sm-2">CVV Code</label>
-					<div class="col-sm-10">
-						<input type="text" class="form-control" name="cvv">
-					</div>
-				</div>
+
 			<button name="pay" type="submit" class="btn btn-outline-primary mb-3" style="width: 50%; margin-left: 25%">Pay<i class='fas fa-save' style='color:blue'></i></button>
 				
 			</form>
-            <script>
-function detail1() {
-  // Use backticks (`) instead of single quotes (') for the URL string so that variable substitution can be performed.
-  location.href = `user.php?tgl=${tgl}&q1=${quantity1}&q2=${quantity2}&q3=${quantity3}&q4=${quantity4}&q5=${quantity5}&q6=${quantity6}&q7=${quantity7}&q8=${quantity8}&q9=${quantity9}&q10=${quantity10}`;
-}
-</script>
+
 </body>
 </html>
