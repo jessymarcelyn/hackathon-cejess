@@ -750,27 +750,30 @@ Banner Style
 */
 
 .main-banner {
+  content:'';
+  background-image: url(../wisata/akar1.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   padding: 250px 120px 150px 120px;
   position: relative;
   overflow: hidden;
+  height: 100vh;  
 }
 
 .main-banner:after {
+
   content: '';
-  background-image: url(../images/slider-left-dec.png);
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
   left: 0px;
   top: 0px;
   width: 100%;
-  height: 100%;
+
   z-index: 1;
 }
-
+/* 
 .main-banner .left-content {
   margin-right: 15px;
 }
@@ -811,7 +814,7 @@ Banner Style
 .main-banner .left-content .white-button a {
   background-color: #1e4e34;
   color: #fff !important;
-}
+} */
 
 /* 
 ---------------------------------------------

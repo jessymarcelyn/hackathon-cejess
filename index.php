@@ -1,38 +1,49 @@
 <?php include('navbar.html'); ?>
 
-
+<link rel="stylesheet" href="slider.css">
 <body>
 
+      
   <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
     <div class="container">
-      <div class="row">
+    <!-- <section id="slider" class="slider-element slider-parallax swiper_wrapper full-screen force-full-screen clearfix slider-parallax-visible" style="height: 704px;">
+        <div class="slider-parallax-inner" style="height: 704px; transform: translateY(0px);">
+          <div class="swiper-container swiper-parent swiper-container-initialized swiper-container-horizontal" style="cursor: grab;">
+            <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);"> -->
+
+              
+                  
+                    <div class="swiper-slide dark swiper-slide-active" style="background-image:url(../wisata/akar1.jpg); height: 704px; width: 1519px;">
+                      <div class="container clearfix">
+                        <div class="slider-caption slider-caption-center" style="transform: translateY(0px); opacity: 1.26278; top: 282px;">
+                          <h2 data-animate="fadeInUp" class="fadeInUp animated">Museum Rekor-Dunia Indonesia</h2>
+                          <p class="bottommargin fadeInUp animated" data-animate="fadeInUp" data-delay="200"></p>
+                        
+                        </div>
+                      <!-- </div> -->
+                        <div class="overlay" style="background-color: rgba(0,0,0,0.55);"></div>
+                      </div>
+			              </div>
+			<!-- <div class="slider-arrow-left swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true" style="opacity: 1.26278;" fdprocessedid="l20834"><i class="icon-angle-left"></i></div>
+			<div class="slider-arrow-right swiper-button-disabled" tabindex="0" role="button" aria-label="Next slide" aria-disabled="true" style="opacity: 1.26278;" fdprocessedid="i88v37"><i class="icon-angle-right"></i></div> -->
+		<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+
+		<a href="#" data-scrollto="#content" data-offset="100" class="dark one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
+
+	<!-- </div> -->
+
+
+
+<!-- </section> -->
+      <!-- <div class="row">
         <div class="col-lg-12">
           <div class="row">
-            <div class="col-lg-6 align-self-center">
-              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                <div class="row">
-                  <div class="col-lg-12">
-                    <h3>Selamat datang di</h3>
-                    <h2><span>Galeri Gumitir</span></h2><span></span>
-                    <p>
-                      Galeri Gumitir terletak di <span> Sidomulyo Silo, Jember. </span> Kami memiliki banyak tempat
-                      wisata
-                      menarik yang
-                      bisa dinikmati dari anak-anak hingga orang dewasa.
-                    </p>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <img src="assets/images/slider-dec.png" alt="" />
-              </div>
-            </div>
-          </div>
+          <h2>Galeri Gumitir</h2>
+          <h3>Pusat Informasi Pariwisata & Oleh-Oleh</h3>  
+           
         </div>
-      </div>
+      </div> -->
+    <!-- </div> -->
     </div>
   </div>
 
