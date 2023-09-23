@@ -1,95 +1,56 @@
 <?php include('navbar.html'); ?>
 
-<link rel="stylesheet" href="slider.css">
+<link rel="stylesheet" href="assets/css/slider.css">
+
 <body>
 
-      
   <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
     <div class="container">
-    <!-- <section id="slider" class="slider-element slider-parallax swiper_wrapper full-screen force-full-screen clearfix slider-parallax-visible" style="height: 704px;">
+      <!-- <section id="slider" class="slider-element slider-parallax swiper_wrapper full-screen force-full-screen clearfix slider-parallax-visible" style="height: 704px;">
         <div class="slider-parallax-inner" style="height: 704px; transform: translateY(0px);">
           <div class="swiper-container swiper-parent swiper-container-initialized swiper-container-horizontal" style="cursor: grab;">
             <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);"> -->
 
-              
-                  
-                    <div class="swiper-slide dark swiper-slide-active" style="background-image:url(../wisata/akar1.jpg); height: 704px; width: 1519px;">
-                      <div class="container clearfix">
-                        <div class="slider-caption slider-caption-center" style="transform: translateY(0px); opacity: 1.26278; top: 282px;">
-                          <h2 data-animate="fadeInUp" class="fadeInUp animated">Museum Rekor-Dunia Indonesia</h2>
-                          <p class="bottommargin fadeInUp animated" data-animate="fadeInUp" data-delay="200"></p>
-                        
-                        </div>
-                      <!-- </div> -->
-                        <div class="overlay" style="background-color: rgba(0,0,0,0.55);"></div>
-                      </div>
-			              </div>
-			<!-- <div class="slider-arrow-left swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true" style="opacity: 1.26278;" fdprocessedid="l20834"><i class="icon-angle-left"></i></div>
-			<div class="slider-arrow-right swiper-button-disabled" tabindex="0" role="button" aria-label="Next slide" aria-disabled="true" style="opacity: 1.26278;" fdprocessedid="i88v37"><i class="icon-angle-right"></i></div> -->
-		<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-
-		<a href="#" data-scrollto="#content" data-offset="100" class="dark one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
-
-	<!-- </div> -->
 
 
+      <div class="swiper-slide dark swiper-slide-active"
+        style="background-image:url(../wisata/akar1.jpg); height: 704px; width: 1519px;">
+        <div class="container clearfix">
+          <div class="slider-caption slider-caption-center"
+            style="transform: translateY(0px); opacity: 1.26278; top: 282px;">
+            <h2 data-animate="fadeInUp" class="fadeInUp animated">Museum Rekor-Dunia Indonesia</h2>
+            <p class="bottommargin fadeInUp animated" data-animate="fadeInUp" data-delay="200"></p>
 
-<!-- </section> -->
-      <!-- <div class="row">
-        <div class="col-lg-12">
-          <div class="row">
-<<<<<<< HEAD
-          <h2>Galeri Gumitir</h2>
-          <h3>Pusat Informasi Pariwisata & Oleh-Oleh</h3>  
-           
-=======
-            <div class="col-lg-6 align-self-center">
-              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                <div class="row">
-                  <div class="col-lg-12">
-                    <h2>Galeri Gumitir</h2><span></span>
-                    <p>
-                      Galeri Gumitir terletak di <span> Sidomulyo Silo, Jember. </span> Kami memiliki banyak tempat
-                      wisata menarik yang bisa dinikmati dari anak-anak hingga orang dewasa.
-                    </p>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <img src="assets/wisata/akar1.png" alt="" />
-              </div>
-            </div>
           </div>
->>>>>>> 207661de58b596a67ddcde4bf9479d654fd7bfea
+          <!-- </div> -->
+          <div class="overlay" style="background-color: rgba(0,0,0,0.55);"></div>
         </div>
-      </div> -->
-    <!-- </div> -->
+      </div>
+      <!-- <div class="slider-arrow-left swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true" style="opacity: 1.26278;" fdprocessedid="l20834"><i class="icon-angle-left"></i></div>
+      <div class="slider-arrow-right swiper-button-disabled" tabindex="0" role="button" aria-label="Next slide" aria-disabled="true" style="opacity: 1.26278;" fdprocessedid="i88v37"><i class="icon-angle-right"></i></div> -->
+      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
     </div>
+
+    <a href="#" data-scrollto="#content" data-offset="100" class="dark one-page-arrow"><i
+        class="icon-angle-down infinite animated fadeInDown"></i></a>
   </div>
 
-  <div id="services" class="services section">
+  <div id="services" class="services section mb-5">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
           <div class="section-heading wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
-            <h4>Amazing <em>Services &amp; Features</em> for you</h4>
-            <img src="assets/images/heading-line-dec.png" alt="" />
+            <h4>Produk Unggulan Kami</h4>
+            <!-- <img src="assets/images/heading-line-dec.png" alt="" /> -->
             <p>
-              If you need the greatest collection of HTML templates for your
-              business, please visit
-              <a rel="nofollow" href="https://www.toocss.com/" target="_blank">TooCSS</a>
-              Blog. If you need to have a contact form PHP script, go to
-              <a href="https://templatemo.com/contact" target="_parent">our contact page</a>
-              for more information.
+              Kami memiliki 4 produk unggulan dari UMKM yang ada di Sidomulyo. Salah satunya bahkan sudah expor hingga
+              ke Mesir dan Amerika.
             </p>
           </div>
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container mb-5">
       <div class="row">
         <div class="col-lg-3">
           <div class="service-item first-service">
@@ -123,7 +84,8 @@
             <h4>Multi Workflow Idea</h4>
             <p>
               If this template is beneficial for your work, please support us
-              <a rel="nofollow" href="https://paypal.me/templatemo" target="_blank">a little via PayPal</a>. Thank you.
+              <a rel="nofollow" href="https://paypal.me/templatemo" target="_blank">a little via PayPal</a>. Thank
+              you.
             </p>
             <div class="text-button">
               <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
@@ -147,13 +109,107 @@
     </div>
   </div>
 
+
+  <!-- WISATA START -->
+  <div id="pricing">
+    <div class="container" style="margin-top:100px">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2 h-100">
+          <div class="section-heading text-center mt-5">
+            <h4>Paket <em>Wisata </em></h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eismod tempor incididunt ut labore et dolore magna.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 h-100">
+          <div class=" pricing-item">
+            <h4>Paket Wisata Sejarah</h4>
+            <p>
+              Wisata yang ditujukan untuk wisatawan umum dapat belajar
+              mengenal peninggalan sejarah Belanda.
+            </p>
+            <div class="border-button">
+              <a href="sejarah.php">Beli Paket</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 h-100">
+          <div class=" pricing-item">
+            <h4>Paket Wisata Edukasi</h4>
+            <p>
+              Wisata edukasi yang ditujukan untuk pelajar sampai umum yang di mana mereka dapat belajar dengan cara
+              yang lebih menyenangkan.
+            </p>
+            <div class="border-button">
+              <a href="sejarah.php">Beli Paket</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="pricing-item">
+            <h4>Paket Wisata Spiritual</h4>
+            <p>
+              Wisata yang ditujukan untuk wisatawan umum yang memiliki minat melakukan kegiatan spiritual (ziarah).
+            </p>
+            <div class="border-button">
+              <a href="sejarah.php">Beli Paket</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="pricing-item">
+            <h4>Paket Wisata EduKids</h4>
+            <p>
+              Wisata edukasi yang ditujukan untuk anak-anak (TK/PAUD-SD) yang
+              di mana mereka dapat berwisata sambil belajar.
+            </p>
+            <div class="border-button">
+              <a href="sejarah.php">Beli Paket</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="pricing-item">
+            <h4>Paket Wisata Kreatif</h4>
+            <p>
+              Wisata yang dikhusukan bagi pengunjung yang memiliki minat khusus untuk belajar dan berkreasi.
+            </p>
+            <div class="border-button">
+              <a href="sejarah.php">Beli Paket</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="pricing-item">
+            <h4>Sport Tourism</h4>
+            <p>
+              Wisata yang ditujukan untuk peminat gowes dan trail untuk menjelajahi rute hutan pinus yang ada di desa
+              Sidomulyo dengan spot pilihan.
+            </p>
+            <div class="border-button">
+              <a href="sejarah.php">Beli Paket</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- WISATA END -->
+
   <div id="about" class="about-us section">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 align-self-center">
           <div class="section-heading">
-            <h4>About <em>What We Do</em> &amp; Who We Are</h4>
-            <img src="assets/images/heading-line-dec.png" alt="" />
+            <h4>Testimoni</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eismod tempor incididunt ut labore et dolore magna.
@@ -258,109 +314,8 @@
   </div>
   <!-- KONTAK END -->
 
-  <!-- PAKET START -->
-  <div id="pricing" class="pricing-tables">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-          <div class="section-heading">
-            <h4>Paket <em>Wisata </em></h4>
-            <!-- <img src="assets/images/heading-line-dec.png" alt="" /> -->
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eismod tempor incididunt ut labore et dolore magna.
-            </p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="pricing-item-regular">
-            <h4>Paket Wisata Sejarah</h4>
-            <div class="icon">
-              <!-- <img src="assets/images/pricing-table-01.png" alt="" /> -->
-            </div>
-            <p>
-              Wisata yang ditujukan untuk wisatawan umum dapat belajar
-              mengenal peninggalan sejarah Belanda
-            </p>
-            <div class="border-button">
-              <a href="detailSejarah.html">Beli Paket</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="pricing-item-regular">
-            <h4>Paket Wisata Edukasi</h4>
-            <div class="icon">
-              <!-- <img src="assets/images/pricing-table-01.png" alt="" /> -->
-            </div>
-            <ul>
-              <p>Wisata edukasi yang ditujukan untuk pelajar sampai umum yang di mana mereka dapat belajar dengan cara
-                yang lebih menyenangkan</p>
-              <div class="border-button">
-                <a href="detailEdukasi.html">Beli Paket</a>
-              </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="pricing-item-regular">
-            <h4>Paket Wisata Spiritual</h4>
-            <div class="icon">
-              <!-- <img src="assets/images/pricing-table-01.png" alt="" /> -->
-            </div>
-            <p>Wisata yang ditujukan untuk wisatawan umum yang memiliki minat melakukan kegiatan spiritual (ziarah)</p>
-            <div class="border-button">
-              <a href="detailSpiritual.html">Beli Paket</a>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="pricing-item-regular">
-            <h4>Paket Wisata EduKids</h4>
-            <div class="icon">
-              <!-- <img src="assets/images/pricing-table-01.png" alt="" /> -->
-            </div>
-            <p>
-              Wisata edukasi yang ditujukan untuk anak-anak (TK/PAUD-SD) yang
-              di mana mereka dapat berwisata sambil belajar
-            </p>
-            <div class="border-button">
-              <a href="detilEdukids.php">Beli Paket</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="pricing-item-regular">
-            <h4>Paket Wisata Kreatif</h4>
-            <div class="icon">
-              <!-- <img src="assets/images/pricing-table-01.png" alt="" /> -->
-            </div>
-            <p>Wisata yang dikhusukan bagi pengunjung yang memiliki minat khusus untuk belajar dan berkreasi</p>
-            <div class="border-button">
-              <a href="detailKreatif.html">Beli Paket</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="pricing-item-regular">
-            <h4>Sport Tourism</h4>
-            <div class="icon">
-              <!-- <img src="assets/images/pricing-table-01.png" alt="" /> -->
-            </div>
-            <p>Wisata yang ditujukan untuk peminat gowes dan trail untuk menjelajahi rute hutan pinus yang ada di desa
-              Sidomulyo dengan spot pilihan</p>
-            <div class="border-button">
-              <a href="#">Beli Paket</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- PAKET END -->
 
   <footer id="newsletter">
     <div class="container">

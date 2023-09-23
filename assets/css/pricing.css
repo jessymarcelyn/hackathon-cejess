@@ -7,16 +7,18 @@
     margin-bottom: 80px;
   }
   
-  .pricing-tables  .section-heading p {
+  .pricing-tables .section-heading p {
     margin-top: 10px;
     margin-left: 18%;
     margin-right: 18%;
   }
-  
-  .pricing-item-regular {
+
+  .pricing-item {
     margin-top: 30px;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.07);
     border-radius: 50px;
+    border: 0.3px solid #1e4e34;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.5);
+    background: linear-gradient(0deg, rgba(139,173,156), #fff);
     padding: 90px 30px;
     text-align: center;
     position: relative;
@@ -25,32 +27,30 @@
     transition: .5s ease-in-out;
     font-weight: bold;
   }
-  
-  .pricing-item-regular:before {
+
+  .pricing-item:before {
     position: absolute;
     top: 0;
     left: 0;
-    /* background-image: url(../images/regular-table-top.png); */
     z-index: 0;
     content: '';
     width: 274px;
     height: 221px;
     transition: .5s ease-in-out;
   }
-  
-  .pricing-item-regular:after {
+
+  .pricing-item:after {
     position: absolute;
     bottom: 0;
     right: 0;
-    /* background-image: url(../images/regular-table-bottom.png);  */
     z-index: 0;
     content: '';
     width: 370px;
     height: 171px;
     transition: .5s ease-in-out;
-  }
+  }  
   
-  .pricing-item-regular span.price {
+  .pricing-item span.price {
     font-size: 40px;
     color: #fff;
     position: absolute;
@@ -60,127 +60,70 @@
     top: 30px;
   }
   
-  .pricing-item-regular h4 {
+  .pricing-item h4 {
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 30px;
   }
   
-  .pricing-item-regular .icon img {
+  .pricing-item .icon img {
     width: 120px;
     height: 106px;
     margin-bottom: 30px;
   }
   
-  .pricing-item-regular ul li {
+  .pricing-item ul li {
     color: #1e4e34;
     font-size: 15px;
     margin-bottom: 15px;
   }
   
-  .pricing-item-regular ul li:last-child {
+  .pricing-item ul li:last-child {
     margin-bottom: 0px;
   }
   
-  .pricing-item-regular ul li.non-function {
+  .pricing-item ul li.non-function {
     color: #afafaf;
     text-decoration: line-through;
   }
   
-  .pricing-item-regular .border-button {
+  .pricing-item .border-button {
     position: relative;
     z-index: 1;
     margin-top: 40px;
   }
 
-  .pricing-item-regular:hover {
+  .pricing-item:hover {
     box-shadow: 0px 0px 15px rgba(0,0,0,0.07);
     border-radius: 50px;
-    padding: 120px 30px;
+    padding: 100px 30px;
     text-align: center;
     position: relative;
     z-index: 1;
     overflow: hidden;
   }
 
-  .pricing-item-regular:hover::before {
+  .pricing-item:hover::before {
     position: absolute;
     top: 0;
     left: 0;
-    /* background-image: url(../images/pro-table-top.png); */
     z-index: 0;
     content: '';
     width: 281px;
-    height: 251px;
+    height: 221px;
   }
 
-  .pricing-item-regular:hover::after {
+  .pricing-item:hover::after {
     position: absolute;
     bottom: 0;
     right: 0;
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-image: url(../images/pro-table-bottom.png); */
     z-index: 0;
     content: '';
     width: 100%;
     height: 201px;
   }
-  
-  .pricing-item-pro:after {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* background-image: url(../images/pro-table-bottom.png); */
-    z-index: 0;
-    content: '';
-    width: 100%;
-    height: 201px;
-  }
-  
-  .pricing-item-pro span.price {
-    font-size: 40px;
-    color: #fff;
-    position: absolute;
-    font-weight: 700;
-    z-index: 1;
-    left: 30px;
-    top: 30px;
-  }
-  
-  .pricing-item-pro h4 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 30px;
-  }
-  
-  .pricing-item-pro .icon img {
-    width: 120px;
-    height: 106px;
-    margin-bottom: 30px;
-  }
-  
-  .pricing-item-pro ul li {
-    color: #1e4e34;
-    font-size: 15px;
-    margin-bottom: 15px;
-  }
-  
-  .pricing-item-pro ul li:last-child {
-    margin-bottom: 0px;
-  }
-  
-  .pricing-item-pro ul li.non-function {
-    color: #afafaf;
-    text-decoration: line-through;
-  }
-  
-  .pricing-item-pro .border-button {
-    position: relative;
-    z-index: 1;
-    margin-top: 40px;
-  }
+
   
   
