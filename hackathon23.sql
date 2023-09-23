@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 23, 2023 at 05:48 AM
+-- Generation Time: Sep 23, 2023 at 03:31 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -84,27 +84,29 @@ INSERT INTO `detail_transaksi` (`id_detail`, `quantity`, `amount`, `id_wisata`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `klien`
+-- Table structure for table `quiz`
 --
 
-CREATE TABLE `klien` (
+CREATE TABLE `quiz` (
   `id` int(11) NOT NULL,
-  `nama` varchar(300) NOT NULL,
-  `alamat` text NOT NULL,
-  `biaya` varchar(30) NOT NULL,
-  `order_id` varchar(30) NOT NULL,
-  `transaction_status` varchar(5) NOT NULL,
-  `email` text NOT NULL
+  `email` varchar(30) NOT NULL,
+  `tanggal_main` date NOT NULL,
+  `no_telp` varchar(13) NOT NULL,
+  `menang` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `klien`
+-- Dumping data for table `quiz`
 --
 
-INSERT INTO `klien` (`id`, `nama`, `alamat`, `biaya`, `order_id`, `transaction_status`, `email`) VALUES
-(5, 'TATA KUSTARA', 'malahyu', '100000', '142011798', '1', 'kustaratata99@gmail.com'),
-(6, 'NUR AMALUNA AFIAH', 'brebes', '100000', '1288264184', '1', 'tatakustara.guru@gmail.com'),
-(7, 'sda', 'asda', '100000', '1045168314', '1', 'tina@gmail.com');
+INSERT INTO `quiz` (`id`, `email`, `tanggal_main`, `no_telp`, `menang`) VALUES
+(1, 'asda@gmail.com', '2023-09-23', '0812313', 0),
+(2, 'asdam@gmail.com', '2023-09-23', '0812233445', 0),
+(3, 'asdamm@gmail.com', '2023-09-23', '0813456788', 0),
+(4, 'asdasd@gmail.com', '2023-09-23', '08123132', 0),
+(5, '132@gmail.com', '2023-09-23', '012832813', 0),
+(6, 'aksdk@gmail.com', '2023-09-23', '0812312', 0),
+(7, 'asdawsd@gmail.com', '2023-09-23', '0812312', 0);
 
 -- --------------------------------------------------------
 
@@ -118,32 +120,31 @@ CREATE TABLE `transaksi` (
   `total_transaksi` int(9) NOT NULL,
   `status` tinyint(1) NOT NULL,
   `id_user` int(11) NOT NULL,
-  `nama_rekening` varchar(30) NOT NULL,
-  `foto` varchar(100) NOT NULL
+  `nama_rekening` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `transaksi`
 --
 
-INSERT INTO `transaksi` (`id_transaksi`, `tanggal_transaksi`, `total_transaksi`, `status`, `id_user`, `nama_rekening`, `foto`) VALUES
-(1, '2023-09-23', 0, 0, 29, 'Budi Santoso', '1367371.jpg'),
-(2, '2023-09-23', 0, 0, 29, 'Budi Santoso', '1367371.jpg'),
-(3, '2023-09-23', 0, 0, 29, 'Budi Santoso', '1367371.jpg'),
-(4, '2023-09-23', 0, 0, 29, 'Budi Santoso', '1367371.jpg'),
-(5, '2023-09-23', 0, 0, 30, 'adsda', '1367371.jpg'),
-(6, '2023-09-23', 0, 0, 30, 'adsda', '1367371.jpg'),
-(7, '2023-09-23', 0, 0, 30, 'adsda', '1367371.jpg'),
-(8, '2023-09-23', 0, 0, 30, 'adsda', '1367371.jpg'),
-(9, '2023-09-23', 0, 0, 30, 'adsda', '1367371.jpg'),
-(10, '2023-09-23', 0, 0, 30, 'adsda', '1367371.jpg'),
-(11, '2023-09-23', 0, 0, 30, 'adsda', '1367371.jpg'),
-(12, '2023-09-23', 0, 0, 30, 'adsda', '1367371.jpg'),
-(13, '2023-09-23', 0, 0, 30, 'adsda', '1367371.jpg'),
-(14, '2023-09-23', 0, 0, 30, 'adsda', '1367371.jpg'),
-(15, '2023-09-23', 100000, 0, 30, 'adsda', '1367371.jpg'),
-(16, '2023-09-23', 130000, 0, 31, 'maria', '1367371.jpg'),
-(17, '2023-09-23', 60000, 0, 32, 'maria', '1367371.jpg');
+INSERT INTO `transaksi` (`id_transaksi`, `tanggal_transaksi`, `total_transaksi`, `status`, `id_user`, `nama_rekening`) VALUES
+(1, '2023-09-23', 0, 0, 29, 'Budi Santoso'),
+(2, '2023-09-23', 0, 0, 29, 'Budi Santoso'),
+(3, '2023-09-23', 0, 0, 29, 'Budi Santoso'),
+(4, '2023-09-23', 0, 0, 29, 'Budi Santoso'),
+(5, '2023-09-23', 0, 0, 30, 'adsda'),
+(6, '2023-09-23', 0, 0, 30, 'adsda'),
+(7, '2023-09-23', 0, 0, 30, 'adsda'),
+(8, '2023-09-23', 0, 0, 30, 'adsda'),
+(9, '2023-09-23', 0, 0, 30, 'adsda'),
+(10, '2023-09-23', 0, 0, 30, 'adsda'),
+(11, '2023-09-23', 0, 0, 30, 'adsda'),
+(12, '2023-09-23', 0, 0, 30, 'adsda'),
+(13, '2023-09-23', 0, 0, 30, 'adsda'),
+(14, '2023-09-23', 0, 0, 30, 'adsda'),
+(15, '2023-09-23', 100000, 0, 30, 'adsda'),
+(16, '2023-09-23', 130000, 0, 31, 'maria'),
+(17, '2023-09-23', 60000, 0, 32, 'maria');
 
 -- --------------------------------------------------------
 
@@ -205,25 +206,24 @@ INSERT INTO `user` (`id`, `nama`, `email`, `no_telp`) VALUES
 CREATE TABLE `wisata` (
   `id_wisata` int(11) NOT NULL,
   `nama` varchar(30) NOT NULL,
-  `harga` int(20) NOT NULL,
-  `image` varchar(30) NOT NULL
+  `harga` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `wisata`
 --
 
-INSERT INTO `wisata` (`id_wisata`, `nama`, `harga`, `image`) VALUES
-(1, 'Raja Domba', 10000, ''),
-(2, 'Rumah Batik', 10000, ''),
-(3, 'Rumah Akar', 10000, ''),
-(4, 'Sendang Tirto Gumitir', 10000, ''),
-(5, 'PPG Wisata Pinus', 10000, ''),
-(6, 'Cafe Gumitir', 10000, ''),
-(7, 'Terowongan Mrawan', 10000, ''),
-(8, 'Stasiun Mrawan', 10000, ''),
-(9, 'Kopi Ketakasi', 10000, ''),
-(10, 'Pabrik Kopi Mrawan', 10000, '');
+INSERT INTO `wisata` (`id_wisata`, `nama`, `harga`) VALUES
+(1, 'Raja Domba', 10000),
+(2, 'Rumah Batik', 10000),
+(3, 'Rumah Akar', 10000),
+(4, 'Sendang Tirto Gumitir', 10000),
+(5, 'PPG Wisata Pinus', 10000),
+(6, 'Cafe Gumitir', 10000),
+(7, 'Terowongan Mrawan', 10000),
+(8, 'Stasiun Mrawan', 10000),
+(9, 'Kopi Ketakasi', 10000),
+(10, 'Pabrik Kopi Mrawan', 10000);
 
 --
 -- Indexes for dumped tables
@@ -238,9 +238,9 @@ ALTER TABLE `detail_transaksi`
   ADD KEY `fk_id_transaksi` (`id_transaksi`);
 
 --
--- Indexes for table `klien`
+-- Indexes for table `quiz`
 --
-ALTER TABLE `klien`
+ALTER TABLE `quiz`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -272,9 +272,9 @@ ALTER TABLE `detail_transaksi`
   MODIFY `id_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
--- AUTO_INCREMENT for table `klien`
+-- AUTO_INCREMENT for table `quiz`
 --
-ALTER TABLE `klien`
+ALTER TABLE `quiz`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
