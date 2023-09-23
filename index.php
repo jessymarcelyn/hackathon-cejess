@@ -1,122 +1,167 @@
 <?php include('navbar.php'); ?>
 
+<link rel="stylesheet" href="assets/css/slider.css">
 
 <body>
 
   <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="row">
-            <div class="col-lg-6 align-self-center">
-              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                <div class="row">
-                  <div class="col-lg-12">
-                    <h2>Galeri Gumitir</h2><span></span>
-                    <p>
-                      Galeri Gumitir terletak di <span> Sidomulyo Silo, Jember. </span> Kami memiliki banyak tempat
-                      wisata menarik yang bisa dinikmati dari anak-anak hingga orang dewasa.
-                    </p>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <img src="assets/wisata/akar1.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="text-center title-landing">
+        <h2 data-animate="fadeInUp" class="wow fadeInUp animated text-white">
+          Galeri Gumitir
+        </h2>
+        <p class="bottommargin fadeInUp animated" data-animate="fadeInUp" data-delay="200">Pusat Informasi Wisata dan
+          Oleh-Oleh Desa Sidomulyo Silo, Jember.</p>
       </div>
+    </div>
+    <div class="text-center arrow-down">
+      <a href="#produk"><i class="fa-solid fa-circle-arrow-down text-white" style="font-size: 30pt; top:100px "></i></a>
     </div>
   </div>
 
-  <div id="services" class="services section">
+  <div id="produk" class="produk section mb-5">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
-          <div class="section-heading wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
-            <h4>Amazing <em>Services &amp; Features</em> for you</h4>
-            <img src="assets/images/heading-line-dec.png" alt="" />
+          <div class="section-heading wow fadeInDown text-center" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h4>Produk Unggulan Kami</h4>
+            <!-- <img src="assets/images/heading-line-dec.png" alt="" /> -->
             <p>
-              If you need the greatest collection of HTML templates for your
-              business, please visit
-              <a rel="nofollow" href="https://www.toocss.com/" target="_blank">TooCSS</a>
-              Blog. If you need to have a contact form PHP script, go to
-              <a href="https://templatemo.com/contact" target="_parent">our contact page</a>
-              for more information.
+              Kami memiliki 4 produk unggulan dari UMKM yang ada di Sidomulyo. Salah satunya bahkan sudah expor hingga
+              ke Mesir dan Amerika.
             </p>
           </div>
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container mb-5">
       <div class="row">
         <div class="col-lg-3">
-          <div class="service-item first-service">
-            <div class="icon"></div>
-            <h4>App Maintenance</h4>
-            <p>
-              You are not allowed to redistribute this template ZIP file on
-              any other website.
-            </p>
-            <div class="text-button">
-              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
-            </div>
+          <div class="service-item first-service h-100">
+            <img src="assets/images/promo1.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-3 ">
+          <div class="service-item second-service h-100">
+            <img src="assets/images/promo5.jpg" alt="">
           </div>
         </div>
         <div class="col-lg-3">
-          <div class="service-item second-service">
-            <div class="icon"></div>
-            <h4>Rocket Speed of App</h4>
-            <p>
-              You are allowed to use the Chain App Dev HTML template. Feel
-              free to modify or edit this layout.
-            </p>
-            <div class="text-button">
-              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="service-item third-service">
-            <div class="icon"></div>
-            <h4>Multi Workflow Idea</h4>
-            <p>
-              If this template is beneficial for your work, please support us
-              <a rel="nofollow" href="https://paypal.me/templatemo" target="_blank">a little via PayPal</a>. Thank you.
-            </p>
-            <div class="text-button">
-              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
-            </div>
+          <div class="service-item third-service h-100">
+            <img src="assets/images/promo4.jpg" alt="">
           </div>
         </div>
         <div class="col-lg-3">
           <div class="service-item fourth-service">
-            <div class="icon"></div>
-            <h4>24/7 Help &amp; Support</h4>
-            <p>
-              Lorem ipsum dolor consectetur adipiscing elit sedder
-              williamsburg photo booth quinoa and fashion axe.
-            </p>
-            <div class="text-button">
-              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
-            </div>
+            <img src="assets/images/promo2.jpg" alt="">
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div id="about" class="about-us section">
+
+  <!-- WISATA START -->
+  <div id="pricing">
+    <div class="container" style="margin-top:100px">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading text-center mt-5">
+            <h4>Paket <em>Wisata </em></h4>
+            <p>
+              Galeri Gumitir menyediakan wahana hiburan yaitu wisata yang unik. Kami memiliki wisata domba, wisata hutan
+              pinus, wisata rumah akar, dan banyak wisata lainnya.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+          <div class="pricing-item h-100">
+            <h4>Paket Wisata Sejarah</h4>
+            <p>
+              Wisata yang ditujukan untuk wisatawan umum dapat belajar
+              mengenal peninggalan sejarah Belanda.
+            </p>
+            <div class="border-button">
+              <a href="sejarah.php">Beli Paket</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+          <div class=" pricing-item h-100">
+            <h4>Paket Wisata Edukasi</h4>
+            <p>
+              Wisata edukasi yang ditujukan untuk pelajar sampai umum yang di mana mereka dapat belajar dengan cara
+              yang lebih menyenangkan.
+            </p>
+            <div class="border-button">
+              <a href="edukasi.php">Beli Paket</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4">
+          <div class="pricing-item h-100">
+            <h4>Paket Wisata Spiritual</h4>
+            <p>
+              Wisata yang ditujukan untuk wisatawan umum yang memiliki minat melakukan kegiatan spiritual (ziarah).
+            </p>
+            <div class="border-button">
+              <a href="spiritual.php">Beli Paket</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="pricing-item h-100">
+            <h4>Paket Wisata EduKids</h4>
+            <p>
+              Wisata edukasi yang ditujukan untuk anak-anak (TK/PAUD-SD) yang
+              di mana mereka dapat berwisata sambil belajar.
+            </p>
+            <div class="border-button">
+              <a href="edukids.php">Beli Paket</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="pricing-item h-100">
+            <h4>Paket Wisata Kreatif</h4>
+            <p>
+              Wisata yang dikhusukan bagi pengunjung yang memiliki minat khusus untuk belajar dan berkreasi.
+            </p>
+            <div class="border-button">
+              <a href="kreatif.php">Beli Paket</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="pricing-item h-100">
+            <h4>Sport Tourism</h4>
+            <p>
+              Wisata yang ditujukan untuk peminat gowes dan trail untuk menjelajahi rute hutan pinus yang ada di desa
+              Sidomulyo dengan spot pilihan.
+            </p>
+            <div class="border-button">
+              <a href="sport.php">Beli Paket</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- WISATA END -->
+
+  <!-- TESTIMONI -->
+  <div id="testimoni" class="testimoni section">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 align-self-center">
+        <div class="col-lg-12 align-self-center text-center">
           <div class="section-heading">
-            <h4>About <em>What We Do</em> &amp; Who We Are</h4>
-            <img src="assets/images/heading-line-dec.png" alt="" />
+            <h4>Testimoni</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eismod tempor incididunt ut labore et dolore magna.
@@ -125,37 +170,43 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="box-item">
-                <h4><a href="#">Maintance Problems</a></h4>
-                <p>Lorem Ipsum Text</p>
+                <h4><a href="#">Anita Romero</a></h4>
+                <i class="fa-solid fa-star" style="color: #fff700;"></i><i class="fa-solid fa-star"
+                  style="color: #fff700;"></i><i class="fa-solid fa-star" style="color: #fff700;"></i><i
+                  class="fa-solid fa-star" style="color: #fff700;"></i><i class="fa-solid fa-star"
+                  style="color: #fff700;"></i>
+                <p>Tempatnya bagus dan estetik.</p>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="box-item">
-                <h4><a href="#">24/7 Support &amp; Help</a></h4>
-                <p>Lorem Ipsum Text</p>
+                <h4><a href="#">Alvin Tejo</a></h4>
+                <i class="fa-solid fa-star" style="color: #fff700;"></i><i class="fa-solid fa-star"
+                  style="color: #fff700;"></i><i class="fa-solid fa-star" style="color: #fff700;"></i><i
+                  class="fa-solid fa-star" style="color: #fff700;"></i><i class="fa-solid fa-star"
+                  style="color: #fff700;"></i>
+                <p>Banyak spot foto.</p>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="box-item">
-                <h4><a href="#">Fixing Issues About</a></h4>
-                <p>Lorem Ipsum Text</p>
+                <h4><a href="#">Jessiah Beni</a></h4>
+                <i class="fa-solid fa-star" style="color: #fff700;"></i><i class="fa-solid fa-star"
+                  style="color: #fff700;"></i><i class="fa-solid fa-star" style="color: #fff700;"></i><i
+                  class="fa-solid fa-star" style="color: #fff700;"></i><i class="fa-solid fa-star"
+                  style="color: #fff700;"></i>
+                <p>Cocok untuk anak-anak dan anak remaja.</p>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="box-item">
-                <h4><a href="#">Co. Development</a></h4>
-                <p>Lorem Ipsum Text</p>
+                <h4><a href="#">Cilmora Eki</a></h4>
+                <i class="fa-solid fa-star" style="color: #fff700;"></i><i class="fa-solid fa-star"
+                  style="color: #fff700;"></i><i class="fa-solid fa-star" style="color: #fff700;"></i><i
+                  class="fa-solid fa-star" style="color: #fff700;"></i><i class="fa-solid fa-star"
+                  style="color: #fff700;"></i>
+                <p>Banyak camilan dari UMKM yang enak.</p>
               </div>
-            </div>
-            <div class="col-lg-12">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eismod tempor idunte ut labore et dolore adipiscing magna.
-              </p>
-              <div class="gradient-button">
-                <a href="#">Start 14-Day Free Trial</a>
-              </div>
-              <span>*No Credit Card Required</span>
             </div>
           </div>
         </div>
@@ -167,9 +218,10 @@
       </div>
     </div>
   </div>
+  <!-- TESTIMONI END -->
 
   <!-- KONTAK START -->
-  <div id="clients" class="the-clients">
+  <div id="kontak" class="the-clients">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
@@ -221,117 +273,13 @@
   </div>
   <!-- KONTAK END -->
 
-  <!-- PAKET START -->
-  <div id="pricing" class="pricing-tables">
+  <footer id="donasi">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
           <div class="section-heading">
-            <h4>Paket <em>Wisata </em></h4>
-            <!-- <img src="assets/images/heading-line-dec.png" alt="" /> -->
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eismod tempor incididunt ut labore et dolore magna.
-            </p>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="pricing-item-regular">
-            <h4>Paket Wisata Sejarah</h4>
-            <div class="icon">
-              <!-- <img src="assets/images/pricing-table-01.png" alt="" /> -->
-            </div>
-            <p>
-              Wisata yang ditujukan untuk wisatawan umum dapat belajar
-              mengenal peninggalan sejarah Belanda
-            </p>
-            <div class="border-button">
-              <a href="detailSejarah.html">Beli Paket</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="pricing-item-regular">
-            <h4>Paket Wisata Edukasi</h4>
-            <div class="icon">
-              <!-- <img src="assets/images/pricing-table-01.png" alt="" /> -->
-            </div>
-            <ul>
-              <p>Wisata edukasi yang ditujukan untuk pelajar sampai umum yang di mana mereka dapat belajar dengan cara
-                yang lebih menyenangkan</p>
-              <div class="border-button">
-                <a href="detailEdukasi.html">Beli Paket</a>
-              </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="pricing-item-regular">
-            <h4>Paket Wisata Spiritual</h4>
-            <div class="icon">
-              <!-- <img src="assets/images/pricing-table-01.png" alt="" /> -->
-            </div>
-            <p>Wisata yang ditujukan untuk wisatawan umum yang memiliki minat melakukan kegiatan spiritual (ziarah)</p>
-            <div class="border-button">
-              <a href="detailSpiritual.html">Beli Paket</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="pricing-item-regular">
-            <h4>Paket Wisata EduKids</h4>
-            <div class="icon">
-              <!-- <img src="assets/images/pricing-table-01.png" alt="" /> -->
-            </div>
-            <p>
-              Wisata edukasi yang ditujukan untuk anak-anak (TK/PAUD-SD) yang
-              di mana mereka dapat berwisata sambil belajar
-            </p>
-            <div class="border-button">
-              <a href="detilEdukids.php">Beli Paket</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="pricing-item-regular">
-            <h4>Paket Wisata Kreatif</h4>
-            <div class="icon">
-              <!-- <img src="assets/images/pricing-table-01.png" alt="" /> -->
-            </div>
-            <p>Wisata yang dikhusukan bagi pengunjung yang memiliki minat khusus untuk belajar dan berkreasi</p>
-            <div class="border-button">
-              <a href="detailKreatif.html">Beli Paket</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="pricing-item-regular">
-            <h4>Sport Tourism</h4>
-            <div class="icon">
-              <!-- <img src="assets/images/pricing-table-01.png" alt="" /> -->
-            </div>
-            <p>Wisata yang ditujukan untuk peminat gowes dan trail untuk menjelajahi rute hutan pinus yang ada di desa
-              Sidomulyo dengan spot pilihan</p>
-            <div class="border-button">
-              <a href="#">Beli Paket</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- PAKET END -->
-
-  <footer id="newsletter">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-          <div class="section-heading">
-            <h4>
-              Join our mailing list to receive the news &amp; latest trends
+            <h4 class="">
+              Mari Berdonasi
             </h4>
           </div>
         </div>
@@ -340,14 +288,14 @@
             <div class="row">
               <div class="col-lg-6 col-sm-6">
                 <fieldset>
-                  <input type="address" name="address" class="email" placeholder="Email Address..." autocomplete="on"
+                  <input type="address" name="address" class="email" placeholder="Email..." autocomplete="on"
                     required />
                 </fieldset>
               </div>
               <div class="col-lg-6 col-sm-6">
                 <fieldset>
                   <button type="submit" class="main-button">
-                    Subscribe Now <i class="fa fa-angle-right"></i>
+                    Donasi <i class="fa fa-angle-right"></i>
                   </button>
                 </fieldset>
               </div>
@@ -356,66 +304,37 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-3">
+        <div class="col-lg-6">
           <div class="footer-widget">
-            <h4>Contact Us</h4>
-            <p>Rio de Janeiro - RJ, 22795-008, Brazil</p>
-            <p><a href="#">010-020-0340</a></p>
-            <p><a href="#">info@company.co</a></p>
+            <h4>Kontak Kami</h4>
+            <p><i class="fa-solid fa-location-dot me-2"></i>Sidomulyo Silo, Jember</p>
+            <p><a href="#"><i class="fa-brands fa-whatsapp me-2"></i>+62 857-0700-3873</a></p>
           </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-6">
           <div class="footer-widget">
-            <h4>About Us</h4>
+            <h4>Tentang Kami</h4>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Testimonials</a></li>
-              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Rumah Akar</a></li>
+              <li><a href="#">Ketakasi</a></li>
+              <li><a href="#">Cafe Gumitir </a></li>
+              <li><a href="#">Gowes</a></li>
+              <li><a href="#">Stasiun Mrawan</a></li>
             </ul>
             <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Testimonials</a></li>
-              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Sendang Tirto</a></li>
+              <li><a href="#">SAT</a></li>
+              <li><a href="#">Raja Domba</a></li>
+              <li><a href="#">PPG Pinus</a></li>
+              <li><a href="#">Habib Ali</a></li>
             </ul>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="footer-widget">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><a href="#">Free Apps</a></li>
-              <li><a href="#">App Engine</a></li>
-              <li><a href="#">Programming</a></li>
-              <li><a href="#">Development</a></li>
-              <li><a href="#">App News</a></li>
-            </ul>
-            <ul>
-              <li><a href="#">App Dev Team</a></li>
-              <li><a href="#">Digital Web</a></li>
-              <li><a href="#">Normal Apps</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="footer-widget">
-            <h4>About Our Company</h4>
-            <div class="logo">
-              <img src="assets/images/white-logo.png" alt="" />
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore.
-            </p>
           </div>
         </div>
         <div class="col-lg-12">
           <div class="copyright-text">
             <p>
-              Copyright © 2022 Chain App Dev Company. All Rights Reserved.
-              <br />Design:
-              <a href="https://templatemo.com/" target="_blank" title="css templates">TemplateMo</a>
+              Copyright © 2023 Tim CEJESS. Hackathon 2023.
+
             </p>
           </div>
         </div>

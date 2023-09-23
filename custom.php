@@ -1,6 +1,6 @@
 <?php session_start();
 require "connect.php";
-include('navbar.html'); ?>
+include('navbar.php'); ?>
 <style>
     /* Your custom CSS styles */
     .plusminus {
@@ -24,10 +24,7 @@ include('navbar.html'); ?>
         user-select: none;
     }
 
-    img {
-        width: 20%;
-        height: 20%;
-    }
+
 
     body {
         box-sizing: border-box;
@@ -42,14 +39,13 @@ include('navbar.html'); ?>
 
 <body>
 
-    <div id="about" class="about-us section">
+    <div id="testimoni" class="testimoni section">
         <div class="container">
             <form action="booking.php" method="post">
                 <div class="row">
                     <div class="col-lg-12 align-self-center">
                         <div class="section-heading">
                             <h4>Pilih Paket Wisata yang Anda Inginkan</h4>
-                            <img src="assets/images/heading-line-dec.png" alt="" />
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                                 eismod tempor incididunt ut labore et dolore magna.
@@ -127,8 +123,8 @@ include('navbar.html'); ?>
                             ?>
 
                             <div class="row">
-                                <div class="col-md-4">
-                                    <input type="date" class="form-control" id="tgl">
+                                <div class="col-md-4 mb-2">
+                                    <input type="date" class="form-control mb-2" id="tgl">
 
                                     <button type="button" class="btn btn-secondary" onclick="detail1()">Book</button>
                                 </div>

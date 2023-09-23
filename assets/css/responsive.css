@@ -94,27 +94,27 @@ responsive
       text-align: center;
       margin-bottom: 30px;
     }
-    .about-us .box-item {
+    .testimoni .box-item {
       text-align: center;
     }
-    .about-us:after {
+    .testimoni:after {
       display: none;
     }
-    .about-us .gradient-button,
-    .about-us span {
+    .testimoni .gradient-button,
+    .testimoni span {
       text-align: center;
       display: block;
     }
-    .about-us .right-image {
+    .testimoni .right-image {
       margin-top: 30px;
     }
     .service-item .icon {
       margin: 0 auto 30px auto;
     }
-    .about-us .section-heading {
+    .testimoni .section-heading {
       text-align: center;
     }
-    .about-us .left-image {
+    .testimoni .left-image {
       margin-right: 30px;
       margin-left: 30px;
       margin-bottom: 45px;
@@ -201,7 +201,7 @@ responsive
     .menu .thumb span.category {
       display: none;
     }
-    .about-us .right-image {
+    .testimoni .right-image {
       margin-top: 30px;
     }
     .service-item .icon {
@@ -235,10 +235,10 @@ responsive
       float: none;
     }
     .our-portfolio .section-heading,
-    .about-us .section-heading,
-    .about-us .about-item,
-    .about-us p,
-    .about-us .main-green-button {
+    .testimoni .section-heading,
+    .testimoni .about-item,
+    .testimoni p,
+    .testimoni .main-green-button {
       text-align: center;
     }
     .our-portfolio .section-heading .line-dec {
@@ -270,7 +270,7 @@ responsive
     .post-item .right-content p {
       display: none;
     }
-    .about-us .about-item {
+    .testimoni .about-item {
       margin-top: 15px;
     }
     form#contact {

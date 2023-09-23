@@ -85,8 +85,9 @@
                       </button>
                     </div>
                     <div class="col-md-2">
-                      <button class="btn beli align-self-center">Beli
-                        sekarang</button>
+                      <a href="https://wa.me/6285707003873?text=Halo, saya ingin membeli paket Wisata EduKids sebanyak (isi banyak paket yang diinginkan): 1 "
+                        target="_blank" class="navbar__highlight"><button class="btn beli align-self-center">Beli
+                          sekarang</button></a>
                     </div>
                   </div>
 
@@ -120,7 +121,10 @@
                       </button>
                     </div>
                     <div class="col-md-2">
-                      <button class="btn  beli align-self-center">Beli sekarang</button>
+                      <a href="https://wa.me/6285707003873?text=Halo, saya ingin membeli paket Wisata EduKids sebanyak (isi banyak paket yang diinginkan): 1 
+                      Berikut bukti transfer saya." target="_blank" class="navbar__highlight"><button
+                          class="btn beli align-self-center">Beli
+                          sekarang</button></a>
                     </div>
                   </div>
 
@@ -148,9 +152,11 @@
                       </button>
                     </div>
                     <div class="col-md-2">
-                      <button class="btn beli align-self-center">Beli sekarang</button>
+                      <a href="https://wa.me/6285707003873?text=Halo, saya ingin membeli paket Wisata EduKids sebanyak (isi banyak paket yang diinginkan): 1 
+                      Berikut bukti transfer saya." target="_blank" class="navbar__highlight"><button
+                          class="btn beli align-self-center">Beli
+                          sekarang</button></a>
                     </div>
-                  </div>
 
                 </h2>
               </div>
