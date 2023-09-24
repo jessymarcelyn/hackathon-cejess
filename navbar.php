@@ -148,7 +148,9 @@
             <input name="nama" type="text" class="form-control border-0 py-2 mb-2 mt-3" placeholder="Nama" />
             <input name="noTelp" type="text" class="form-control border-0 py-2 mb-2 mt-3" placeholder="Nomor Telepon" />
             <input name="emailk" type="email" class="form-control border-0 py-2 mb-2 mt-3" placeholder="Email" />
-            <button name="play" class="btn btn-register w-100 py-2 mt-3">Main Kuis!</button>
+            <a href="quiz.php" name="play" class="btn w-100 py-2 mt-3 text-white" style=" background:#1e4e34">Main
+              Kuis!</a>
+            <!-- <button name="play" class="btn btn-register w-100 py-2 mt-3"></button> -->
           </div>
         </form>
       </div>

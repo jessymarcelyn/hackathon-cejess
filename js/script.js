@@ -137,8 +137,8 @@ function showResult(){
     quiz_box.classList.remove("activeQuiz"); //hide quiz box
     result_box.classList.add("activeResult"); //show result box
     const scoreText = result_box.querySelector(".score_text");
-    if (userScore == 5) {
-        let scoreTag = '<span>Anda menjawab 5 nomor dengan tepat! Selamat Anda mendapatkan Voucher Galeri Gumitir</span>';
+    if (userScore == 10) {
+        let scoreTag = '<span>Anda menjawab 10 nomor dengan tepat! Selamat Anda mendapatkan Voucher Galeri Gumitir</span>';
         scoreText.innerHTML = scoreTag;
 
         // Create an AJAX object
@@ -167,7 +167,7 @@ function showResult(){
         
 
     }
-    else if (userScore > 1 && userScore <=4){ // if user scored more than 3
+    else if (userScore > 1 && userScore <=9){ // if user scored more than 3
         //creating a new span tag and passing the user score number and total question number
         let scoreTag = '<span>Anda berhasil mejawab <p>'+ userScore +'</p> dari <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text

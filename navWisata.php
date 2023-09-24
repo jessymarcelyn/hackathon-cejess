@@ -169,27 +169,27 @@
                                     </div>
                                 </div>
                             </li>
-                            <!-- <li class="scroll-to-section">
+                            <li class="scroll-to-section">
                                 <div class="dropdown">
                                     <a class="dropdown-toggle active" type="button" data-toggle="dropdown"
                                         aria-expanded="false">
-                                        Wisata
+                                        Cerita Edukatif
                                     </a>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="edukids.php">Paket Wisata Edukids</a>
-                                        <a class="dropdown-item" href="edukasi.php">Paket Wisata Edukasi</a>
-                                        <a class="dropdown-item" href="kreatif.php">Paket Wisata Kreatif</a>
-                                        <a class="dropdown-item" href="sejarah.php">Paket Wisata Sejarah</a>
-                                        <a class="dropdown-item" href="spiritual.php">Paket Wisata Spiritual</a>
-                                        <a class="dropdown-item" href="sport.php">Sport Tourism gowes & Trail
-                                            Adventure</a>
-                                        <a class="dropdown-item text-warning" href="custom.php">Custom Paket</a>
+                                        <a class="dropdown-item" href="ceritaAkar.php">Rumah Akar</a>
+                                        <a class="dropdown-item" href="ceritaBatik.php">Rumah Batik</a>
+                                        <a class="dropdown-item" href="ceritaDomba.php">Raja Domba</a>
+                                        <a class="dropdown-item" href="ceritaKafe.php">Kafe Gumitri</a>
+                                        <a class="dropdown-item" href="ceritaKetakase.php">Ketakase</a>
+                                        <a class="dropdown-item" href="ceritaPPG.php">PPG Sidomulyo</a>
+                                        <a class="dropdown-item" href="sport.php">PPG Sidomulyo</a>
+                                        <a class="dropdown-item" href="ceritaSendang.php">Sendang Tirto Gumitir</a>
                                     </div>
                                 </div>
-                            </li> -->
+                            </li>
                             <li>
                                 <div class="gradient-button">
-                                    <a id="modal_trigger" href="#modal"><i
+                                    <a href="" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
                                             class="fa-regular fa-lightbulb me-2"></i>QUIZ</a>
                                 </div>
                             </li>
@@ -203,3 +203,34 @@
         </div>
     </header>
     <!-- NAVBAR END -->
+
+
+
+    <!-- Modal quiz START-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="bg-light modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Isi data diri</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="game.php" method="post">
+                        <div class="rounded" style="padding: 30px">
+                            <input name="nama" type="text" class="form-control border-0 py-2 mb-2 mt-3"
+                                placeholder="Nama" />
+                            <input name="noTelp" type="text" class="form-control border-0 py-2 mb-2 mt-3"
+                                placeholder="Nomor Telepon" />
+                            <input name="emailk" type="email" class="form-control border-0 py-2 mb-2 mt-3"
+                                placeholder="Email" />
+                            <a href="quiz.php" name="play" class="btn w-100 py-2 mt-3 text-white"
+                                style=" background:#1e4e34">Main
+                                Kuis!</a>
+                            <!-- <button name="play" class="btn btn-register w-100 py-2 mt-3"></button> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL quiz END -->

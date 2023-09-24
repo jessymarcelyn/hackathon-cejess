@@ -8,9 +8,10 @@
     <div class="container">
       <div class="text-center title-landing">
         <h2 data-animate="fadeInUp" class="wow fadeInUp animated text-white">
-          Galeri Gumitir
+          GALERI GUMITI
         </h2>
-        <p class="bottommargin fadeInUp animated" data-animate="fadeInUp" data-delay="200">Pusat Informasi Wisata dan
+        <p class="bottommargin fadeInUp animated" data-animate="fadeInUp" data-delay="200" style="color:#fff5f5">Pusat
+          Informasi Wisata dan
           Oleh-Oleh Desa Sidomulyo Silo, Jember.</p>
       </div>
     </div>
@@ -23,7 +24,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
-          <div class="section-heading wow fadeInDown text-center" data-wow-duration="1s" data-wow-delay="0.5s">
+          <div class="rounded-info wow fadeInDown text-center" data-wow-duration="1s" data-wow-delay="0.5s">
             <h4>Produk Unggulan Kami</h4>
             <!-- <img src="assets/images/heading-line-dec.png" alt="" /> -->
             <p>
@@ -37,23 +38,31 @@
     <div class="container mb-5">
       <div class="row">
         <div class="col-lg-3">
-          <div class="service-item first-service h-100">
+          <div class="service-item first-service h-100 text-center">
             <img src="assets/images/promo1.jpg" alt="">
+            <a href="https://shp.ee/3magiig" target=”_blank” class=" mt-2" style="color: #1e4e34">Lihat detail <i
+                class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
         <div class="col-lg-3 ">
-          <div class="service-item second-service h-100">
+          <div class="service-item second-service h-100 text-center">
             <img src="assets/images/promo5.jpg" alt="">
+            <a href="https://shp.ee/3magiig" target=”_blank” class=" mt-2" style="color: #1e4e34">Lihat detail <i
+                class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
         <div class="col-lg-3">
-          <div class="service-item third-service h-100">
+          <div class="service-item third-service h-100 text-center">
             <img src="assets/images/promo4.jpg" alt="">
+            <a href="https://shp.ee/3magiig" target=”_blank” class=" mt-2" style="color: #1e4e34">Lihat detail <i
+                class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
         <div class="col-lg-3">
-          <div class="service-item fourth-service">
+          <div class="service-item forth-service h-100 text-center">
             <img src="assets/images/promo2.jpg" alt="">
+            <a href="https://shp.ee/3magiig" target=”_blank” class=" mt-2" style="color: #1e4e34">Lihat detail <i
+                class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
@@ -66,7 +75,7 @@
     <div class="container" style="margin-top:100px">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
-          <div class="section-heading text-center mt-5">
+          <div class="rounded-info text-center mt-5 mb-3">
             <h4>Paket <em>Wisata </em></h4>
             <p>
               Galeri Gumitir menyediakan wahana hiburan yaitu wisata yang unik. Kami memiliki wisata domba, wisata hutan
@@ -113,7 +122,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-lg-4 mb-4">
           <div class="pricing-item h-100">
             <h4>Paket Wisata EduKids</h4>
             <p>
@@ -126,7 +135,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-lg-4 mb-4">
           <div class="pricing-item h-100">
             <h4>Paket Wisata Kreatif</h4>
             <p>
@@ -138,7 +147,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-lg-4 mb-4">
           <div class="pricing-item h-100">
             <h4>Sport Tourism</h4>
             <p>
@@ -148,6 +157,19 @@
             <div class="border-button">
               <a href="sport.php">Beli Paket</a>
             </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 offset-lg-4">
+          <div class="pricing-item h-100">
+            <h4>Custom Paket Wisata</h4>
+            <p>
+              Anda dapat memilih wisata yang akan dikunjungi dengan pilihan-pilihan yang tersedia.
+            </p>
+            <div class="border-button">
+              <a href="sport.php">Beli Paket</a>
+            </div>
+
           </div>
         </div>
       </div>
@@ -160,11 +182,10 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 align-self-center text-center">
-          <div class="section-heading">
+          <div class="rounded-info">
             <h4>Testimoni</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eismod tempor incididunt ut labore et dolore magna.
+              Berikut adalah testimoni dari pelanggan setia kami.
             </p>
           </div>
           <div class="row">
@@ -225,12 +246,11 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
-          <div class="section-heading">
+          <div class="rounded-info text-center">
             <h4>Kontak kami</h4>
             <img src="assets/images/heading-line-dec.png" alt="" />
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eismod tempor incididunt ut labore et dolore magna.
+              Hubungi kami.
             </p>
           </div>
         </div>
@@ -277,8 +297,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
-          <div class="section-heading">
-            <h4 class="">
+          <div class="rounded-info">
+            <h4 class="text-center text-white mb-5">
               Mari Berdonasi
             </h4>
           </div>

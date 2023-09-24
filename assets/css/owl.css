@@ -3,7 +3,6 @@
   display: none;
   width: 100%;
   -webkit-tap-highlight-color: transparent;
-  /* position relative and z-index fix webkit rendering fonts issue */
   position: relative;
   z-index: 1; }
   .owl-carousel .owl-stage {
@@ -11,7 +10,7 @@
     -ms-touch-action: pan-Y;
     touch-action: manipulation;
     -moz-backface-visibility: hidden;
-    /* fix firefox animation glitch */ }
+}
   .owl-carousel .owl-stage:after {
     content: ".";
     display: block;

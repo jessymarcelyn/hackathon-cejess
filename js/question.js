@@ -2,57 +2,112 @@
 let questions = [
     {
     numb: 1,
-    question: "What does HTML stand for?",
-    answer: "Hyper Text Markup Language",
+    question: "Dimana Alamat Daya Tarik Wisata Rumah Akar?",
+    answer:  "Dusun Curah Damar Sidomulyo",
     options: [
-      "Hyper Text Preprocessor",
-      "Hyper Text Markup Language",
-      "Hyper Text Multiple Language",
-      "Hyper Tool Multi Language"
+      "Dusun Curah Damar Sidomulyo",
+      "Dusun Tanah Manis SIdomulyo",
+      "Dusun Curah Manis Sidomulyo",
+      "Dusun Garahan Kidul Sidomulyo"
     ]
   },
     {
     numb: 2,
-    question: "What does CSS stand for?",
-    answer: "Cascading Style Sheet",
+    question: "Siapa nama legenda yang menjadikan sendang tirto Gumitir sebagai tempat persinggahannya?",
+    answer: "Minak jinggo dan Layang Seto",
     options: [
-      "Common Style Sheet",
-      "Colorful Style Sheet",
-      "Computer Style Sheet",
-      "Cascading Style Sheet"
+      "Minak jinggo dan Layang Seto",
+      "Layang Kumitir dan Layang Seto",
+      "Gajah Mada dan Pattimura",
+      "Layang Kumitir dan Minak Jinggo"
     ]
   },
     {
     numb: 3,
-    question: "What does PHP stand for?",
-    answer: "Hypertext Preprocessor",
+    question: "Ada berapa pancuran di Sedang Tirto Gumitir?",
+    answer: "Tujuh",
     options: [
-      "Hypertext Preprocessor",
-      "Hypertext Programming",
-      "Hypertext Preprogramming",
-      "Hometext Preprocessor"
+      "Tujuh",
+      "Empat",
+      "Enam",
+      "Delapan"
     ]
   },
     {
     numb: 4,
-    question: "What does SQL stand for?",
-    answer: "Structured Query Language",
+    question: "Apa motif khas Batik Sidomulyo?",
+    answer: "Domba dan Kopi",
     options: [
-      "Stylish Question Language",
-      "Stylesheet Query Language",
-      "Statement Question Language",
-      "Structured Query Language"
+      "Domba dan Kopi",
+      "Domba dan Sapi",
+      "Pinus dan Gunung",
+      "Kopi dan Pinus"
     ]
   },
     {
     numb: 5,
-    question: "What does XML stand for?",
-    answer: "eXtensible Markup Language",
+    question: "Terletak di Daya Tarik Apa sebuah Kursi Raksasa di Sidomulyo?",
+    answer: "Rest Area dan Café Gumitir",
     options: [
-      "eXtensible Markup Language",
-      "eXecutable Multiple Language",
-      "eXTra Multi-Program Language",
+      "Rest Area dan Café Gumitir",
+      "Rumah Akar",
+      "Wisata Edukasi Kopi",
       "eXamine Multiple Language"
     ]
   },
+  {
+    numb: 6,
+    question: "Dibawah ini jenis-jenis domba, kecuali?",
+    answer: "Supas",
+    options: [
+      "Supas",
+      "Dormas",
+      "Texel",
+      "Limusin"
+    ]
+  },
+  {
+    numb: 7,
+    question: "Produk apa di Desa Sidomulyo yang sudah ekspor ke Luar Negeri?",
+    answer: "Kopi Ketakasi",
+    options: [
+      "Kerupuk Gadung",
+      "Sale Pisang",
+      "Rujak",
+      "Kopi Ketakasi"
+    ]
+  },
+  {
+    numb: 8,
+    question: " Apa nama monument besar pintu masuk Desa Sidomulyo?",
+    answer: "Gapuro Agung",
+    options: [
+      "Tugu Hutan Gumitir",
+      "Monas",
+      "Gapuro Agung",
+      "Agung Setiawan"
+    ]
+  },
+  {
+    numb: 9,
+    question: "Berikut jenis Wisata Edukasi di Desa Sidomulyo, Kecuali?",
+    answer: "Wisata Edukasi Pinus",
+    options: [
+      "Wisata Edukasi Batik",
+      "Wisata Edukasi Raja Domba",
+      "Wisata Edukasi Kopi",
+      "Wisata Edukasi Pinus"
+    ]
+  },
+  {
+    numb: 10,
+    question: "Terletak di Daya Tarik Apa sebuah Kursi Raksasa di Sidomulyo?",
+    answer: "Tubing, Gowes, Hiking, Café",
+    options: [
+      "Tubing, Gowes, Hiking, Café",
+      "Gowes, APV, Camping Ground",
+      "Camping Ground, Gowes, Trampolin, Tubing",
+      "Tubing, Camping Ground, Gowes, APV, Café."
+    ]
+  }
 ];

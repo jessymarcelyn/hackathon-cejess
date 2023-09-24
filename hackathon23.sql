@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 23, 2023 at 06:02 PM
+-- Generation Time: Sep 23, 2023 at 03:31 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -40,10 +40,21 @@ CREATE TABLE `detail_transaksi` (
 --
 
 INSERT INTO `detail_transaksi` (`id_detail`, `quantity`, `amount`, `id_wisata`, `id_transaksi`) VALUES
+(5, 1, 10000, 1, 14),
+(6, 1, 10000, 2, 14),
+(7, 1, 10000, 3, 14),
+(8, 1, 10000, 4, 14),
+(9, 1, 10000, 5, 14),
+(10, 1, 10000, 6, 14),
+(11, 1, 10000, 7, 14),
+(12, 1, 10000, 8, 14),
+(13, 1, 10000, 9, 14),
+(14, 1, 10000, 10, 14),
 (15, 1, 10000, 1, 15),
 (16, 1, 10000, 2, 15),
 (17, 1, 10000, 3, 15),
 (18, 1, 10000, 4, 15),
+(19, 1, 10000, 5, 15),
 (20, 1, 10000, 6, 15),
 (21, 1, 10000, 7, 15),
 (22, 1, 10000, 8, 15),
@@ -62,6 +73,7 @@ INSERT INTO `detail_transaksi` (`id_detail`, `quantity`, `amount`, `id_wisata`, 
 (35, 3, 30000, 1, 17),
 (36, 1, 10000, 2, 17),
 (37, 0, 0, 3, 17),
+(38, 0, 0, 4, 17),
 (39, 0, 0, 5, 17),
 (40, 0, 0, 6, 17),
 (41, 2, 20000, 7, 17),
@@ -116,8 +128,10 @@ CREATE TABLE `transaksi` (
 --
 
 INSERT INTO `transaksi` (`id_transaksi`, `tanggal_transaksi`, `total_transaksi`, `status`, `id_user`, `nama_rekening`) VALUES
-(2, '2023-09-20', 10000, 1, 0, 'Kalia L'),
+(1, '2023-09-23', 0, 0, 29, 'Budi Santoso'),
+(2, '2023-09-23', 0, 0, 29, 'Budi Santoso'),
 (3, '2023-09-23', 0, 0, 29, 'Budi Santoso'),
+(4, '2023-09-23', 0, 0, 29, 'Budi Santoso'),
 (5, '2023-09-23', 0, 0, 30, 'adsda'),
 (6, '2023-09-23', 0, 0, 30, 'adsda'),
 (7, '2023-09-23', 0, 0, 30, 'adsda'),
@@ -127,12 +141,10 @@ INSERT INTO `transaksi` (`id_transaksi`, `tanggal_transaksi`, `total_transaksi`,
 (11, '2023-09-23', 0, 0, 30, 'adsda'),
 (12, '2023-09-23', 0, 0, 30, 'adsda'),
 (13, '2023-09-23', 0, 0, 30, 'adsda'),
+(14, '2023-09-23', 0, 0, 30, 'adsda'),
 (15, '2023-09-23', 100000, 0, 30, 'adsda'),
 (16, '2023-09-23', 130000, 0, 31, 'maria'),
-(17, '2023-09-23', 60000, 0, 32, 'maria'),
-(20, '2023-09-14', 5, 0, 1, 'klll'),
-(21, '2023-09-28', 1200000, 1, 1, 'kkkoo'),
-(22, '2023-09-28', 1200000, 0, 2, 'Rihana');
+(17, '2023-09-23', 60000, 0, 32, 'maria');
 
 -- --------------------------------------------------------
 
@@ -152,7 +164,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `nama`, `email`, `no_telp`) VALUES
-(1, 'kjjhj', 'tina123@gmail.com', '086543123'),
+(1, 'kjjhj', 'bbb@gmail.com', '86543'),
+(2, 'asdas', 'aaa@gmail.com', '812312'),
 (3, 'asdasas', 'asdad@gmail.com', '812312'),
 (4, 'dsfdfs', 'ccc@gmail.com', '08812831'),
 (5, 'fdggd', 'ddd@gmail.com', '0812334546'),
@@ -182,9 +195,7 @@ INSERT INTO `user` (`id`, `nama`, `email`, `no_telp`) VALUES
 (29, 'sdasd', 'asdwead@gmail.com', '081283813'),
 (30, 'DSADA', 'ADSD@GMAIL.COM', '012838123'),
 (31, 'asda', 'mmmm@gmail.com', '0812313213'),
-(32, 'aksdkadk', 'jjjj@gmail.com', '08123311'),
-(33, 'Mira', 'dinda23@gmail.com', '081231312'),
-(34, 'Tina123', 'mari1a@gmail.com', '0812313213');
+(32, 'aksdkadk', 'jjjj@gmail.com', '08123311');
 
 -- --------------------------------------------------------
 
@@ -270,13 +281,13 @@ ALTER TABLE `quiz`
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `wisata`

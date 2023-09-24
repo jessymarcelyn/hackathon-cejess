@@ -1,8 +1,4 @@
-/**
- * Owl Carousel v2.3.4
- * Copyright 2013-2018 David Deutsch
- * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
- */
+
 /**
  * Owl carousel
  * @version 2.3.4
@@ -257,15 +253,9 @@
 		State: 'state'
 	};
 
-	/**
-	 * Contains all registered plugins.
-	 * @public
-	 */
 	Owl.Plugins = {};
 
-	/**
-	 * List of workers involved in the update process.
-	 */
+
 	Owl.Workers = [ {
 		filter: [ 'width', 'settings' ],
 		run: function() {
@@ -451,31 +441,24 @@
 	Owl.prototype.initializeStage = function() {
 		this.$stage = this.$element.find('.' + this.settings.stageClass);
 
-		// if the stage is already in the DOM, grab it and skip stage initialization
 		if (this.$stage.length) {
 			return;
 		}
 
 		this.$element.addClass(this.options.loadingClass);
 
-		// create stage
+
 		this.$stage = $('<' + this.settings.stageElement + '>', {
 			"class": this.settings.stageClass
 		}).wrap( $( '<div/>', {
 			"class": this.settings.stageOuterClass
 		}));
 
-		// append stage
 		this.$element.append(this.$stage.parent());
 	};
 
-	/**
-	 * Create item DOM elements
-	 */
 	Owl.prototype.initializeItems = function() {
 		var $items = this.$element.find('.owl-item');
-
-		// if the items are already in the DOM, grab them and skip item initialization
 		if ($items.length) {
 			this._items = $items.get().map(function(item) {
 				return $(item);
@@ -490,15 +473,11 @@
 			return;
 		}
 
-		// append content
 		this.replace(this.$element.children().not(this.$stage.parent()));
 
-		// check visibility
 		if (this.isVisible()) {
-			// update view
 			this.refresh();
 		} else {
-			// invalidate width
 			this.invalidate('width');
 		}
 
@@ -1306,11 +1285,9 @@
 	 */
 	Owl.prototype.onTransitionEnd = function(event) {
 
-		// if css2 animation then event object is undefined
 		if (event !== undefined) {
 			event.stopPropagation();
 
-			// Catch only owl-stage transitionEnd event
 			if ((event.target || event.srcElement || event.originalTarget) !== this.$stage.get(0)) {
 				return false;
 			}
@@ -1754,14 +1731,8 @@
 
 })(window.Zepto || window.jQuery, window, document);
 
-/**
- * AutoRefresh Plugin
- * @version 2.3.4
- * @author Artus Kolanowski
- * @author David Deutsch
- * @license The MIT License (MIT)
- */
-;(function($, window, document, undefined) {
+
+(function($, window, document, undefined) {
 
 	/**
 	 * Creates the auto refresh plugin.
@@ -1803,10 +1774,8 @@
 			}, this)
 		};
 
-		// set default options
 		this._core.options = $.extend({}, AutoRefresh.Defaults, this._core.options);
 
-		// register event handlers
 		this._core.$element.on(this._handlers);
 	};
 
@@ -1819,9 +1788,6 @@
 		autoRefreshInterval: 500
 	};
 
-	/**
-	 * Watches the element.
-	 */
 	AutoRefresh.prototype.watch = function() {
 		if (this._interval) {
 			return;
@@ -1831,9 +1797,7 @@
 		this._interval = window.setInterval($.proxy(this.refresh, this), this._core.settings.autoRefreshInterval);
 	};
 
-	/**
-	 * Refreshes the element.
-	 */
+
 	AutoRefresh.prototype.refresh = function() {
 		if (this._core.isVisible() === this._visible) {
 			return;
@@ -1918,10 +1882,9 @@
 						position = (e.property && e.property.value !== undefined ? e.property.value : this._core.current()) + i,
 						clones = this._core.clones().length,
 						load = $.proxy(function(i, v) { this.load(v) }, this);
-					//TODO: Need documentation for this new option
 					if (settings.lazyLoadEager > 0) {
 						n += settings.lazyLoadEager;
-						// If the carousel is looping also preload images that are to the "left"
+					
 						if (settings.loop) {
               position -= settings.lazyLoadEager;
               n++;
@@ -1936,11 +1899,8 @@
 				}
 			}, this)
 		};
-
-		// set the default options
 		this._core.options = $.extend({}, Lazy.Defaults, this._core.options);
 
-		// register event handler
 		this._core.$element.on(this._handlers);
 	};
 
@@ -2064,25 +2024,18 @@
 			}, this)
 		};
 
-		// set default options
 		this._core.options = $.extend({}, AutoHeight.Defaults, this._core.options);
 
-		// register event handlers
 		this._core.$element.on(this._handlers);
 		this._intervalId = null;
 		var refThis = this;
 
-		// These changes have been taken from a PR by gavrochelegnou proposed in #1575
-		// and have been made compatible with the latest jQuery version
 		$(window).on('load', function() {
 			if (refThis._core.settings.autoHeight) {
 				refThis.update();
 			}
 		});
 
-		// Autoresize the height of the carousel when window is resized
-		// When carousel has images, the height is dependent on the width
-		// and should also change on resize
 		$(window).resize(function() {
 			if (refThis._core.settings.autoHeight) {
 				if (refThis._intervalId != null) {
@@ -2106,9 +2059,6 @@
 		autoHeightClass: 'owl-height'
 	};
 
-	/**
-	 * Updates the view.
-	 */
 	AutoHeight.prototype.update = function() {
 		var start = this._core._current,
 			end = start + this._core.settings.items,
@@ -2226,10 +2176,8 @@
 			}, this)
 		};
 
-		// set default options
 		this._core.options = $.extend({}, Video.Defaults, this._core.options);
 
-		// register event handlers
 		this._core.$element.on(this._handlers);
 
 		this._core.$element.on('click.owl.video', '.owl-video-play-icon', $.proxy(function(e) {
@@ -2269,18 +2217,6 @@
 				url = target.attr('href');
 
 		if (url) {
-
-			/*
-					Parses the id's out of the following urls (and probably more):
-					https://www.youtube.com/watch?v=:id
-					https://youtu.be/:id
-					https://vimeo.com/:id
-					https://vimeo.com/channels/:channel/:id
-					https://vimeo.com/groups/:group/videos/:id
-					https://app.vzaar.com/videos/:id
-
-					Visual example: https://regexper.com/#(http%3A%7Chttps%3A%7C)%5C%2F%5C%2F(player.%7Cwww.%7Capp.)%3F(vimeo%5C.com%7Cyoutu(be%5C.com%7C%5C.be%7Cbe%5C.googleapis%5C.com)%7Cvzaar%5C.com)%5C%2F(video%5C%2F%7Cvideos%5C%2F%7Cembed%5C%2F%7Cchannels%5C%2F.%2B%5C%2F%7Cgroups%5C%2F.%2B%5C%2F%7Cwatch%5C%3Fv%3D%7Cv%5C%2F)%3F(%5BA-Za-z0-9._%25-%5D*)(%5C%26%5CS%2B)%3F
-			*/
 
 			id = url.match(/(http:|https:|)\/\/(player.|www.|app.)?(vimeo\.com|youtu(be\.com|\.be|be\.googleapis\.com|be\-nocookie\.com)|vzaar\.com)\/(video\/|videos\/|embed\/|channels\/.+\/|groups\/.+\/|watch\?v=|v\/)?([A-Za-z0-9._%-]*)(\&\S+)?/);
 
@@ -2344,7 +2280,6 @@
 				target.after(icon);
 			};
 
-		// wrap video content into owl-video-wrapper div
 		target.wrap( $( '<div/>', {
 			"class": "owl-video-wrapper",
 			"style": dimensions
@@ -2355,7 +2290,6 @@
 			lazyClass = 'owl-lazy';
 		}
 
-		// custom thumbnail
 		if (customTn.length) {
 			create(customTn.attr(srcType));
 			customTn.remove();
@@ -2664,8 +2598,6 @@
 						this.stop();
 					}
 				} else if (e.namespace && e.property.name === 'position' && this._paused) {
-					// Reset the timer. This code is triggered when the position
-					// of the carousel was changed through user interaction.
 					this._time = 0;
 				}
 			}, this),
@@ -2706,10 +2638,8 @@
 			}, this)
 		};
 
-		// register event handlers
 		this._core.$element.on(this._handlers);
 
-		// set default options
 		this._core.options = $.extend({}, Autoplay.Defaults, this._core.options);
 	};
 
@@ -2764,20 +2694,15 @@
 
 		timeout = timeout || this._core.settings.autoplayTimeout;
 
-		// Calculate the elapsed time since the last transition. If the carousel
-		// wasn't playing this calculation will yield zero.
 		elapsed = Math.min(this._time % (this._timeout || timeout), timeout);
 
 		if (this._paused) {
-			// Start the clock.
 			this._time = this.read();
 			this._paused = false;
 		} else {
-			// Clear the active timeout to allow replacement.
 			window.clearTimeout(this._call);
 		}
 
-		// Adjust the origin of the timer to match the new timeout value.
 		this._time += this.read() % timeout - elapsed;
 
 		this._timeout = timeout;
@@ -2948,10 +2873,8 @@
 			}, this)
 		};
 
-		// set default options
 		this._core.options = $.extend({}, Navigation.Defaults, this._core.options);
 
-		// register event handlers
 		this.$element.on(this._handlers);
 	};
 
@@ -2992,7 +2915,6 @@
 		var override,
 			settings = this._core.settings;
 
-		// create DOM structure for relative navigation
 		this._controls.$relative = (settings.navContainer ? $(settings.navContainer)
 			: $('<div>').addClass(settings.navContainerClass).appendTo(this.$element)).addClass('disabled');
 
@@ -3011,7 +2933,6 @@
 				this.next(settings.navSpeed);
 			}, this));
 
-		// create DOM structure for absolute navigation
 		if (!settings.dotsData) {
 			this._templates = [ $('<button role="button">')
 				.addClass(settings.dotClass)
@@ -3031,20 +2952,6 @@
 			this.to(index, settings.dotsSpeed);
 		}, this));
 
-		/*$el.on('focusin', function() {
-			$(document).off(".carousel");
-
-			$(document).on('keydown.carousel', function(e) {
-				if(e.keyCode == 37) {
-					$el.trigger('prev.owl')
-				}
-				if(e.keyCode == 39) {
-					$el.trigger('next.owl')
-				}
-			});
-		});*/
-
-		// override public methods of the carousel
 		for (override in this._overrides) {
 			this._core[override] = $.proxy(this[override], this);
 		}
@@ -3314,13 +3221,9 @@
 			}, this)
 		};
 
-		// set default options
 		this._core.options = $.extend({}, Hash.Defaults, this._core.options);
-
-		// register the event handlers
 		this.$element.on(this._handlers);
 
-		// register event listener for hash navigation
 		$(window).on('hashchange.owl.navigation', $.proxy(function(e) {
 			var hash = window.location.hash.substring(1),
 				items = this._core.$stage.children(),
@@ -3428,19 +3331,16 @@
 	}
 
 	if (tests.csstransitions()) {
-		/* jshint -W053 */
 		$.support.transition = new String(prefixed('transition'))
 		$.support.transition.end = events.transition.end[ $.support.transition ];
 	}
 
 	if (tests.cssanimations()) {
-		/* jshint -W053 */
 		$.support.animation = new String(prefixed('animation'))
 		$.support.animation.end = events.animation.end[ $.support.animation ];
 	}
 
 	if (tests.csstransforms()) {
-		/* jshint -W053 */
 		$.support.transform = new String(prefixed('transform'));
 		$.support.transform3d = tests.csstransforms3d();
 	}
