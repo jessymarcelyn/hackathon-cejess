@@ -8,7 +8,7 @@
     <div class="container">
       <div class="text-center title-landing">
         <h2 data-animate="fadeInUp" class="wow fadeInUp animated text-white">
-          GALERI GUMITI
+          GALERI GUMITIR
         </h2>
         <p class="bottommargin fadeInUp animated" data-animate="fadeInUp" data-delay="200" style="color:#fff5f5">Pusat
           Informasi Wisata dan

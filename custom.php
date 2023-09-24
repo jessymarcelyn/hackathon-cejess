@@ -59,6 +59,7 @@ include('navWisata.php');
                     </div>
 
                     <div class="row">
+
                         <?php
                         for ($i = 1; $i <= 10; $i++) {
                             $sql = "SELECT * FROM wisata WHERE id_wisata = '$i'";
