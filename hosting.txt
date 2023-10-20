@@ -1,0 +1,7 @@
+deploy
+- beli hosting di Niagahoster
+- setup hosting dan beli domain
+- memilih nama domain jatimaju.site
+- menunggu beberapa waktu baru bisa digunakan 
+- membuka cpanel
+- upload file ke cpanel
