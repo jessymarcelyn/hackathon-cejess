@@ -6,296 +6,178 @@ if (isset($_POST['def'])) {
 	exit();
 }
 if (isset($_POST['transaksi'])) {
-	$sql = "SELECT * FROM transaksi";
-	$result = mysqli_query($con, $sql);
-	echo '<p class ="judul" style = " height : 3rem; text-align: center; margin-top: 1rem;" >Transaksi</p>';
-	echo "<table class='table table-bordered my-5'>
-			  <thead class = 'table-dark'>
-			    <tr>
-			      <th scope='col-md-4' class='text-center'>ID</th>
-			      <th scope='col' class='text-center'>Tanggal Transaksi</th>
-			      <th scope='col' class='text-center'>Total</th>
-			      <th scope='col-md-4' class='text-center'>Status</th>
-			      <th scope='col' class='text-center'>ID User</th>
-			      <th scope='col' class='text-center'>nama_rekening</th>
-			      
-			    </tr>
-			  </thead>
-			  <tbody>";
-	while ($row = mysqli_fetch_array($result)) {
-		echo "
-			  	<tr>
-			  		<td class='text-center'>$row[0]</td>
-					<td class='text-center'>$row[1]</td>
-					<td class='text-center'>$row[2]</td>
-					<td class='text-center'>$row[3]</td>
-					<td class='text-center'>$row[4]</td>
-					<td class='text-center'>$row[5]</td>
-				</tr>";
+    $sql = "SELECT * FROM transaksi";
+    $stmt = $con->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    echo '<p class="judul" style="height: 3rem; text-align: center; margin-top: 1rem;">Transaksi</p>';
+    echo "<table class='table table-bordered my-5'>
+              <thead class='table-dark'>
+                <tr>
+                  <th scope='col-md-4' class='text-center'>ID</th>
+                  <th scope='col' class='text-center'>Tanggal Transaksi</th>
+                  <th scope='col' class='text-center'>Total</th>
+                  <th scope='col-md-4' class='text-center'>Status</th>
+                  <th scope='col' class='text-center'>ID Pengguna</th>
+                  <th scope='col' class='text-center'>Nama Rekening</th>
+                </tr>
+              </thead>
+              <tbody>";
 
-	}
-	echo "</tbody>
-			</table>";
-	exit();
+			  foreach ($result as $row) {
+				echo "
+						<tr>
+							<td class='text-center'>" . $row['id_transaksi'] . "</td>
+							<td class='text-center'>" . $row['tanggal_transaksi'] . "</td>
+							<td class='text-center'>" . $row['total_transaksi'] . "</td>
+							<td class='text-center'>" . $row['status'] . "</td>
+							<td class='text-center'>" . $row['id_user'] . "</td>
+							<td class='text-center'>" . $row['nama_rekening'] . "</td>
+						</tr>";
+			}
+			
+    
+
+    echo "</tbody>
+            </table>";
+    exit();
 }
 if (isset($_POST['dt'])) {
-	$sql = "SELECT * FROM detail_transaksi";
-	$result = mysqli_query($con, $sql);
-	echo '<p class ="judul" style = " height : 3rem; text-align: center; margin-top: 1rem;" >Detail Transaksi</p>';
-	echo "<table class='table table-bordered my-5'>
-			  <thead class = 'table-dark'>
-			    <tr>
-			      <th scope='col-md-4' class='text-center'>ID Detail</th>
-			      <th scope='col' class='text-center'>Kuantitas</th>
-			      <th scope='col' class='text-center'>Jumlah</th>
-			      <th scope='col-md-4' class='text-center'>ID Wisata</th>
-			      <th scope='col' class='text-center'>ID Transaksi</th>
-			      
-			    </tr>
-			  </thead>
-			  <tbody>";
-	while ($row = mysqli_fetch_array($result)) {
-		echo "
-			  	<tr>
-			  		<td class='text-center' >$row[0]</td>
-					<td class='text-center'>$row[1]</td>
-					<td class='text-center'>$row[2]</td>
-					<td class='text-center'>$row[3]</td>
-					<td class='text-center'>$row[4] </td>
-					
-				</tr>";
+    $sql = "SELECT * FROM detail_transaksi";
+    $stmt = $con->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    echo '<p class="judul" style="height: 3rem; text-align: center; margin-top: 1rem;">Detail Transaksi</p>';
+    echo "<table class='table table-bordered my-5'>
+              <thead class='table-dark'>
+                <tr>
+                  <th scope='col-md-4' class='text-center'>ID Detail</th>
+                  <th scope='col' class='text-center'>Kuantitas</th>
+                  <th scope='col' class='text-center'>Jumlah</th>
+                  <th scope='col-md-4' class='text-center'>ID Wisata</th>
+                  <th scope='col' class='text-center'>ID Transaksi</th>
+                </tr>
+              </thead>
+              <tbody>";
 
-	}
-	echo "</tbody>
-			</table>";
-	exit();
+    foreach ($result as $row) {
+        echo "
+                <tr>
+                    <td class='text-center'>" . $row['id_detail'] . "</td>
+                    <td class='text-center'>" . $row['quantity'] . "</td>
+                    <td class='text-center'>" . $row['amount'] . "</td>
+                    <td class='text-center'>" . $row['id_wisata'] . "</td>
+                    <td class='text-center'>" . $row['id_transaksi'] . "</td>
+                </tr>";
+    }
+
+    echo "</tbody>
+            </table>";
+    exit();
 }
+
 if (isset($_POST['user'])) {
-	$sql = "SELECT * FROM user ORDER BY id ASC";
-	$result = mysqli_query($con, $sql);
-	echo '<p class ="judul" style = " height : 3rem; text-align: center; margin-top: 1rem;" >User</p>';
-	echo "<table class='table table-bordered my-5'>
-			  <thead class = 'table-dark'>
-			    <tr>
-					<th scope='col' class='text-center'>ID User</th>
-			      <th scope='col' class='text-center'>Nama</th>
-			      <th scope='col' class='text-center'>Email</th>
-				  <th scope='col' class='text-center'>Nomor Telepon</th>
-			   	  
-			    </tr>
-			  </thead>
-			  <tbody>";
-	while ($row = mysqli_fetch_array($result)) {
-		echo "
-			  	<tr>
-				  	<td class='text-center'>$row[0]</td>
-					<td class='text-center'>$row[1]</td>
-					<td class='text-center'>$row[2]</td>
-					<td class='text-center'>$row[3]</td>
-				</tr>";
+    $sql = "SELECT * FROM user ORDER BY id ASC";
+    $stmt = $con->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    echo '<p class="judul" style="height: 3rem; text-align: center; margin-top: 1rem;">User</p>';
+    echo "<table class='table table-bordered my-5'>
+              <thead class='table-dark'>
+                <tr>
+                    <th scope='col' class='text-center'>ID Pengguna</th>
+                    <th scope='col' class='text-center'>Nama</th>
+                    <th scope='col' class='text-center'>Email</th>
+                    <th scope='col' class='text-center'>Nomor Telepon</th>
+                </tr>
+              </thead>
+              <tbody>";
 
-	}
-	echo "</tbody>
-			</table>";
-	exit();
+    foreach ($result as $row) {
+        echo "
+                <tr>
+                    <td class='text-center'>" . $row['id'] . "</td>
+                    <td class='text-center'>" . $row['nama'] . "</td>
+                    <td class='text-center'>" . $row['email'] . "</td>
+                    <td class='text-center'>" . $row['no_telp'] . "</td>
+                </tr>";
+    }
+
+    echo "</tbody>
+            </table>";
+    exit();
 }
-if (isset($_POST['payment'])) {
-	$sql = "SELECT * FROM kartu_kredit";
-	$result = mysqli_query($con, $sql);
-	echo '<p class ="judul" style = " height : 3rem; text-align: center; margin-top: 1rem;" >Payment</p>';
-	echo "<table class='table table-bordered my-5'>
-			  <thead class = 'table-dark'>
-			    <tr>
-			      
-			      <th scope='col' class='text-center'>ID Card</th>
-			      <th scope='col' class='text-center'>Name</th>
-			      <th scope='col' class='text-center'>CVV</th>
-			   	  <th scope='col' class='text-center'>Expiration Date</th>
-			    </tr>
-			  </thead>
-			  <tbody>";
-	while ($row = mysqli_fetch_array($result)) {
-		echo "
-			  	<tr>
-			  		<td class='text-center'>$row[0]</td>
-					<td class='text-center'>$row[1]</td>
-					<td class='text-center'>$row[2]</td>
-					<td class='text-center'>$row[3]</td>
-				</tr>";
 
-
-	}
-	echo "</tbody>
-			</table>";
-	exit();
-}
 if (isset($_POST['quiz'])) {
-	$sql = "SELECT * FROM quiz";
-	$result = mysqli_query($con, $sql);
-	echo '<p class ="judul" style = " height : 3rem; text-align: center; margin-top: 1rem;" >Quiz</p>';
-	echo "<table class='table table-bordered my-5'>
-			  <thead class = 'table-dark'>
-			    <tr>
-			      <th scope='col-md-4' class='text-center'>ID Quiz</th>
-			      <th scope='col' class='text-center'>Email</th>
-			      <th scope='col' class='text-center' style = 'width:40%'>Tanggal Main</th>
-			      <th scope='col' class='text-center'>Nomor Telepon</th>
-				  <th scope='col' class='text-center'>Menang</th>
-			    </tr>
-			  </thead>
-			  <tbody>";
-	while ($row = mysqli_fetch_array($result)) {
-		echo "
-			  	<tr>
-					<td class='text-center'>$row[0]</td>
-					<td class='text-center'>$row[1]</td>
-					<td class='text-center'>$row[2]</td>
-					<td class='text-center'>$row[3]</td>
-					<td class='text-center'>$row[4]</td>
-				</tr>";
-	}
-	echo "</tbody>
-			</table>";
-	exit();
+    $sql = "SELECT * FROM quiz";
+    $stmt = $con->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    echo '<p class="judul" style="height: 3rem; text-align: center; margin-top: 1rem;">Quiz</p>';
+    echo "<table class='table table-bordered my-5'>
+              <thead class='table-dark'>
+                <tr>
+                    <th scope='col-md-4' class='text-center'>ID Kuis</th>
+                    <th scope='col' class='text-center'>Email</th>
+                    <th scope='col' class='text-center' style='width:40%'>Tanggal Main</th>
+                    <th scope='col' class='text-center'>Nomor Telepon</th>
+                    <th scope='col' class='text-center'>Menang</th>
+                </tr>
+              </thead>
+              <tbody>";
+
+    foreach ($result as $row) {
+        echo "
+                <tr>
+                    <td class='text-center'>" . $row['id'] . "</td>
+                    <td class='text-center'>" . $row['email'] . "</td>
+                    <td class='text-center'>" . $row['tanggal_main'] . "</td>
+                    <td class='text-center'>" . $row['no_telp'] . "</td>
+                    <td class='text-center'>" . $row['menang'] . "</td>
+                </tr>";
+    }
+
+    echo "</tbody>
+            </table>";
+    exit();
 }
+
 if (isset($_POST['wisata'])) {
-	$sql = "SELECT * FROM wisata";
-	$result = mysqli_query($con, $sql);
-	echo '<p class ="judul" style = " height : 3rem; text-align: center; margin-top: 1rem;" >Wisata</p>';
-	echo "<table class='table table-bordered my-5'>
-			  <thead class = 'table-dark'>
-			    <tr>
-			      <th scope='col-md-4' class='text-center'>ID Wisata</th>
-			      <th scope='col' class='text-center'>Nama</th>
-			      <th scope='col' class='text-center'>Harga</th>
-			      
-			    </tr>
-			  </thead>
-			  <tbody>";
-	while ($row = mysqli_fetch_array($result)) {
-		echo "
-			  	<tr>
-					<td class='text-center'>$row[0]</td>
-					<td class='text-center'>$row[1]</td>
-					<td class='text-center'>$row[2]</td>
-				</tr>";
+    $sql = "SELECT * FROM wisata";
+    $stmt = $con->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    echo '<p class="judul" style="height: 3rem; text-align: center; margin-top: 1rem;">Wisata</p>';
+    echo "<table class='table table-bordered my-5'>
+              <thead class='table-dark'>
+                <tr>
+                    <th scope='col-md-4' class='text-center'>ID Wisata</th>
+                    <th scope='col' class='text-center'>Nama</th>
+                    <th scope='col' class='text-center'>Harga</th>
+                </tr>
+              </thead>
+              <tbody>";
 
-	}
-	echo "</tbody>
-			</table>";
-	exit();
+    foreach ($result as $row) {
+        echo "
+                <tr>
+                    <td class='text-center'>" . $row['id_wisata'] . "</td>
+                    <td class='text-center'>" . $row['nama'] . "</td>
+                    <td class='text-center'>" . $row['harga'] . "</td>
+                </tr>";
+    }
+
+    echo "</tbody>
+            </table>";
+    exit();
 }
-if (isset($_POST['detail'])) {
-	$sql = "SELECT * FROM detail_transaksi";
-	$result = mysqli_query($con, $sql);
-	echo '<p class ="judul" style = " height : 3rem; text-align: center; margin-top: 1rem;" >Transaction Details</p>';
-	echo "<table class='table table-bordered my-5'>
-			  <thead class = 'table-dark'>
-			    <tr>
-			      <th scope='col-md-4' class='text-center'>Detail ID</th>
-			      <th scope='col' class='text-center' >Check In</th>
-			      <th scope='col' class='text-center' >Check Out</th>
-			      <th scope='col-md-4' class='text-center'>Nights</th>
-			      <th scope='col' class='text-center' >Quantity</th>
-			      <th scope='col' class='text-center' >Price</th>
-			      <th scope='col' class='text-center'>Total Price</th>
-			      <th scope='col' class='text-center' style = width:25%;'>Detail</th> 
-			      <th scope='col' class='text-center'>Room ID</th> 
-			      
-			    </tr>
-			  </thead>
-			  <tbody>";
-	while ($row = mysqli_fetch_array($result)) {
-		echo "
-			  	<tr>
-			  		<td class='text-center'>$row[0]</td>
-					<td class='text-center'>$row[1]</td>
-					<td class='text-center'>$row[2]</td>
-					<td class='text-center'>$row[3]</td>
-					<td class='text-center'>$row[4]</td>
-					<td class='text-center'>$row[5]</td>
-					<td class='text-center'>$row[6]</td>
-					<td class='text-center'>$row[7]</td>
-					<td class='text-center'>$row[8]</td>
-				</tr>";
 
 
-	}
-	echo "</tbody>
-			</table>";
-	exit();
-}
-if (isset($_POST['admin'])) {
-	$sql = "SELECT * FROM admin";
-	$result = mysqli_query($con, $sql);
-	echo '<p class ="judul" style = " height : 3rem; text-align: center; margin-top: 1rem;" >Admin</p>';
-	echo "<table class='table table-bordered my-5'>
-			  <thead class = 'table-dark'>
-			    <tr>
-			      <th scope='col' class='text-center'>Username</th>
-			      <th scope='col'class='text-center'>Password</th>
-			      <th scope='col' class='text-center'>Nama</th>
-			   	  
-			    </tr>
-			  </thead>
-			  <tbody>";
-	while ($row = mysqli_fetch_array($result)) {
-		echo "
-			  	<tr>
-					<td class='text-center'>$row[0]</td>
-					<td class='text-center'>$row[1]</td>
-					<td class='text-center'>$row[2]</td>
-				</tr>";
-
-
-	}
-	echo "</tbody>
-			</table>";
-	exit();
-}
-if (isset($_POST['wishlist'])) {
-	$sql = "SELECT * FROM wishlist";
-	$result = mysqli_query($con, $sql);
-	echo '<p class ="judul" style = " height : 3rem; text-align: center; margin-top: 1rem;" >Wishlist</p>';
-	echo "<table class='table table-bordered my-5'>
-			  <thead class = 'table-dark'>
-			    <tr>
-			      <th scope='col' class='text-center'>ID Wishlist</th>
-			      <th scope='col' class='text-center'>ID Member</th>
-			      <th scope='col' class='text-center'>Detail</th>
-			   	  <th scope='col' class='text-center'>Check In Date</th>
-				  <th scope='col' class='text-center'>Check Out Date</th>
-			   	  <th scope='col' class='text-center'>Room ID</th>
-				  <th scope='col' class='text-center'>Breakfast</th>
-				  <th scope='col' class='text-center'>Smoking</th>
-				  <th scope='col' class='text-center'>Quantity</th>
-			    </tr>
-			  </thead>
-			  <tbody>";
-	while ($row = mysqli_fetch_array($result)) {
-		echo "
-			  	<tr>
-					<td class='text-center'>$row[0]</td>
-					<td class='text-center'>$row[1]</td>
-					<td class='text-center'>$row[2]</td>
-					<td class='text-center'>$row[3]</td>
-					<td class='text-center'>$row[5]</td>
-					<td class='text-center'>$row[4]</td>
-					<td class='text-center'>$row[6]</td>
-					<td class='text-center'>$row[7]</td>
-					<td class='text-center'>$row[8]</td>
-				</tr>";
-
-
-	}
-	echo "</tbody>
-			</table>";
-	exit();
-}
 ?>
 <style>
 	.judul {
@@ -418,16 +300,16 @@ if (isset($_POST['wishlist'])) {
 			<div class="col-2" style="margin-left: -3.2rem; margin-top:4rem">
 
 				<button class="btn btn-dark" id="transaction"
-					style="margin-top: 20px; padding-left: 2rem; padding-right: 2rem;">Transactions</button><br>
+					style="margin-top: 20px; padding-left: 2.2rem; padding-right: 2.2rem;">Transaksi</button><br>
 				<button class="btn btn-dark" id="dt"
-					style="margin-top: 20px; ; padding-left: 1.2rem; padding-right: 1.2rem">Detail
+					style="margin-top: 20px; ; ">Detail
 					Transaksi</button><br>
 				<button class="btn btn-dark" id="user"
-					style="margin-top: 20px; padding-left: 3.5rem; padding-right: 3.5rem">User</button><br>
+					style="margin-top: 20px; padding-left: 1.9rem; padding-right: 1.9rem">Pengguna</button><br>
 				<button class="btn btn-dark" id="quiz"
-					style="margin-top: 20px; padding-left: 3.5rem; padding-right: 3.5rem">Quiz</button><br>
+					style="margin-top: 20px; padding-left: 3.2rem; padding-right: 3.2rem">Kuis</button><br>
 				<button class="btn btn-dark" id="wisata"
-					style="margin-top: 20px; padding-left: 3rem; padding-right: 3rem">Wisata</button><br>
+					style="margin-top: 20px; padding-left: 2.6rem; padding-right: 2.6rem">Wisata</button><br>
 				<!-- <button class = "btn btn-dark" id ="detail" style="margin-top: 20px; width: 72%; ">Transaction Details</button><br>
 				<button class = "btn btn-dark" id ="admin" style="margin-top: 20px; padding-left: 2.2rem; padding-right: 2.2rem">Admin</button><br>
 				<button class = "btn btn-dark" id ="wishlist" style="margin-top: 20px; padding-left: 2rem; padding-right: 2rem">Wishlist</button><br>

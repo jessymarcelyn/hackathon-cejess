@@ -87,7 +87,7 @@
                       </button>
                     </div>
                     <div class="col-md-2">
-                      <a href="https://wa.me/6285707003873?text=Halo, saya ingin membeli paket Wisata Edukasi sebanyak (isi banyak paket yang diinginkan): 1. Berikut bukti transfer saya."
+                      <a href="https://wa.me/6285707003873?text=Halo, saya ingin membeli paket Wisata Edukasi 55k/pax sebanyak : (isi banyak paket yang diinginkan)."
                         target="_blank" class="navbar__highlight"><button class="btn beli align-self-center">Beli
                           sekarang</button></a>
                     </div>
@@ -106,7 +106,7 @@
                       <li>📌Kopi Ketakasi</li>
                       <li>📌Rumah Akar</li>
                       <li>📌Sendang Tiro Gumintir</li>
-                      <li><strong>📌Welcome Drink</strong></li>
+                      <li>📌Welcome Drink</li>
                     </ul>
 
                   </div>
@@ -125,8 +125,7 @@
                       </button>
                     </div>
                     <div class="col-md-2">
-                      <a href="https://wa.me/6285707003873?text=Halo, saya ingin membeli paket Wisata Edukasi sebanyak (isi banyak paket yang diinginkan): 1 
-                      Berikut bukti transfer saya." target="_blank" class="navbar__highlight"><button
+                      <a href="https://wa.me/6285707003873?text=Halo, saya ingin membeli paket Wisata Edukasi 95k/pax sebanyak : (isi banyak paket yang diinginkan)." target="_blank" class="navbar__highlight"><button
                           class="btn beli align-self-center">Beli
                           sekarang</button></a>
                     </div>
@@ -141,8 +140,8 @@
                     <li>📌Raja Domba</li>
                     <li>📌Kopi Ketakasi</li>
                     <li>📌Rumah Akar</li>
-                    <li><strong>📌PPG Wisata Pinus</strong></li>
-                    <li><strong>📌Dokumentasi</strong></li>
+                    <li>📌PPG Wisata Pinus</li>
+                    <li>📌Dokumentasi</li>
                   </ul>
 
                 </div>

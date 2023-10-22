@@ -78,7 +78,7 @@
                       </button>
                     </div>
                     <div class="col-md-2">
-                      <a href="https://wa.me/6285707003873?text=Silahkan masukkan bukti pembayaran " target="_blank"
+                      <a href="https://wa.me/6285707003873?text=Halo, saya ingin membeli paket Wisata Kreatif 65k/pax sebanyak : (isi banyak paket yang diinginkan)." target="_blank"
                         class="navbar__highlight"><button class="btn beli align-self-center">Beli
                           sekarang</button></a>
                     </div>

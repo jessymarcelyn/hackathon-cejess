@@ -128,12 +128,14 @@ require "connect.php";
 					<p class="card-text">
 					<div class="row justify-content-start" style="text-align:center">
 						<div class="col-5" style="margin-right:-1.5rem;">
-							<?php
-							$sql = "select count(*) as total from transaksi";
-							$result = mysqli_query($con, $sql);
-							$data = mysqli_fetch_assoc($result);
-							echo "<p style = 'font-size:2.3rem; padding-left: 1.5rem;'>" . $data['total'] . "</p>";
+						<?php
+							$sql = "SELECT count(*) as total FROM transaksi";
+							$stmt = $con->prepare($sql);
+							$stmt->execute();
+							$data = $stmt->fetch(PDO::FETCH_ASSOC);
+							echo "<p style='font-size:2.3rem; padding-left: 1.5rem;'>" . $data['total'] . "</p>";
 							?>
+
 							<p style='font-size:1.2rem; margin-right:-1rem; margin-top:-1.4rem;'>Transaksi</p>
 
 						</div>
@@ -154,12 +156,14 @@ require "connect.php";
 					<p class="card-text">
 					<div class="row justify-content-start" style="text-align:center">
 						<div class="col-4" style="margin-right:0.5rem;">
-							<?php
-							$sql = "select count(*) as total from detail_transaksi";
-							$result = mysqli_query($con, $sql);
-							$data = mysqli_fetch_assoc($result);
-							echo "<p style = 'font-size:2.5rem; padding-left: 1.5rem; margin-right:-1rem;'>" . $data['total'] . "</p>";
+						<?php
+							$sql = "SELECT COUNT(*) as total FROM detail_transaksi";
+							$stmt = $con->prepare($sql);
+							$stmt->execute();
+							$data = $stmt->fetch(PDO::FETCH_ASSOC);
+							echo "<p style='font-size:2.5rem; padding-left: 1.5rem; margin-right:-1rem;'>" . $data['total'] . "</p>";
 							?>
+
 							<p style='font-size:1.2rem; padding-left:0.5rem; margin-top:-1.4rem; margin-right:-2rem;'>
 								Detail Transaksi</p>
 
@@ -180,12 +184,14 @@ require "connect.php";
 					<p class="card-text">
 					<div class="row justify-content-start" style="text-align:center">
 						<div class="col-6" style="margin-right:-1.5rem;">
-							<?php
-							$sql = "select count(*) as total from user";
-							$result = mysqli_query($con, $sql);
-							$data = mysqli_fetch_assoc($result);
-							echo "<p style = 'font-size:2.5rem; padding-left: 1.5rem;'>" . $data['total'] . "</p>";
+						<?php
+							$sql = "SELECT COUNT(*) as total FROM user";
+							$stmt = $con->prepare($sql);
+							$stmt->execute();
+							$data = $stmt->fetch(PDO::FETCH_ASSOC);
+							echo "<p style='font-size:2.5rem; padding-left: 1.5rem;'>" . $data['total'] . "</p>";
 							?>
+
 							<p style='font-size:1.2rem; margin-right:-1rem; margin-top:-1.4rem;'>Pengguna</p>
 
 						</div>
@@ -208,12 +214,14 @@ require "connect.php";
 					<p class="card-text">
 					<div class="row justify-content-start" style="text-align:center">
 						<div class="col-4" style="margin-right:-0.8rem;">
-							<?php
-							$sql = "select count(*) as total from quiz";
-							$result = mysqli_query($con, $sql);
-							$data = mysqli_fetch_assoc($result);
-							echo "<p style = 'font-size:2.5rem; padding-left: 1.5rem; margin-right: -0.5rem'>" . $data['total'] . "</p>";
+						<?php
+							$sql = "SELECT COUNT(*) as total FROM quiz";
+							$stmt = $con->prepare($sql);
+							$stmt->execute();
+							$data = $stmt->fetch(PDO::FETCH_ASSOC);
+							echo "<p style='font-size:2.5rem; padding-left: 1.5rem; margin-right: -0.5rem'>" . $data['total'] . "</p>";
 							?>
+
 							<p style='font-size:1.2rem; margin-right:-1rem; margin-top:-1.4rem;'>Quiz</p>
 
 						</div>
@@ -236,12 +244,14 @@ require "connect.php";
 					<p class="card-text">
 					<div class="row justify-content-start" style="text-align:center">
 						<div class="col-4" style="margin-right:0.5rem;">
-							<?php
-							$sql = "select count(*) as total from wisata";
-							$result = mysqli_query($con, $sql);
-							$data = mysqli_fetch_assoc($result);
-							echo "<p style = 'font-size:2.5rem; padding-left: 1.5rem; margin-right:-1rem;'>" . $data['total'] . "</p>";
+						<?php
+							$sql = "SELECT COUNT(*) as total FROM wisata";
+							$stmt = $con->prepare($sql);
+							$stmt->execute();
+							$data = $stmt->fetch(PDO::FETCH_ASSOC);
+							echo "<p style='font-size:2.5rem; padding-left: 1.5rem; margin-right:-1rem;'>" . $data['total'] . "</p>";
 							?>
+
 							<p style='font-size:1.2rem; padding-left:0.5rem; margin-top:-1.4rem; margin-right:-2rem;'>
 								Wisata</p>
 
@@ -256,107 +266,6 @@ require "connect.php";
 					</p>
 				</div>
 			</div>
-			<!-- <div class="card text-bg-success mb-3 col-4 me-3" style="max-width: 18rem;">
-					<div class="card-header">Reviews</div>
-						<div class="card-body">
-							<p class="card-text" >  <div class="row justify-content-start" style = "text-align:center" >
-								<div class="col-4" >
-									<?php
-									$sql = "select count(*) as total from review";
-									$result = mysqli_query($con, $sql);
-									$data = mysqli_fetch_assoc($result);
-									echo "<p style = 'font-size:2.5rem; padding-left: 1rem;'>" . $data['total'] . "</p>";
-									?>
-									<p style = 'font-size:1.2rem; margin-right:-1rem; margin-top:-1.4rem;'>Reviews</p>
-				
-								</div>
-
-								<div class="col-4" style = "margin-left: 3rem">
-								<i class="fas fa-user-edit fa-4x"></i>
-									<a href = "reviewAdmin.php"><button class = "btn btn-light" style = "margin-top: 0.3rem; margin-left:-0.7rem;">Reviews</button></a>
-								</div>
-							</div>
-							</p>
-						</div>
-					</div>
-				</div>
-				
-
-				<div class="row">
-				<div class="card text-bg-primary mb-3 col-4 me-3" style="max-width: 18rem;">
-					<div class="card-header">Transactions</div>
-						<div class="card-body">
-							<p class="card-text" >  <div class="row justify-content-start" style = "text-align:center" >
-								<div class="col-4" >
-									<?php
-									$sql = "select count(*) as total from features";
-									$result = mysqli_query($con, $sql);
-									$data = mysqli_fetch_assoc($result);
-									echo "<p style = 'font-size:2.5rem; padding-left: 1.5rem; margin-right: -0.5rem'>" . $data['total'] . "</p>";
-									?>
-									<p style = 'font-size:1.2rem; margin-right:-2.8rem; margin-top:-1.4rem;'>Transactions</p>
-				
-								</div>
-
-								<div class="col-4" style = "margin-left: 3.5rem">
-								<i class="fas fa-money-bill-alt fa-4x"></i>
-									<a href = "transactionAdmin.php"><button class = "btn btn-light" style = "margin-top: 0.3rem; margin-left:-1rem;">Transactions</button></a>
-								</div>
-							</div>
-							</p>
-						</div>
-					</div>
- 
-
-		
-			<div class="card text-bg-secondary mb-3 col-4 me-3" style="max-width: 18rem;">
-					<div class="card-header">Transaction Details</div>
-						<div class="card-body">
-							<p class="card-text" >  <div class="row justify-content-start" style = "text-align:center" >
-								<div class="col-4" style= "margin-right:0.5rem;">
-									<?php
-									$sql = "select count(*) as total from detail_transaksi";
-									$result = mysqli_query($con, $sql);
-									$data = mysqli_fetch_assoc($result);
-									echo "<p style = 'font-size:2.5rem; padding-left: 1.5rem; margin-right:-1rem;'>" . $data['total'] . "</p>";
-									?>
-									<p style = 'font-size:1.2rem; padding-left:0.5rem; margin-top:-1.4rem; margin-right:-2.7rem;'>Transaction Details</p>
-				
-								</div>
-
-								<div class="col-4" style = "margin-left: 2rem">
-								<i class="fas fa-file-invoice fa-4x"  style = "margin-left: 1rem"></i>
-									<a href = "dtransaksi.php"><button class = "btn btn-light" style = "margin-top: 0.3rem; margin-left:-0.5rem;" >Transaction Details</button></a>
-								</div>
-							</div>
-							</p>
-						</div>
-					</div>
-				<div class="card text-bg-success mb-3 col-4 me-3" style="max-width: 18rem;">
-					<div class="card-header">Credit Card</div>
-						<div class="card-body">
-							<p class="card-text" >  <div class="row justify-content-start" style = "text-align:center" >
-								<div class="col-4" >
-									<?php
-									$sql = "select count(*) as total from kartu_kredit";
-									$result = mysqli_query($con, $sql);
-									$data = mysqli_fetch_assoc($result);
-									echo "<p style = 'font-size:2.5rem; padding-left: 1rem;'>" . $data['total'] . "</p>";
-									?>
-									<p style = 'font-size:1.2rem; margin-right:-1rem; margin-top:-1.4rem;'>Credit Card</p>
-				
-								</div>
-
-								<div class="col-4" style = "margin-left: 3rem">
-								<i class="fas fa-dollar-sign fa-4x"></i>
-									<a href = "paymentAdmin.php"><button class = "btn btn-light" style = "margin-top: 0.3rem; margin-left:-0.7rem; ">Credit Card</button></a>
-								</div>
-							</div>
-							</p>
-						</div>
-					</div>
-				</div> -->
-
 		</div>
 	</div>
 
