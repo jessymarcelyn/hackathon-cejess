@@ -1,6 +1,6 @@
 <?php
-
 require "connect.php";
+
 if (isset($_POST['save'])) {
     $tgl = $_POST['tgl'];
     $q1 = $_POST['q1'];
@@ -17,16 +17,20 @@ if (isset($_POST['save'])) {
     $nomor = $_POST['nomor'];
     $email = $_POST['email'];
 
-    $sql = mysqli_query($con, "SELECT * FROM user where email='$email'");
+    // Check if the email already exists
+    $sql = $con->prepare("SELECT * FROM user WHERE email = :email");
+    $sql->bindParam(':email', $email, PDO::PARAM_STR);
+    $sql->execute();
 
-    // if (mysqli_num_rows($sql) > 0) {
-    //     header('location: user.php?status=0');
-    // } else {
-    $sql2 = "INSERT INTO user VALUES (null, '$nama', '$email', '$nomor')";
-    $query = mysqli_query($con, $sql2);
-    $idUser = mysqli_insert_id($con);
+    // Insert a new user
+    $insertUser = $con->prepare("INSERT INTO user (nama, email, no_telp) VALUES (:nama, :email, :nomor)");
+    $insertUser->bindParam(':nama', $nama, PDO::PARAM_STR);
+    $insertUser->bindParam(':email', $email, PDO::PARAM_STR);
+    $insertUser->bindParam(':nomor', $nomor, PDO::PARAM_STR);
+    $insertUser->execute();
+
+    $idUser = $con->lastInsertId();
+
     header("Location: payment.php?id_user=${idUser}&tgl=${tgl}&q1=${q1}&q2=${q2}&q3=${q3}&q4=${q4}&q5=${q5}&q6=${q6}&q7=${q7}&q8=${q8}&q9=${q9}&q10=${q10}");
-    // }
 }
-
 ?>

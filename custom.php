@@ -44,9 +44,7 @@ include('navWisata.php');
     </style>
 </head>
 
-
 <body>
-
     <div id="testimoni" class="testimoni section">
         <div class="container">
             <form action="booking.php" method="post">
@@ -59,63 +57,68 @@ include('navWisata.php');
                     </div>
 
                     <div class="row">
-
                         <?php
+                        // Establish a PDO connection
+                        try {
+                            $con = new PDO("mysql:host=localhost;dbname=hackathon23", 'root', '');
+                            $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                        } catch (PDOException $e) {
+                            echo "Connection failed: " . $e->getMessage();
+                            die();
+                        }
                         for ($i = 1; $i <= 10; $i++) {
-                            $sql = "SELECT * FROM wisata WHERE id_wisata = '$i'";
-                            $res1 = mysqli_query($con, $sql);
+                            $stmt = $con->prepare("SELECT * FROM wisata WHERE id_wisata = :id_wisata");
+                            $stmt->bindParam(':id_wisata', $i, PDO::PARAM_INT);
+                            $stmt->execute();
 
-                            if (!empty($res1)) {
-                                while ($row = mysqli_fetch_array($res1)) {
-                                    ?>
+                            $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-                                    <div class="col-lg-3">
-                                        <div class="box-item">
-                                            <h5>
-                                                <?= $row["nama"] ?>
-                                            </h5>
-                                            <input style="color:#fff" type="hidden" name="idQ<?= $i ?>" id="quantity<?= $i ?>">
-                                            <div class="plusminus">
-                                                <span class="text-white me-2" id="minus<?= $i ?>" class="spanplusminus">-</span>
-                                                <span class="text-white" id="num<?= $i ?>" class="spanplusminus">01</span>
-                                                <span class="text-white ms-2" id="plus<?= $i ?>" class="spanplusminus">+</span>
-                                            </div>
+                            if ($row) {
+                                ?>
+                                <div class="col-lg-3">
+                                    <div class="box-item">
+                                        <h5><?= $row["nama"] ?></h5>
+                                        <h7>Rp <?= number_format($row["harga"], 0, ',', '.') ?></h7>
+                                        <input style="color:#fff" type="hidden" name="idQ<?= $i ?>" id="quantity<?= $i ?>">
+                                        <div class="plusminus">
+                                            <span class="text-white me-2" id="minus<?= $i ?>" class="spanplusminus">-</span>
+                                            <span class="text-white" id="num<?= $i ?>" class="spanplusminus">01</span>
+                                            <span class="text-white ms-2" id="plus<?= $i ?>" class="spanplusminus">+</span>
                                         </div>
                                     </div>
+                                </div>
+                                <script>
+                                    let quantity<?= $i ?> = 0;
 
-
-                                    <script>
-                                        let quantity<?= $i ?> = 0;
-                                        function updateQuantity<?= $i ?>(value) {
-                                            if (quantity<?= $i ?> === 0 && value === -1) {
-                                                return;
-                                            }
-                                            quantity<?= $i ?> += value;
-                                            let quantityInput<?= $i ?> = document.getElementById("quantity<?= $i ?>");
-                                            quantityInput<?= $i ?>.value = quantity<?= $i ?>;
-
-                                            let num<?= $i ?> = document.getElementById("num<?= $i ?>");
-                                            num<?= $i ?>.innerText = quantity<?= $i ?>;
-
-                                            let minus<?= $i ?> = document.getElementById("minus<?= $i ?>");
-                                            if (quantity<?= $i ?> === 0) {
-                                                minus<?= $i ?>.classList.add('disabled');
-                                            } else {
-                                                minus<?= $i ?>.classList.remove('disabled');
-                                            }
+                                    function updateQuantity<?= $i ?>(value) {
+                                        if (quantity<?= $i ?> === 0 && value === -1) {
+                                            return;
                                         }
+                                        quantity<?= $i ?> += value;
+                                        let quantityInput<?= $i ?> = document.getElementById("quantity<?= $i ?>");
+                                        quantityInput<?= $i ?>.value = quantity<?= $i ?>;
 
-                                        document.getElementById("plus<?= $i ?>").addEventListener("click", () => {
-                                            updateQuantity<?= $i ?>(1);
-                                        });
+                                        let num<?= $i ?> = document.getElementById("num<?= $i ?>");
+                                        num<?= $i ?>.innerText = quantity<?= $i ?>;
 
-                                        document.getElementById("minus<?= $i ?>").addEventListener("click", () => {
-                                            updateQuantity<?= $i ?>(-1);
-                                        });
-                                        updateQuantity<?= $i ?>(0);
-                                    </script>
-                                    <?php
-                                }
+                                        let minus<?= $i ?> = document.getElementById("minus<?= $i ?>");
+                                        if (quantity<?= $i ?> === 0) {
+                                            minus<?= $i ?>.classList.add('disabled');
+                                        } else {
+                                            minus<?= $i ?>.classList.remove('disabled');
+                                        }
+                                    }
+
+                                    document.getElementById("plus<?= $i ?>").addEventListener("click", () => {
+                                        updateQuantity<?= $i ?>(1);
+                                    });
+
+                                    document.getElementById("minus<?= $i ?>").addEventListener("click", () => {
+                                        updateQuantity<?= $i ?>(-1);
+                                    });
+                                    updateQuantity<?= $i ?>(0);
+                                </script>
+                                <?php
                             }
                         }
                         ?>
@@ -127,15 +130,14 @@ include('navWisata.php');
                                 onclick="detail1()">Book</button>
                         </div>
                     </div>
-
                 </div>
-
                 <script>
                     let tomorrow = new Date();
                     tomorrow.setDate(tomorrow.getDate() + 2);
                     let tomorrowFormatted = tomorrow.toISOString().split('T')[0];
 
                     document.getElementById('tgl').setAttribute('min', tomorrowFormatted);
+
                     function detail1() {
                         let tgl = document.getElementById("tgl").value;
                         let a1 = document.getElementById("quantity1").value;

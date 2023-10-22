@@ -167,7 +167,7 @@ include('navbar.php')
         ?>
         <div class="wrapper">
             <a href="custom.php" class="text-primary"><i><u> &#171; kembali </u> </i> </a>
-            <h2 style='text-align: center;'>Sign Up</h2>
+            <h2 style='text-align: center;'>Registrasi</h2>
             <!-- <p>Please fill this form to create an account</p> -->
             <form action="regist.php" method="post">
                 <input class="form-control" type="hidden" name="tgl" value="<?php echo ($tgl); ?>">

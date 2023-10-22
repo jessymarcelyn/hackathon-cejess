@@ -60,7 +60,7 @@ require "connect.php";
 	<p class="judul" style="background-color :#1e4e34; height : 3rem; text-align: center; ">
 		Detail Transaksi</p>
 	<div style="margin-left: 10vw; margin-right: 10vw;">
-		<form action="https://wa.me/6285707003873?text=Bukti pembayaran " method="post">
+		<form action="pay.php " method="post">
 			<input type="hidden" name="tgl" value="<?php echo ($tgl); ?>">
 			<input type="hidden" name="idUser" value="<?php echo ($idUser); ?>">
 			<input type="hidden" name="q1" value="<?php echo ($q1); ?>">
@@ -105,7 +105,7 @@ require "connect.php";
 				<div class="col-sm-3">
 					<input type="text" class="form-control" name="q5" value="<?php echo $q5; ?>" readonly>
 				</div>
-				<label class="col-sm-3">PPG Wisata Pinus</label>
+				<label class="col-sm-3">Cafe Gumitir</label>
 				<div class="col-sm-3">
 					<input type="text" class="form-control" name="q6" value="<?php echo $q6; ?>" readonly>
 				</div>
@@ -130,6 +130,33 @@ require "connect.php";
 					<input type="text" class="form-control" name="q10" value="<?php echo $q10; ?>" readonly>
 				</div>
 			</div>
+			<div class="mb-3 row">
+				<label class="col-sm-2"><b>Total Pembayaran : </b></label>
+				<div class="col-sm-10"><b>
+				<?php
+					$total = 0;
+
+					for ($i = 1; $i <= 10; $i++) {
+						$stmt = $con->prepare("SELECT * FROM wisata WHERE id_wisata = :id_wisata");
+						$stmt->bindParam(':id_wisata', $i, PDO::PARAM_INT);
+						$stmt->execute();
+						$row = $stmt->fetch(PDO::FETCH_ASSOC);
+						if ($row) {
+							// Calculate the subtotal for each item
+							$subtotal = $row["harga"] * ${"q" . $i};
+
+							// Add the subtotal to the total
+							$total += $subtotal;
+						}
+					}
+					
+					echo "Rp " . number_format($total, 0, ',', '.');
+
+							?>
+							<input type="hidden" name="total" value="<?php echo ($total); ?>">
+				</b>
+				</div>
+			</div>
 			<p class="judul"
 				style="background-color :#1e4e34; height: 3rem; text-align: center; margin-top: 3rem;">
 				Detail Pembayaran</p>
@@ -146,9 +173,10 @@ require "connect.php";
 					<input class="form-control" type="file" id="photo" name="photo" required>
 				</div>
 			</div>
+			
 
 			<a href="asdada "><button class="btn mb-3 text-white"
-					style="width: 50%; margin-left: 25%; background:#1e4e34">Pay<i class='fas fa-save'
+					style="width: 50%; margin-left: 25%; background:#1e4e34" name= "pay">Pay<i class='fas fa-save'
 						style='color:blue'></i></button></a>
 
 		</form>
