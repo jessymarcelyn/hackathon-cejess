@@ -382,7 +382,7 @@ if (isset($_POST['wishlist'])) {
 		.navbar .navbar-brand a {
 			padding: 1rem 0;
 			display: block;
-			text decoration: none;
+			text-decoration: none;
 		}
 
 		.navbar-brand {

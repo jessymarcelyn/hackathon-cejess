@@ -4,7 +4,7 @@
         height: 100vh;
     }
 
-    .col - 6 {
+    .col-6 {
         position: absolute;
 
     }

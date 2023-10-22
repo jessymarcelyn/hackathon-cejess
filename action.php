@@ -78,7 +78,7 @@ require "connect.php";
 		.navbar .navbar-brand a {
 			padding: 1rem 0;
 			display: block;
-			text decoration: none;
+			text-decoration: none;
 		}
 
 		.navbar-brand {
@@ -118,7 +118,7 @@ require "connect.php";
 	</nav>
 	<br>
 	<p id="judul"
-		style=" height : 3rem; text-align: center; margin-button: 3rem;  margin-right:5rem; margin-left:5rem;">Dashboard
+		style=" height : 3rem; text-align: center; margin-right:5rem; margin-left:5rem;">Dashboard
 	</p>
 	<div class=" dbcard container" style="margin-left : 11rem;">
 		<div class="row">

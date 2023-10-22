@@ -23,7 +23,7 @@
               data-wow-delay="0.5s" data-bs-ride="carousel" style="height: 400px">
               <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="3000">
-                  <img src="assets/wisata/domba1.jpg" class="d-block w-150" />
+                  <img src="assets/wisata/domba1.JPG" class="d-block w-150" />
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
                   <img src="assets/wisata/batik3.jpg" class="d-block w-150" />

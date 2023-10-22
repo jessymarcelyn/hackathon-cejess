@@ -118,7 +118,7 @@ if(isset($_POST['update'])){
 </nav>
 	<div class = "container">
 		<div class = "content-web my-5">
-		<p id ="judul" style = " height : 3rem; text-align: center; margin-button: 3rem;  margin-top: 3rem;" >Transaction Details</p>
+		<p id ="judul" style = " height : 3rem; text-align: center;  margin-top: 3rem;" >Transaction Details</p>
 			<form>
 			<div class="row justify-content-start" >
 					<div class="col-4" style = "margin-right : 10rem;">

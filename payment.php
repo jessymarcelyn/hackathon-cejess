@@ -131,7 +131,7 @@ require "connect.php";
 				</div>
 			</div>
 			<p class="judul"
-				style="background-color :#1e4e34; height: 3rem; text-align: center; margin-button: 3rem;  margin-top: 3rem;">
+				style="background-color :#1e4e34; height: 3rem; text-align: center; margin-top: 3rem;">
 				Detail Pembayaran</p>
 			<p style=" width : 125%;"><b>BCA 5210932567 A/N Galeri Sidomulyo</b></p>
 			<div class="mb-3 row">
@@ -147,7 +147,7 @@ require "connect.php";
 				</div>
 			</div>
 
-			<a href="https://wa.me/6285707003873?text=Bukti pembayaran "><button class="btn mb-3 text-white"
+			<a href="asdada "><button class="btn mb-3 text-white"
 					style="width: 50%; margin-left: 25%; background:#1e4e34">Pay<i class='fas fa-save'
 						style='color:blue'></i></button></a>
 
