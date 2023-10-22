@@ -165,7 +165,6 @@
                                         <a class="dropdown-item" href="ceritaKafe.php">Kafe Gumitri</a>
                                         <a class="dropdown-item" href="ceritaKetakase.php">Ketakase</a>
                                         <a class="dropdown-item" href="ceritaPPG.php">PPG Sidomulyo</a>
-                                        <a class="dropdown-item" href="sport.php">PPG Sidomulyo</a>
                                         <a class="dropdown-item" href="ceritaSendang.php">Sendang Tirto Gumitir</a>
                                     </div>
                                 </div>
