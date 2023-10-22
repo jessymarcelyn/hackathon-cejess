@@ -150,8 +150,13 @@ include('navWisata.php');
                         let a8 = document.getElementById("quantity8").value;
                         let a9 = document.getElementById("quantity9").value;
                         let a10 = document.getElementById("quantity10").value;
-
+                        if (tgl === "" || (a1 == 0 && a2 == 0 && a3 == 0 && a4 == 0 && a5 == 0 && a6 == 0 && a7 == 0 && a8 == 0 && a9 == 0&& a10 == 0 )) {
+                            // Handle the case where tgl is empty or a1 and a2 are both empty
+                            alert("Mohon lengkapi form");
+                        }
+                        else{
                         location.href = `user.php?tgl=${tgl}&q1=${a1}&q2=${a2}&q3=${a3}&q4=${a4}&q5=${a5}&q6=${a6}&q7=${a7}&q8=${a8}&q9=${a9}&q10=${a10}`;
+                        }
                     }
                 </script>
             </form>

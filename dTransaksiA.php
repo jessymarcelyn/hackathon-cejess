@@ -3,7 +3,7 @@ require 'connect.php';
 
 if (isset($_POST['edit'])) {
     $id = $_POST['id'];
-    $sql  = "SELECT * FROM detail_transaksi WHERE id_detail = :id";
+    $sql = "SELECT * FROM detail_transaksi WHERE id_detail = :id";
     $stmt = $con->prepare($sql);
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
     $stmt->execute();
@@ -19,8 +19,7 @@ if (isset($_POST['save'])) {
     $idWisata = $_POST['idWisata'];
     $idTransaksi = $_POST['idTransaksi'];
 
-    $sql = "INSERT INTO detail_transaksi (id_detail, quantity, amount, id_wisata, id_transaksi)
-            VALUES (:id, :kuantitas, :jumlah, :idWisata, :idTransaksi)";
+    $sql = "INSERT INTO detail_transaksi (id_detail, quantity, amount, id_wisata, id_transaksi) VALUES (:id, :kuantitas, :jumlah, :idWisata, :idTransaksi)";
     $stmt = $con->prepare($sql);
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
     $stmt->bindParam(':kuantitas', $kuantitas, PDO::PARAM_INT);
@@ -77,7 +76,7 @@ if (isset($_POST['update'])) {
     $id = $_POST['id'];
     $kuantitas = $_POST['kuantitas'];
     $jumlah = $_POST['jumlah'];
-    $idWisata = $_POST['idWisata'];
+    $idWisata = $_POST['wisata'];
     $idTransaksi = $_POST['idTransaksi'];
 
     $sql = "UPDATE detail_transaksi 

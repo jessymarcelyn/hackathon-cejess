@@ -1,78 +1,89 @@
 <?php
 require 'connect.php';
-// include('adminverification.php');
+
 if(isset($_POST['edit'])){
 	$id = $_POST['id'];
-	$sql  = "SELECT * FROM quiz WHERE id = '$id'";
-	$result = mysqli_query($con,$sql);
-	$row = mysqli_fetch_array($result);
+	$sql = "SELECT * FROM quiz WHERE id = :id";
+	$stmt = $con->prepare($sql);
+	$stmt->bindParam(':id', $id, PDO::PARAM_INT);
+	$stmt->execute();
+	$row = $stmt->fetch(PDO::FETCH_ASSOC);
 	echo json_encode($row);
-
 	exit();
-
 }
+
 if(isset($_POST['save'])){
 	$id = $_POST['id'];
 	$telp = $_POST['telp'];
 	$email = $_POST['email'];
-    $tglMain = $_POST['tglMain'];
-    $menang = $_POST['menang'];
+	$tglMain = $_POST['tglMain'];
+	$menang = $_POST['menang'];
 
-	$sql = "INSERT INTO quiz VALUES('$id','$email', '$tglMain', '$telp', $menang)";
-	$result = mysqli_query($con,$sql);
+	$sql = "INSERT INTO quiz (id, email, tanggal_main, no_telp, menang) VALUES (:id, :email, :tglMain, :telp, :menang)";
+	$stmt = $con->prepare($sql);
+	$stmt->bindParam(':id', $id, PDO::PARAM_INT);
+	$stmt->bindParam(':email', $email, PDO::PARAM_STR);
+	$stmt->bindParam(':tglMain', $tglMain, PDO::PARAM_STR);
+	$stmt->bindParam(':telp', $telp, PDO::PARAM_STR);
+	$stmt->bindParam(':menang', $menang, PDO::PARAM_INT);
+	$stmt->execute();
 	exit();
-	
-
-
 }
+
 if(isset($_POST['showtable'])){
 	$sql = "SELECT * FROM quiz";
-	$result = mysqli_query($con,$sql);
+	$stmt = $con->query($sql);
 	echo "<table class='table table-bordered my-5'>
-			  <thead class = 'table-dark' style = 'text-align:center';>
+			  <thead class='table-dark' style='text-align:center';>
 			    <tr>
 			      <th scope='col' class='text-center'>ID Pengguna</th>
 			      <th scope='col' class='text-center'>Email</th>
-				  <th scope='col' class='text-center'>Tanggal Main</th>
+			      <th scope='col' class='text-center'>Tanggal Main</th>
 			      <th scope='col' class='text-center'>Nomor Telepon</th>
                   <th scope='col' class='text-center'>Menang</th>
 			      <th scope='col' class='text-center'>Action</th>			      
 			    </tr>
 			  </thead>
 			  <tbody>";
-	while($row=mysqli_fetch_array($result)){
+	while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
 		echo "
-			  	<tr>
-			  		<th class='text-center'>$row[0]</th>
-					<th class='text-center'>$row[1]</th>
-					<th class='text-center'>$row[2]</th>
-					<th class='text-center'>$row[3]</th>
-                    <th class='text-center'>$row[4]</th>
-					<td class='text-center'><button class = 'btn btn-dark edit' ide = '$row[0]'>Edit </button> <button class = 'btn btn-danger delete' idd = '$row[0]'>Delete</button></td>
-				</tr>";
-			  
-			  
+			<tr>
+				<th class='text-center'>$row[id]</th>
+				<th class='text-center'>$row[email]</th>
+				<th class='text-center'>$row[tanggal_main]</th>
+				<th class='text-center'>$row[no_telp]</th>
+				<th class='text-center'>$row[menang]</th>
+				<td class='text-center'><button class='btn btn-dark edit' ide='$row[id]'>Edit</button> <button class='btn btn-danger delete' idd='$row[id]'>Delete</button></td>
+			</tr>";
 	}
-	echo "</tbody>
-			</table>";
+	echo "</tbody></table>";
 	exit();
 }
+
 if(isset($_POST['del'])){
 	$id = $_POST['id'];
-	$sql = "DELETE FROM quiz WHERE id = '$id'";
-	$result = mysqli_query($con,$sql);
-	
+	$sql = "DELETE FROM quiz WHERE id = :id";
+	$stmt = $con->prepare($sql);
+	$stmt->bindParam(':id', $id, PDO::PARAM_INT);
+	$stmt->execute();
 	exit();
 }
+
 if(isset($_POST['update'])){
 	$id = $_POST['id'];
 	$telp = $_POST['telp'];
 	$email = $_POST['email'];
-    $tglMain = $_POST['tglMain'];
-    $menang = $_POST['menang'];
+	$tglMain = $_POST['tglMain'];
+	$menang = $_POST['menang'];
 
-	$sql="UPDATE quiz set email = '$email', tanggal_main = '$tglMain', menang = $menang WHERE id = '$id'";
-	$result = mysqli_query($con,$sql);
+	$sql = "UPDATE quiz SET email = :email, tanggal_main = :tglMain, no_telp = :telp, menang = :menang WHERE id = :id";
+	$stmt = $con->prepare($sql);
+	$stmt->bindParam(':id', $id, PDO::PARAM_INT);
+	$stmt->bindParam(':email', $email, PDO::PARAM_STR);
+	$stmt->bindParam(':tglMain', $tglMain, PDO::PARAM_STR);
+	$stmt->bindParam(':telp', $telp, PDO::PARAM_STR);
+	$stmt->bindParam(':menang', $menang, PDO::PARAM_INT);
+	$stmt->execute();
 	exit();
 }
 ?>
@@ -91,12 +102,29 @@ if(isset($_POST['update'])){
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
+<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
 	<script src="jquery-3.6.1.js" type="text/javascript"></script>
 	<link rel="stylesheet" type="text/css" href="bootstrap-5.2.0/css/bootstrap.css">
-</head>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<!-- Bootstrap core CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+		integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+		integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+		crossorigin="anonymous"></script>
+		</head>
 <body>
 	<nav class="navbar navbar-expand-lg bg-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
 	    <div class="container-fluid">
@@ -126,7 +154,7 @@ if(isset($_POST['update'])){
 				<div class="row justify-content-start" >
                     <div class="col-4" style = "margin-right : 10rem;">
                         <label>Tanggal Main</label><br>
-                        <input type="text" class="form-control" id = "tgl_main">
+                        <input type="date" class="form-control" id = "tgl_main">
                     </div>
                     <br>
                     <div class="col-4" style = " margin-left:-9rem;">
@@ -225,10 +253,9 @@ if(isset($_POST['update'])){
 			});
 		$('#update').click(function(){
 				v_id = $('#id').val();
-				v_nama = $('#nama').val();
 				v_telp = $('#telp').val();
 				v_mail = $('#email').val();
-                v_tglMain = $('#tglMain').val();
+                v_tglMain = $('#tgl_main').val();
                 v_menang = $('#menang').val();
 				
 			$.ajax({
@@ -238,7 +265,6 @@ if(isset($_POST['update'])){
 				data : {
 					update : 1,
 					id : v_id,
-					nama : v_nama,
 					telp : v_telp,
 					email : v_mail,
                     tglMain : v_tglMain,
