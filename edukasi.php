@@ -87,7 +87,7 @@
                       </button>
                     </div>
                     <div class="col-md-2">
-                      <a href="https://wa.me/6285707003873?text=Halo, saya ingin membeli paket Wisata Edukasi 55k/pax sebanyak : (isi banyak paket yang diinginkan)."
+                      <a href="https://wa.me/6285707003873?text=Halo, saya ingin membeli Paket Wisata Edukasi 55k/pax sebanyak : (isi banyak paket yang diinginkan)."
                         target="_blank" class="navbar__highlight"><button class="btn beli align-self-center">Beli
                           sekarang</button></a>
                     </div>
@@ -125,7 +125,7 @@
                       </button>
                     </div>
                     <div class="col-md-2">
-                      <a href="https://wa.me/6285707003873?text=Halo, saya ingin membeli paket Wisata Edukasi 95k/pax sebanyak : (isi banyak paket yang diinginkan)." target="_blank" class="navbar__highlight"><button
+                      <a href="https://wa.me/6285707003873?text=Halo, saya ingin membeli Paket Wisata Edukasi 95k/pax sebanyak : (isi banyak paket yang diinginkan)." target="_blank" class="navbar__highlight"><button
                           class="btn beli align-self-center">Beli
                           sekarang</button></a>
                     </div>

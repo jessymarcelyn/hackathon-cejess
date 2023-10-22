@@ -162,7 +162,7 @@
                                         <a class="dropdown-item" href="ceritaAkar.php">Rumah Akar</a>
                                         <a class="dropdown-item" href="ceritaBatik.php">Rumah Batik</a>
                                         <a class="dropdown-item" href="ceritaDomba.php">Raja Domba</a>
-                                        <a class="dropdown-item" href="ceritaKafe.php">Kafe Gumitri</a>
+                                        <a class="dropdown-item" href="ceritaKafe.php">Kafe Gumitir</a>
                                         <a class="dropdown-item" href="ceritaKetakase.php">Ketakase</a>
                                         <a class="dropdown-item" href="ceritaPPG.php">PPG Sidomulyo</a>
                                         <a class="dropdown-item" href="ceritaSendang.php">Sendang Tirto Gumitir</a>

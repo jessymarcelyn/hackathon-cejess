@@ -73,7 +73,7 @@
                       </button>
                     </div>
                     <div class="col-md-2">
-                      <a href="https://wa.me/6285707003873?text=Halo, saya ingin membeli paket Wisata Spiritual sebanyak : (isi banyak paket yang diinginkan)." target="_blank"
+                      <a href="https://wa.me/6285707003873?text=Halo, saya ingin membeli Paket Wisata Spiritual sebanyak : (isi banyak paket yang diinginkan)." target="_blank"
                         class="navbar__highlight"><button class="btn beli align-self-center">Beli
                           sekarang</button></a>
                     </div>

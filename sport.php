@@ -86,7 +86,7 @@
                       </button>
                     </div>
                     <div class="col-md-2">
-                      <a href="https://wa.me/6285707003873?text=Halo, saya ingin membeli paket Fun SAT 50k/pax sebanyak : (isi banyak paket yang diinginkan)."target="_blank"
+                      <a href="https://wa.me/6285707003873?text=Halo, saya ingin membeli Paket Fun SAT 50k/pax sebanyak : (isi banyak paket yang diinginkan)."target="_blank"
                         class="navbar__highlight"><button class="btn beli align-self-center">Beli
                           sekarang</button></a>
                     </div>
@@ -115,7 +115,7 @@
                       </button>
                     </div>
                     <div class="col-md-2">
-                      <a href="https://wa.me/6285707003873?text=Halo, saya ingin membeli paket Extreme SAT 55k/pax sebanyak : (isi banyak paket yang diinginkan)." target="_blank"
+                      <a href="https://wa.me/6285707003873?text=Halo, saya ingin membeli Paket Extreme SAT 55k/pax sebanyak : (isi banyak paket yang diinginkan)." target="_blank"
                         class="navbar__highlight"><button class="btn beli align-self-center">Beli
                           sekarang</button></a>
                     </div>
@@ -144,7 +144,7 @@
                       </button>
                     </div>
                     <div class="col-md-2">
-                      <a href="https://wa.me/6285707003873?text=Halo, saya ingin membeli paket Hard SAT 60k/pax sebanyak : (isi banyak paket yang diinginkan)." target="_blank"
+                      <a href="https://wa.me/6285707003873?text=Halo, saya ingin membeli Paket Hard SAT 60k/pax sebanyak : (isi banyak paket yang diinginkan)." target="_blank"
                         class="navbar__highlight"><button class="btn beli align-self-center">Beli
                           sekarang</button></a>
                     </div>
@@ -174,7 +174,7 @@
                       </button>
                     </div>
                     <div class="col-md-2">
-                      <a href="https://wa.me/6285707003873?text=Halo, saya ingin membeli paket Moutain Bike sebanyak : (isi banyak paket yang diinginkan)." target="_blank"
+                      <a href="https://wa.me/6285707003873?text=Halo, saya ingin membeli Paket Moutain Bike sebanyak : (isi banyak paket yang diinginkan)." target="_blank"
                         class="navbar__highlight"><button class="btn beli align-self-center">Beli
                           sekarang</button></a>
                     </div>
