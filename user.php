@@ -96,14 +96,14 @@ include('navbar.php')
 
         .wrapper {
             background-color: #E9EEF2;
-            width: 600px;
+            width: 75%;
             padding: 20px;
             margin: auto;
             border-style: solid;
             border-radius: 20px;
-            padding: -2px;
-            /* margin-top: 5%; */
-            margin-bottom: 8px;
+            /* padding: -2px; */
+            margin-top: 5%;
+            margin-bottom: 25%;
         }
     </style>
 </head>
@@ -151,7 +151,7 @@ include('navbar.php')
 
 
 <body>
-    <div class="main-banner">
+    <div class="d-flex align-items-center main-banner">
         <?php
         $tgl = $_GET['tgl'];
         $q1 = $_GET['q1'];
