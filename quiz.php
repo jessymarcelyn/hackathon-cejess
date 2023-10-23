@@ -369,12 +369,20 @@
         transition: all 0.3s ease;
     }
 
-    .buttons button.restart {
+    .buttons button.restart.show {
+        opacity: 1;
+        pointer-events: auto;
+        transform: scale(1);
+    }
+
+    .buttons button.restart,
+    button.claim {
         color: #fff;
         background: #CAC2B3;
     }
 
-    .buttons button.restart:hover {
+    .buttons button.restart:hover,
+    button.claim:hover {
         background: #0263ca;
     }
 
@@ -453,7 +461,8 @@
             <!-- Here I've inserted Score Result from JavaScript -->
         </div>
         <div class="buttons">
-            <button class="restart">Ulangi</button>
+            <button class="claim">Klaim</button>
+            <button class="restart"></button>
             <button class="quit">Keluar</button>
         </div>
     </div>

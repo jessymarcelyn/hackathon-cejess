@@ -36,6 +36,7 @@ let counter;
 let counterLine;
 let widthValue = 0;
 const restart_quiz = result_box.querySelector(".buttons .restart");
+const claim_quiz = result_box.querySelector(".buttons .claim");
 const quit_quiz = result_box.querySelector(".buttons .quit");
 // if restartQuiz button clicked
 restart_quiz.onclick = ()=>{
@@ -163,14 +164,16 @@ function showResult(){
             }
         };
         xhr.send(data);
-        restart_quiz.style.display = "none";
-        
 
+        restart_quiz.classList.remove("show");
+        claim_quiz.classList.add("show");
     }
     else if (userScore > 1 && userScore <=9){ // if user scored more than 3
         //creating a new span tag and passing the user score number and total question number
         let scoreTag = '<span>Anda berhasil mejawab <p>'+ userScore +'</p> dari <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
+        restart_quiz.classList.add("show");
+        claim_quiz.classList.remove("show");
     }
 
     else{ // if user scored less than 1
