@@ -27,7 +27,6 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
@@ -46,10 +45,6 @@
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="stylesheet" href="assets/css/pricing.css" />
     <link rel="icon" type="image/x-icon" href="assets/images/logores.png" />
-
-       <!-- Required meta tags -->
-       <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -175,15 +170,16 @@
                 <form action="game.php" method="post">
                     <div class="rounded" style="padding: 30px">
                         <input name="nama" type="text" class="form-control border-0 py-2 mb-2 mt-3"
-                            placeholder="Nama" />
+                            placeholder="Nama" required />
                         <input name="noTelp" type="text" class="form-control border-0 py-2 mb-2 mt-3"
-                            placeholder="Nomor Telepon" />
+                            placeholder="Nomor Telepon" required/>
                         <input name="emailk" type="email" class="form-control border-0 py-2 mb-2 mt-3"
-                            placeholder="Email" />
-                        <a href="quiz.php" name="play" class="btn w-100 py-2 mt-3 text-white"
+                            placeholder="Email" required />
+                        <!-- <a href="quiz.php" name="play" class="btn w-100 py-2 mt-3 text-white"
                             style=" background:#1e4e34">Main
-                            Kuis!</a>
-                        <!-- <button name="play" class="btn btn-register w-100 py-2 mt-3"></button> -->
+                            Kuis!</a> -->
+                        <button name="play" class="btn btn-register w-100 py-2 mt-3" style=" background:#1e4e34; color:white">Main
+                            Kuis!</button>
                     </div>
                 </form>
             </div>
