@@ -1,6 +1,10 @@
 <?php
+session_start();
 require 'connect.php';
-// include('adminverification.php');
+
+if (!isset($_SESSION["id"])) {
+	header("location: login.php?error=2");
+}
 
 if(isset($_POST['edit'])){
 	$id = $_POST['id'];

@@ -1,5 +1,10 @@
 <?php
+session_start();
 require 'connect.php';
+
+if (!isset($_SESSION["id"])) {
+	header("location: login.php?error=2");
+}
 
 if (isset($_POST['edit'])) {
     $id = $_POST['id'];
@@ -145,7 +150,7 @@ if (isset($_POST['update'])) {
 </nav>
 	<div class = "container">
 		<div class = "content-web my-5">
-		<p id ="judul" style = " height : 3rem; text-align: center;  margin-top: 3rem;" >Transaction Details</p>
+		<p id ="judul" style = " height : 3rem; text-align: center;  margin-top: 3rem;" >Detail Transaksi</p>
 			<form>
 			<div class="row justify-content-start" >
 					<div class="col-4" style = "margin-right : 10rem;">

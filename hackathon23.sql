@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 23, 2023 at 03:31 PM
+-- Generation Time: Oct 23, 2023 at 08:19 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -24,6 +24,25 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `password` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `username`, `password`) VALUES
+(1, 'ilham', 'halo');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `detail_transaksi`
 --
 
@@ -40,21 +59,8 @@ CREATE TABLE `detail_transaksi` (
 --
 
 INSERT INTO `detail_transaksi` (`id_detail`, `quantity`, `amount`, `id_wisata`, `id_transaksi`) VALUES
-(5, 1, 10000, 1, 14),
-(6, 1, 10000, 2, 14),
-(7, 1, 10000, 3, 14),
-(8, 1, 10000, 4, 14),
-(9, 1, 10000, 5, 14),
-(10, 1, 10000, 6, 14),
-(11, 1, 10000, 7, 14),
-(12, 1, 10000, 8, 14),
-(13, 1, 10000, 9, 14),
-(14, 1, 10000, 10, 14),
-(15, 1, 10000, 1, 15),
-(16, 1, 10000, 2, 15),
-(17, 1, 10000, 3, 15),
+(16, 2, 10000, 3, 15),
 (18, 1, 10000, 4, 15),
-(19, 1, 10000, 5, 15),
 (20, 1, 10000, 6, 15),
 (21, 1, 10000, 7, 15),
 (22, 1, 10000, 8, 15),
@@ -73,13 +79,14 @@ INSERT INTO `detail_transaksi` (`id_detail`, `quantity`, `amount`, `id_wisata`, 
 (35, 3, 30000, 1, 17),
 (36, 1, 10000, 2, 17),
 (37, 0, 0, 3, 17),
-(38, 0, 0, 4, 17),
 (39, 0, 0, 5, 17),
 (40, 0, 0, 6, 17),
 (41, 2, 20000, 7, 17),
 (42, 0, 0, 8, 17),
 (43, 0, 0, 9, 17),
-(44, 0, 0, 10, 17);
+(44, 0, 0, 10, 17),
+(47, 2, 20000, 2, 34),
+(48, 4, 4, 4, 22);
 
 -- --------------------------------------------------------
 
@@ -100,13 +107,14 @@ CREATE TABLE `quiz` (
 --
 
 INSERT INTO `quiz` (`id`, `email`, `tanggal_main`, `no_telp`, `menang`) VALUES
-(1, 'asda@gmail.com', '2023-09-23', '0812313', 0),
-(2, 'asdam@gmail.com', '2023-09-23', '0812233445', 0),
+(2, 'asdam@gmail.com', '2023-10-27', '0812233445', 1),
 (3, 'asdamm@gmail.com', '2023-09-23', '0813456788', 0),
 (4, 'asdasd@gmail.com', '2023-09-23', '08123132', 0),
 (5, '132@gmail.com', '2023-09-23', '012832813', 0),
 (6, 'aksdk@gmail.com', '2023-09-23', '0812312', 0),
-(7, 'asdawsd@gmail.com', '2023-09-23', '0812312', 0);
+(7, 'asdawsd@gmail.com', '2023-09-23', '0812312', 0),
+(9, 'tin12a@gmail.com', '0000-00-00', '08123123', 1),
+(10, 'rendy@gmail.com', '2023-09-23', '08123123', 1);
 
 -- --------------------------------------------------------
 
@@ -128,23 +136,37 @@ CREATE TABLE `transaksi` (
 --
 
 INSERT INTO `transaksi` (`id_transaksi`, `tanggal_transaksi`, `total_transaksi`, `status`, `id_user`, `nama_rekening`) VALUES
-(1, '2023-09-23', 0, 0, 29, 'Budi Santoso'),
-(2, '2023-09-23', 0, 0, 29, 'Budi Santoso'),
-(3, '2023-09-23', 0, 0, 29, 'Budi Santoso'),
-(4, '2023-09-23', 0, 0, 29, 'Budi Santoso'),
-(5, '2023-09-23', 0, 0, 30, 'adsda'),
-(6, '2023-09-23', 0, 0, 30, 'adsda'),
-(7, '2023-09-23', 0, 0, 30, 'adsda'),
-(8, '2023-09-23', 0, 0, 30, 'adsda'),
-(9, '2023-09-23', 0, 0, 30, 'adsda'),
-(10, '2023-09-23', 0, 0, 30, 'adsda'),
+(10, '2023-09-27', 0, 0, 30, 'adsda'),
 (11, '2023-09-23', 0, 0, 30, 'adsda'),
 (12, '2023-09-23', 0, 0, 30, 'adsda'),
 (13, '2023-09-23', 0, 0, 30, 'adsda'),
-(14, '2023-09-23', 0, 0, 30, 'adsda'),
 (15, '2023-09-23', 100000, 0, 30, 'adsda'),
 (16, '2023-09-23', 130000, 0, 31, 'maria'),
-(17, '2023-09-23', 60000, 0, 32, 'maria');
+(17, '2023-09-23', 60000, 0, 32, 'maria'),
+(21, '2023-09-28', 1200000, 1, 1, 'kkkoo'),
+(22, '2023-09-28', 1200000, 0, 2, 'Rihana'),
+(23, '2023-09-26', 1200000, 1, 1, 'Maria'),
+(24, '2023-09-06', 1200000, 1, 1, 'Maria'),
+(25, '2023-09-26', 1200000, 1, 1, 'Kalia'),
+(26, '2023-09-12', 1200000, 1, 1, 'Kalia'),
+(27, '2023-08-31', 1200000, 1, 1, 'Kalia'),
+(28, '2023-09-20', 1200000, 1, 1, 'Kalia'),
+(29, '2023-10-04', 1200000, 1, 1, 'Kalia'),
+(30, '2023-10-22', 30000, 0, 49, '123123'),
+(31, '2023-10-22', 30000, 0, 49, '123123'),
+(32, '2023-10-22', 30000, 0, 49, '123123'),
+(33, '2023-10-22', 30000, 0, 49, '123123'),
+(34, '2023-10-22', 30000, 0, 49, '123123'),
+(35, '2023-10-22', 30000, 0, 49, '123123'),
+(36, '2023-10-22', 30000, 0, 49, '123123'),
+(37, '2023-10-22', 30000, 0, 49, '123123'),
+(38, '2023-10-22', 30000, 0, 49, '123123'),
+(39, '2023-10-22', 30000, 0, 49, '123123'),
+(40, '2023-10-22', 30000, 0, 49, '123123'),
+(41, '2023-10-22', 30000, 0, 49, '123123'),
+(42, '2023-10-24', 10000, 1, 9, 'maria'),
+(43, '2023-10-25', 1200000, 1, 29, 'adsda'),
+(44, '2023-10-22', 80000, 0, 51, 'asdads');
 
 -- --------------------------------------------------------
 
@@ -164,8 +186,6 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `nama`, `email`, `no_telp`) VALUES
-(1, 'kjjhj', 'bbb@gmail.com', '86543'),
-(2, 'asdas', 'aaa@gmail.com', '812312'),
 (3, 'asdasas', 'asdad@gmail.com', '812312'),
 (4, 'dsfdfs', 'ccc@gmail.com', '08812831'),
 (5, 'fdggd', 'ddd@gmail.com', '0812334546'),
@@ -174,8 +194,7 @@ INSERT INTO `user` (`id`, `nama`, `email`, `no_telp`) VALUES
 (8, 'asd', 'asddd@gmail.com', '0812392193'),
 (9, 'sdfs', 'adsdkk@gmail.com', '081239193'),
 (10, 'sdfs', 'adsdkk3@gmail.com', '081239193'),
-(11, 'asdad', 'asdsfdsf@gmail.com', '081231'),
-(12, 'hkghkg', 'dinda4@gmail.com', '082244'),
+(11, 'asdad', 'asdsfdsf@gmail.com', '08123123'),
 (13, 'hkghkg', 'dinda42@gmail.com', '082244'),
 (14, 'sdad', 'sdada@gmail.com', '08123132'),
 (15, 'akdsakdk', 'akdsakdk@gmail.com', '081238183'),
@@ -195,7 +214,26 @@ INSERT INTO `user` (`id`, `nama`, `email`, `no_telp`) VALUES
 (29, 'sdasd', 'asdwead@gmail.com', '081283813'),
 (30, 'DSADA', 'ADSD@GMAIL.COM', '012838123'),
 (31, 'asda', 'mmmm@gmail.com', '0812313213'),
-(32, 'aksdkadk', 'jjjj@gmail.com', '08123311');
+(32, 'aksdkadk', 'jjjj@gmail.com', '08123311'),
+(33, 'Mira', 'dinda23@gmail.com', '081231312'),
+(34, 'Tina123', 'mari1a@gmail.com', '0812313213'),
+(35, '', 'tina@gmail.com', '08123212213'),
+(36, '', 'tina1234@gmail.com', '0812313321'),
+(37, 'adsasd', 'dinda@gmail.com', '012831231'),
+(38, 'assdad', 'tinaTTT@gmail.com', '01823123'),
+(39, 'asad', 'maria@gmail.com', '1231231'),
+(40, 'sadsd', 'tinaTTT@gmail.com', '123132'),
+(41, 'asdad', 'maria@gmail.com', '123123'),
+(42, 'asdasd', 'dinda@gmail.com', '1231321'),
+(43, 'asdsa', 'dasda@gmail.com', '12312'),
+(44, 'asda', 'maria@gmail.com', '08123132'),
+(45, 'ASDADS', 'maria@gmail.com', '081231231'),
+(46, 'adas', 'maria@gmail.com', '08123131'),
+(47, 'sads', 'maria@gmail.com', '01231232'),
+(48, 'asda', 'maria@gmail.com', '08123123'),
+(49, 'sads', 'maria@gmail.com', '1231'),
+(50, 'Kalia', 'kali@gmail.com', '081231323'),
+(51, 'kaskakda', 'dinda@gmail.com', '081231231');
 
 -- --------------------------------------------------------
 
@@ -228,6 +266,12 @@ INSERT INTO `wisata` (`id_wisata`, `nama`, `harga`) VALUES
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `detail_transaksi`
@@ -266,34 +310,40 @@ ALTER TABLE `wisata`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `detail_transaksi`
 --
 ALTER TABLE `detail_transaksi`
-  MODIFY `id_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id_detail` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `quiz`
 --
 ALTER TABLE `quiz`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT for table `wisata`
 --
 ALTER TABLE `wisata`
-  MODIFY `id_wisata` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_wisata` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables

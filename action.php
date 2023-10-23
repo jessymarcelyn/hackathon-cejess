@@ -1,6 +1,10 @@
 <?php
-require "connect.php";
-// include('adminverification.php');
+session_start();
+require 'connect.php';
+
+if (!isset($_SESSION["id"])) {
+	header("location: login.php?error=2");
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -115,6 +119,7 @@ require "connect.php";
 			<div class="collapse navbar-collapse justify-content-between" id="navbarNav">
 			</div>
 		</div>
+		<button type='button' class='btn btn-danger'><a href = 'logout.php' style = "color:white; ">Logout</a></button>
 	</nav>
 	<br>
 	<p id="judul"

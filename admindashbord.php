@@ -1,8 +1,12 @@
 <?php
+session_start();
 require 'connect.php';
-// include('adminverification.php');
+
+if (!isset($_SESSION["id"])) {
+	header("location: login.php?error=2");
+}
 if (isset($_POST['def'])) {
-	echo '<p class ="judul" style = " height : 3rem; text-align: center; margin-button: 3rem;  margin-top: 1rem;" >View Database</p>';
+	echo '<p class ="judul" style = " height : 3rem; text-align: center; margin-button: 3rem;  margin-top: 1rem;" >Lihat Database</p>';
 	exit();
 }
 if (isset($_POST['transaksi'])) {
@@ -291,6 +295,7 @@ if (isset($_POST['wisata'])) {
 					</li>
 				</ul>
 			</div>
+			<button type='button' class='btn btn-danger'><a href = 'logout.php' style = "color:white; ">Logout</a></button>
 	</nav>
 
 	<div class="container">
