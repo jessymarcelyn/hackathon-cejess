@@ -3,7 +3,7 @@ let questions = [
     {
     numb: 1,
     question: "Dimana Alamat Daya Tarik Wisata Rumah Akar?",
-    answer:  "Dusun Curah Damar Sidomulyo",
+    answer:  "Dusun Curah Manis Sidomulyo",
     options: [
       "Dusun Curah Damar Sidomulyo",
       "Dusun Tanah Manis SIdomulyo",
@@ -14,7 +14,7 @@ let questions = [
     {
     numb: 2,
     question: "Siapa nama legenda yang menjadikan sendang tirto Gumitir sebagai tempat persinggahannya?",
-    answer: "Minak jinggo dan Layang Seto",
+    answer: "Layang Kumitir dan Layang Seto",
     options: [
       "Minak jinggo dan Layang Seto",
       "Layang Kumitir dan Layang Seto",
@@ -36,7 +36,7 @@ let questions = [
     {
     numb: 4,
     question: "Apa motif khas Batik Sidomulyo?",
-    answer: "Domba dan Kopi",
+    answer: "Kopi dan Pinus",
     options: [
       "Domba dan Kopi",
       "Domba dan Sapi",
@@ -58,7 +58,7 @@ let questions = [
   {
     numb: 6,
     question: "Dibawah ini jenis-jenis domba, kecuali?",
-    answer: "Supas",
+    answer: "Limusin",
     options: [
       "Supas",
       "Dormas",
@@ -102,7 +102,7 @@ let questions = [
   {
     numb: 10,
     question: "Terletak di Daya Tarik Apa sebuah Kursi Raksasa di Sidomulyo?",
-    answer: "Tubing, Gowes, Hiking, Café",
+    answer: "Tubing, Camping Ground, Gowes, APV, Café.",
     options: [
       "Tubing, Gowes, Hiking, Café",
       "Gowes, APV, Camping Ground",
