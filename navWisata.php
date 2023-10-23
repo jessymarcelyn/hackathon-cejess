@@ -146,7 +146,7 @@
                                         <a class="dropdown-item" href="kreatif.php">Paket Wisata Kreatif</a>
                                         <a class="dropdown-item" href="sejarah.php">Paket Wisata Sejarah</a>
                                         <a class="dropdown-item" href="spiritual.php">Paket Wisata Spiritual</a>
-                                        <a class="dropdown-item" href="sport.php">Sport Tourism gowes & Trail
+                                        <a class="dropdown-item" href="sport.php">Sport Tourism Gowes & Trail
                                             Adventure</a>
                                         <a class="dropdown-item text-warning" href="custom.php">Custom Paket</a>
                                     </div>

@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
+
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
@@ -45,6 +46,10 @@
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="stylesheet" href="assets/css/pricing.css" />
     <link rel="icon" type="image/x-icon" href="assets/images/logores.png" />
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -88,6 +93,11 @@
         <div class="row">
             <div class="col-12">
                 <nav class="main-nav">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                     <a href="index.php" class="logo">
                         <img src="assets/images/logores.png" alt="" />
                     </a>
@@ -99,7 +109,6 @@
                         <li class="scroll-to-section">
                             <a href="#produk">Produk</a>
                         </li>
-
                         <li>
                             <div class="dropdown">
                                 <a href="#wisata" class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
@@ -112,8 +121,10 @@
                                     <a class="dropdown-item" href="kreatif.php">Paket Wisata Kreatif</a>
                                     <a class="dropdown-item" href="sejarah.php">Paket Wisata Sejarah</a>
                                     <a class="dropdown-item" href="spiritual.php">Paket Wisata Spiritual</a>
-                                    <a class="dropdown-item" href="sport.php">Sport Tourism gowes & Trail Adventure</a>
-                                    <a class="dropdown-item text-danger" href="custom.php">Custom Paket Wisata</a>
+                                    <a class="dropdown-item" href="sport.php">Sport Tourism Gowes & Trail Adventure</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item highlight-text" href="custom.php">Custom Paket
+                                        Wisata</a>
                                 </div>
                             </div>
                         </li>
@@ -123,8 +134,7 @@
                         <li class="scroll-to-section">
                             <a href="#kontak">Kontak Kami</a>
                         </li>
-
-                        <li class="scroll-to-section">
+                        <li>
                             <div class="dropdown">
                                 <a class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
@@ -137,14 +147,15 @@
                                     <a class="dropdown-item" href="ceritaKafe.php">Kafe Gumitir</a>
                                     <a class="dropdown-item" href="ceritaKetakase.php">Ketakase</a>
                                     <a class="dropdown-item" href="ceritaPPG.php">PPG Sidomulyo</a>
-                                    <a class="dropdown-item" href="ceritaSendang.php">sendang Tirto Gumitir</a>
+                                    <a class="dropdown-item" href="ceritaSendang.php">Sendang Tirto Gumitir</a>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="gradient-button">
                                 <a href="" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                        class="fa-regular fa-lightbulb me-2"></i>QUIZ</a>
+                                        class="fa-regular fa-lightbulb me-2"></i>QUIZ
+                                </a>
                             </div>
                         </li>
                     </ul>
@@ -169,17 +180,16 @@
             <div class="modal-body">
                 <form action="game.php" method="post">
                     <div class="rounded" style="padding: 30px">
-                        <input name="nama" type="text" class="form-control border-0 py-2 mb-2 mt-3"
-                            placeholder="Nama" required />
+                        <input name="nama" type="text" class="form-control border-0 py-2 mb-2 mt-3" placeholder="Nama"
+                            required />
                         <input name="noTelp" type="text" class="form-control border-0 py-2 mb-2 mt-3"
-                            placeholder="Nomor Telepon" required/>
+                            placeholder="Nomor Telepon" required />
                         <input name="emailk" type="email" class="form-control border-0 py-2 mb-2 mt-3"
                             placeholder="Email" required />
-                        <!-- <a href="quiz.php" name="play" class="btn w-100 py-2 mt-3 text-white"
+                        <a href="quiz.php" name="play" class="btn w-100 py-2 mt-3 text-white"
                             style=" background:#1e4e34">Main
-                            Kuis!</a> -->
-                        <button name="play" class="btn btn-register w-100 py-2 mt-3" style=" background:#1e4e34; color:white">Main
-                            Kuis!</button>
+                            Kuis!</a>
+                        <!-- <button name="play" class="btn btn-register w-100 py-2 mt-3"></button> -->
                     </div>
                 </form>
             </div>

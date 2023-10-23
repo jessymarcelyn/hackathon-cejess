@@ -13,11 +13,11 @@ include('navWisata.php');
     <style>
         .plusminus {
             margin-top: 3%;
-            height: 60%;
-            width: 30%;
+            height: 30px;
+            /* width: 30%; */
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-evenly;
             background-color: #1e4e34;
             color: white;
             border-radius: 8px;
@@ -28,7 +28,7 @@ include('navWisata.php');
             width: 35%;
             text-align: center;
             font-size: 110%;
-            cursor: pointer;
+            cursor: default;
             user-select: none;
         }
 
@@ -50,10 +50,28 @@ include('navWisata.php');
             <form action="booking.php" method="post">
                 <div class="row">
                     <div class="rounded-info">
-                        <h4>Pilih Paket Wisata yang Anda Inginkan</h4>
-                        <p>
-                            Kunjungi lokasi-lokasi favoritmu dengan pilihan yang tersedia.
-                        </p>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h4>Pilih Paket Wisata yang Anda Inginkan</h4>
+                                <p class="text-start">
+                                    Kunjungi lokasi-lokasi favoritmu dengan pilihan yang tersedia.
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <input type="date" class="form-control mb-2" id="tgl">
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button" class="btn mb-5 text-white" style="background:#1e4e34"
+                                            onclick="detail1()">Book</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
                     <div class="row">
@@ -75,16 +93,31 @@ include('navWisata.php');
 
                             if ($row) {
                                 ?>
-                                <div class="col-lg-3">
+                                <div class="col-md-6">
                                     <div class="box-item">
-                                        <h5><?= $row["nama"] ?></h5>
-                                        <h7>Rp <?= number_format($row["harga"], 0, ',', '.') ?></h7>
-                                        <input style="color:#fff" type="hidden" name="idQ<?= $i ?>" id="quantity<?= $i ?>">
-                                        <div class="plusminus">
-                                            <span class="text-white me-2" id="minus<?= $i ?>" class="spanplusminus">-</span>
-                                            <span class="text-white" id="num<?= $i ?>" class="spanplusminus">01</span>
-                                            <span class="text-white ms-2" id="plus<?= $i ?>" class="spanplusminus">+</span>
+
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <h5>
+                                                    <?= $row["nama"] ?>
+                                                </h5>
+                                                <h7>Rp
+                                                    <?= number_format($row["harga"], 0, ',', '.') ?>
+                                                </h7>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <input style="color:#fff" type="hidden" name="idQ<?= $i ?>"
+                                                    id="quantity<?= $i ?>">
+                                                <div class="plusminus">
+                                                    <span class="text-white me-2 spanplusminus" id="minus<?= $i ?>">-</span>
+                                                    <span class="text-white" id="num<?= $i ?>" class="spanplusminus">01</span>
+                                                    <span class="text-white ms-2 spanplusminus" id="plus<?= $i ?>">+</span>
+                                                </div>
+                                            </div>
+
                                         </div>
+
+
                                     </div>
                                 </div>
                                 <script>
@@ -123,13 +156,7 @@ include('navWisata.php');
                         }
                         ?>
                     </div>
-                    <div class="row">
-                        <div class="col-md-4 mb-2">
-                            <input type="date" class="form-control mb-2" id="tgl">
-                            <button type="button" class="btn mb-5 text-white" style="background:#1e4e34"
-                                onclick="detail1()">Book</button>
-                        </div>
-                    </div>
+
                 </div>
                 <script>
                     let tomorrow = new Date();
@@ -150,12 +177,12 @@ include('navWisata.php');
                         let a8 = document.getElementById("quantity8").value;
                         let a9 = document.getElementById("quantity9").value;
                         let a10 = document.getElementById("quantity10").value;
-                        if (tgl === "" || (a1 == 0 && a2 == 0 && a3 == 0 && a4 == 0 && a5 == 0 && a6 == 0 && a7 == 0 && a8 == 0 && a9 == 0&& a10 == 0 )) {
+                        if (tgl === "" || (a1 == 0 && a2 == 0 && a3 == 0 && a4 == 0 && a5 == 0 && a6 == 0 && a7 == 0 && a8 == 0 && a9 == 0 && a10 == 0)) {
                             // Handle the case where tgl is empty or a1 and a2 are both empty
                             alert("Mohon lengkapi form");
                         }
-                        else{
-                        location.href = `user.php?tgl=${tgl}&q1=${a1}&q2=${a2}&q3=${a3}&q4=${a4}&q5=${a5}&q6=${a6}&q7=${a7}&q8=${a8}&q9=${a9}&q10=${a10}`;
+                        else {
+                            location.href = `user.php?tgl=${tgl}&q1=${a1}&q2=${a2}&q3=${a3}&q4=${a4}&q5=${a5}&q6=${a6}&q7=${a7}&q8=${a8}&q9=${a9}&q10=${a10}`;
                         }
                     }
                 </script>

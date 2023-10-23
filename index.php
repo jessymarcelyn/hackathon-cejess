@@ -22,14 +22,12 @@
     <div id="produk" class="produk section mb-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <div class="rounded-info text-center">
+                <div class="col-lg-12">
+                    <div class="rounded-info text-center mt-5 mb-3">
                         <h4>Produk Unggulan Kami</h4>
-                        <!-- <img src="assets/images/heading-line-dec.png" alt="" /> -->
-                        <p>
+                        <p class="subtitle">
                             Kami memiliki 4 produk unggulan dari UMKM yang ada di Sidomulyo. Salah satunya bahkan sudah
-                            expor hingga
-                            ke Mesir dan Amerika.
+                            expor hingga ke Mesir dan Amerika.
                         </p>
                     </div>
                 </div>
@@ -77,7 +75,7 @@
                 <div class="col-lg-8 offset-lg-2">
                     <div class="rounded-info text-center mt-5 mb-3">
                         <h4>Paket <em>Wisata </em></h4>
-                        <p>
+                        <p class="subtitle">
                             Galeri Gumitir menyediakan wahana hiburan yaitu wisata yang unik. Kami memiliki wisata
                             domba, wisata hutan
                             pinus, wisata rumah akar, dan banyak wisata lainnya.
@@ -86,96 +84,113 @@
                 </div>
 
                 <div class="col-lg-4 mb-4">
-                    <div class="pricing-item h-100">
-                        <h4>Paket Wisata Sejarah</h4>
-                        <p>
-                            Wisata yang ditujukan untuk wisatawan umum dapat belajar
-                            mengenal peninggalan sejarah Belanda.
-                        </p>
-                        <div class="border-button">
-                            <a href="sejarah.php">Beli Paket</a>
+                    <a href="sejarah.php" class="text-black">
+                        <div class="pricing-item h-100">
+                            <img class="pricing-img" src="assets/wisata/sejarah_cover.jpg" alt="">
+                            <div class="card-body">
+                                <h4>Paket Wisata Sejarah</h4>
+                                <p>
+                                    Wisata yang ditujukan untuk wisatawan umum dapat belajar
+                                    mengenal peninggalan sejarah Belanda.
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
+
                 </div>
 
                 <div class="col-lg-4 mb-4">
-                    <div class=" pricing-item h-100">
-                        <h4>Paket Wisata Edukasi</h4>
-                        <p>
-                            Wisata edukasi yang ditujukan untuk pelajar sampai umum yang di mana mereka dapat belajar
-                            dengan cara
-                            yang lebih menyenangkan.
-                        </p>
-                        <div class="border-button">
-                            <a href="edukasi.php">Beli Paket</a>
+                    <a href="edukasi.php" class="text-black">
+                        <div class="pricing-item h-100">
+                            <img class="pricing-img" src="assets/wisata/edukasi_cover.jpg" alt="">
+                            <div class="card-body">
+                                <h4>Paket Wisata Edukasi</h4>
+                                <p>
+                                    Wisata edukasi yang ditujukan untuk pelajar sampai umum yang di mana mereka dapat
+                                    belajar
+                                    dengan cara
+                                    yang lebih menyenangkan.
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
+
                 </div>
 
                 <div class="col-lg-4 mb-4">
-                    <div class="pricing-item h-100">
-                        <h4>Paket Wisata Spiritual</h4>
-                        <p>
-                            Wisata yang ditujukan untuk wisatawan umum yang memiliki minat melakukan kegiatan spiritual
-                            (ziarah).
-                        </p>
-                        <div class="border-button">
-                            <a href="spiritual.php">Beli Paket</a>
+                    <a href="spiritual.php" class="text-black">
+                        <div class="pricing-item h-100">
+                            <img class="pricing-img" src="assets/wisata/habib1.jpg" alt="">
+                            <div class="card-body">
+                                <h4>Paket Wisata Spiritual</h4>
+                                <p>
+                                    Wisata yang ditujukan untuk wisatawan umum yang memiliki minat melakukan kegiatan
+                                    spiritual
+                                    (ziarah).
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
+
                 </div>
 
                 <div class="col-lg-4 mb-4">
-                    <div class="pricing-item h-100">
-                        <h4>Paket Wisata EduKids</h4>
-                        <p>
-                            Wisata edukasi yang ditujukan untuk anak-anak (TK/PAUD-SD) yang
-                            di mana mereka dapat berwisata sambil belajar.
-                        </p>
-                        <div class="border-button">
-                            <a href="edukids.php">Beli Paket</a>
+                    <a href="edukids.php" class="text-black">
+                        <div class="pricing-item h-100">
+                            <img class="pricing-img" src="assets/wisata/edukids_cover.jpg" alt="">
+                            <div class="card-body">
+                                <h4>Paket Wisata EduKids</h4>
+                                <p>
+                                    Wisata edukasi yang ditujukan untuk anak-anak (TK/PAUD-SD) yang
+                                    di mana mereka dapat berwisata sambil belajar.
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
+
                 </div>
 
                 <div class="col-lg-4 mb-4">
-                    <div class="pricing-item h-100">
-                        <h4>Paket Wisata Kreatif</h4>
-                        <p>
-                            Wisata yang dikhusukan bagi pengunjung yang memiliki minat khusus untuk belajar dan
-                            berkreasi.
-                        </p>
-                        <div class="border-button">
-                            <a href="kreatif.php">Beli Paket</a>
+                    <a href="kreatif.php" class="text-black">
+                        <div class="pricing-item h-100">
+                            <img class="pricing-img" src="assets/wisata/kreatif_cover.jpg" alt="">
+                            <div class="card-body">
+                                <h4>Paket Wisata Kreatif</h4>
+                                <p>
+                                    Wisata yang dikhusukan bagi pengunjung yang memiliki minat khusus untuk belajar dan
+                                    berkreasi.
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
+
                 </div>
 
                 <div class="col-lg-4 mb-4">
-                    <div class="pricing-item h-100">
-                        <h4>Sport Tourism</h4>
-                        <p>
-                            Wisata yang ditujukan untuk peminat gowes dan trail untuk menjelajahi rute hutan pinus yang
-                            ada di desa
-                            Sidomulyo dengan spot pilihan.
-                        </p>
-                        <div class="border-button">
-                            <a href="sport.php">Beli Paket</a>
+                    <a href="sport.php" class="text-black">
+                        <div class="pricing-item h-100">
+                            <img class="pricing-img" src="assets/wisata/sport_custom.jpg" alt="">
+                            <div class="card-body">
+                                <h4>Sport Tourism</h4>
+                                <p>
+                                    Wisata yang ditujukan untuk peminat gowes dan trail untuk menjelajahi rute hutan
+                                    pinus
+                                    yang ada di desa Sidomulyo dengan spot pilihan.
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
-                <div class="col-lg-4 offset-lg-4">
-                    <div class="pricing-item h-100">
-                        <h4>Custom Paket Wisata</h4>
-                        <p>
-                            Anda dapat memilih wisata yang akan dikunjungi dengan pilihan-pilihan yang tersedia.
-                        </p>
-                        <div class="border-button">
-                            <a href="custom.php">Beli Paket</a>
+                <div class="col-lg-8 offset-lg-2">
+                    <a href="custom.php" class="text-black">
+                        <div class="pricing-item h-100">
+                            <h4>Custom Paket Wisata</h4>
+                            <p>
+                                Anda dapat memilih wisata yang akan dikunjungi dengan pilihan-pilihan yang tersedia.
+                            </p>
                         </div>
-
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -183,13 +198,13 @@
     <!-- WISATA END -->
 
     <!-- TESTIMONI -->
-    <div id="testimoni" class="testimoni section">
+    <div id="testimoni" class="testimoni">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 align-self-center text-center">
                     <div class="rounded-info">
                         <h4>Testimoni</h4>
-                        <p>
+                        <p class="subtitle">
                             Berikut adalah testimoni dari pelanggan setia kami.
                         </p>
                     </div>
@@ -249,7 +264,7 @@
                 <div class="col-lg-8 offset-lg-2">
                     <div class="rounded-info text-center">
                         <h4>Kontak kami</h4>
-                        <p>
+                        <p class="subtitle">
                             Hubungi kami.
                         </p>
                     </div>
@@ -283,7 +298,7 @@
                                         placeholder="Message" />
                                 </div>
                                 <div class="d-flex">
-                                    <button class="btn" style="background: #1e4e34">SEND</button>
+                                    <button class="btn text-white" style="background: #1e4e34">SEND</button>
                                 </div>
                             </form>
                         </div>
@@ -328,14 +343,14 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-md-6">
                     <div class="footer-widget">
                         <h4>Kontak Kami</h4>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sidomulyo Silo, Jember</p>
                         <p><a href="#"><i class="fa-brands fa-whatsapp me-2"></i>+62 857-0700-3873</a></p>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-md-6">
                     <div class="footer-widget">
                         <h4>Tentang Kami</h4>
                         <ul>

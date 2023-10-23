@@ -76,89 +76,88 @@ require "connect.php";
 			<div class="mb-3 row">
 				<label class="col-sm-3">Tanggal</label>
 				<div class="col-sm-3">
-					<input type="text" class="form-control" name="tgl" value="<?php echo $tgl; ?>" readonly>
+					<input type="text" class="form-control disabled" name="tgl" value="<?php echo $tgl; ?>" disabled>
 				</div>
 			</div>
 			<div class="mb-3 row">
 				<label class="col-sm-3">Raja Domba</label>
 				<div class="col-sm-3">
-					<input type="text" class="form-control" name="q1" value="<?php echo $q1; ?>" readonly>
+					<input type="text" class="form-control disabled" name="q1" value="<?php echo $q1; ?>" disabled>
 				</div>
 				<label class="col-sm-3">Rumah Batik</label>
 				<div class="col-sm-3">
-					<input type="text" class="form-control" name="q2" value="<?php echo $q2; ?>" readonly>
+					<input type="text" class="form-control disabled" name="q2" value="<?php echo $q2; ?>" disabled>
 				</div>
 
 			</div>
 			<div class="mb-3 row">
 				<label class="col-sm-3">Rumah Akar</label>
 				<div class="col-sm-3">
-					<input type="text" class="form-control" name="q3" value="<?php echo $q3; ?>" readonly>
+					<input type="text" class="form-control" name="q3" value="<?php echo $q3; ?>" disabled>
 				</div>
 				<label class="col-sm-3">Sendang Tirto Gumitir</label>
 				<div class="col-sm-3">
-					<input type="text" class="form-control" name="q4" value="<?php echo $q4; ?>" readonly>
+					<input type="text" class="form-control" name="q4" value="<?php echo $q4; ?>" disabled>
 				</div>
 			</div>
 			<div class="mb-3 row">
 				<label class="col-sm-3">PPG Wisata Pinus</label>
 				<div class="col-sm-3">
-					<input type="text" class="form-control" name="q5" value="<?php echo $q5; ?>" readonly>
+					<input type="text" class="form-control" name="q5" value="<?php echo $q5; ?>" disabled>
 				</div>
 				<label class="col-sm-3">Cafe Gumitir</label>
 				<div class="col-sm-3">
-					<input type="text" class="form-control" name="q6" value="<?php echo $q6; ?>" readonly>
+					<input type="text" class="form-control" name="q6" value="<?php echo $q6; ?>" disabled>
 				</div>
 			</div>
 			<div class="mb-3 row">
 				<label class="col-sm-3">Terowongan Mrawan</label>
 				<div class="col-sm-3">
-					<input type="text" class="form-control" name="q7" value="<?php echo $q7; ?>" readonly>
+					<input type="text" class="form-control" name="q7" value="<?php echo $q7; ?>" disabled>
 				</div>
 				<label class="col-sm-3">Stasiun Mrawan</label>
 				<div class="col-sm-3">
-					<input type="text" class="form-control" name="q8" value="<?php echo $q8; ?>" readonly>
+					<input type="text" class="form-control" name="q8" value="<?php echo $q8; ?>" disabled>
 				</div>
 			</div>
 			<div class="mb-3 row">
 				<label class="col-sm-3">Kopi Ketakasi</label>
 				<div class="col-sm-3">
-					<input type="text" class="form-control" name="q9" value="<?php echo $q9; ?>" readonly>
+					<input type="text" class="form-control" name="q9" value="<?php echo $q9; ?>" disabled>
 				</div>
 				<label class="col-sm-3">Pabrik Kopi Mrawan</label>
 				<div class="col-sm-3">
-					<input type="text" class="form-control" name="q10" value="<?php echo $q10; ?>" readonly>
+					<input type="text" class="form-control" name="q10" value="<?php echo $q10; ?>" disabled>
 				</div>
 			</div>
 			<div class="mb-3 row">
 				<label class="col-sm-2"><b>Total Pembayaran : </b></label>
 				<div class="col-sm-10"><b>
-				<?php
-					$total = 0;
+						<?php
+						$total = 0;
 
-					for ($i = 1; $i <= 10; $i++) {
-						$stmt = $con->prepare("SELECT * FROM wisata WHERE id_wisata = :id_wisata");
-						$stmt->bindParam(':id_wisata', $i, PDO::PARAM_INT);
-						$stmt->execute();
-						$row = $stmt->fetch(PDO::FETCH_ASSOC);
-						if ($row) {
-							// Calculate the subtotal for each item
-							$subtotal = $row["harga"] * ${"q" . $i};
+						for ($i = 1; $i <= 10; $i++) {
+							$stmt = $con->prepare("SELECT * FROM wisata WHERE id_wisata = :id_wisata");
+							$stmt->bindParam(':id_wisata', $i, PDO::PARAM_INT);
+							$stmt->execute();
+							$row = $stmt->fetch(PDO::FETCH_ASSOC);
+							if ($row) {
+								// Calculate the subtotal for each item
+								$subtotal = $row["harga"] * ${"q" . $i};
 
-							// Add the subtotal to the total
-							$total += $subtotal;
+								// Add the subtotal to the total
+								$total += $subtotal;
+							}
 						}
-					}
-					
-					echo "Rp " . number_format($total, 0, ',', '.');
 
-							?>
-							<input type="hidden" name="total" value="<?php echo ($total); ?>">
-				</b>
+						echo "Rp " . number_format($total, 0, ',', '.');
+
+						?>
+						<input type="hidden" name="total" value="<?php echo ($total); ?>">
+					</b>
 				</div>
 			</div>
-			<p class="judul"
-				style="background-color :#1e4e34; height: 3rem; text-align: center; margin-top: 3rem;">
+			<p class="judul" style="background-color :#1e4e34; height: 3rem; text-align: center; margin-top: 3rem;">
 				Detail Pembayaran</p>
 			<p style=" width : 125%;"><b>BCA 5210932567 A/N Galeri Sidomulyo</b></p>
 			<div class="mb-3 row">
@@ -173,10 +172,10 @@ require "connect.php";
 					<input class="form-control" type="file" id="photo" name="photo" required>
 				</div>
 			</div>
-			
+
 
 			<a href="asdada "><button class="btn mb-3 text-white"
-					style="width: 50%; margin-left: 25%; background:#1e4e34" name= "pay">Pay<i class='fas fa-save'
+					style="width: 50%; margin-left: 25%; background:#1e4e34" name="pay">Pay<i class='fas fa-save'
 						style='color:blue'></i></button></a>
 
 		</form>

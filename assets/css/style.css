@@ -45,6 +45,30 @@
     background: #fff;
     font-family: 'Roboto', sans-serif;
   }
+
+  .highlight-text {
+    animation: heartbeat 2s infinite linear;
+  }
+
+  .subtitle {
+    margin-top: 10px;
+    margin-bottom: 60px;
+  }
+
+  @keyframes heartbeat{
+    0% {
+      color: #1e4e34;
+    }
+    25% {
+      color: #ff9800;
+    }
+    75% {
+      color: #ff9800;
+    }
+    100% {
+      color: #1e4e34;
+    }
+  }
   
   ::selection {
     background: #ff9800;
